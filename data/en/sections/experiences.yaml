@@ -11,14 +11,14 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: Example Co.
-    url: "https://www.example.com"
-    location: Dhaka Branch
+    name: IBM Brazil.
+    url: "https://www.ibm.com"
+    location: Belo Horizonte
     # company overview
-    overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+    overview: IBM is one of the most recognized company for TI and I am prond to be an IBMer.
   positions:
-  - designation: Senior Software Engineer
-    start: Nov 2019
+  - designation: Db2 Database Administartor 
+    start: Nov 2008
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.

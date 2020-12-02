@@ -8,42 +8,42 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Software Engineer
+designation: Db2 Database Administrator
 # your company information
 company:
-  name: Example Co.
-  url: "https://www.example.com"
+  name: IBM Brazil.
+  url: "https://www.ibm.com"
 
 # your resume. this file path should be relative to you "static" directory
 resume: "files/resume.pdf"
 
 # a summary about you
-summary: 'I am a passionate software engineer with x years of working experience. I built OSS tools for [Kubernetes](https://kubernetes.io/) using GO. My tools help people to deploy their workloads in Kubernetes. Sometimes, I work on some fun projects such as writing a theme, etc.'
+summary: 'I am a database administator specilized in Db2 support with 10 years of working experience. I built Db2 database for customers to support critical application. I also love to work with data analytics, machine learning, deep learning, etc.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
 socialLinks:
 - name: Email
   icon: "fas fa-envelope"
-  url: "example@gmail.com"
+  url: "brunodeabreu@gmail.com"
 
 - name: Github
   icon: "fab fa-github"
-  url: "https://www.github.com/example"
+  url: "https://www.github.com/brunodeabreu"
 
-- name: Stackoverflow
+#- name: Stackoverflow
   icon: "fab fa-stack-overflow"
   url: "#"
 
 - name: LinkedIn
   icon: "fab fa-linkedin"
-  url: "#"
+  url: "https://LinkedIn.com/in/brunodeabreu"
 
 - name: Twitter
   icon: "fab fa-twitter"
-  url: "#"
+  url: "https://twitter.com/__bmachado__"
 
-- name: Facebook
+#- name: Facebook
   icon: "fab fa-facebook"
   url: "#"
 
