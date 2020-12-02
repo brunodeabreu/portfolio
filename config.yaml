@@ -1,4 +1,4 @@
-baseURL: http://example.org/
+baseURL: https://brunodeabreu.netlify.app/static/
 languageCode: en-us
 title: "Bruno"
 theme: "toha"
@@ -8,10 +8,10 @@ theme: "toha"
 languages:
   en:
     languageName: English
-    weight: 1
+    weight: 2
   pt:
     languageName: Português
-    weight: 2
+    weight: 1
 
 # Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
 # DefaultContentLanguage: fr
@@ -60,4 +60,4 @@ params:
   # Provide newsletter configuration. This feature hasn't been implemented yet.
   # Currently, you can just hide it from the footer.
   newsletter:
-    enable: true
+    enable: false

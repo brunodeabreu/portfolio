@@ -15,50 +15,42 @@ experiences:
     url: "https://www.ibm.com"
     location: Belo Horizonte
     # company overview
-    overview: IBM is one of the most recognized company for TI and I am prond to be an IBMer.
+    overview: IBM is one of big Company in the world 
   positions:
-  - designation: Db2 Database Administartor 
+  - designation: Db2 Database Administrator 
     start: Nov 2008
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
+    - Provide phisical database support to IBM customers 
+    - Perform updates, upgrades and database maintanence 
+    - Work on high avaiability and disaster recovery projects
 
-  - designation: Junior Software Engineer
-    start: Nov 2017
-    end: Oct 2019
-    responsibilities:
-    - Implement and test xyz feature for abc tool.
-    - Support client for abc tool.
-    - Learn k,d,w technology for xyz.
 
 - company:
-    name: PreExample Co.
-    url: "https://www.preexample.com"
-    location: Nowhere
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+    name: AF Service.
+    url: "https://www.af-service.com"
+    location: Belo Horizonte
+    overview: AF Service was a startup that provide java developement services
   positions:
-  - designation: Software Engineer
-    start: March 2016
-    end: May 2017
+  - designation: Java Programmer
+    start: Nov 2008
+    end: Dez 2008
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
+    - Write and document codes.
+
 
 - company:
-    name: Intern Counting Company (ICC).
-    url: "https://www.intern.com"
-    location: Intern Land
-    overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
+    name: Fumec University.
+    url: "https://www.fumec.com"
+    location: Belo Horizonte
+    overview: University located in Belo Horizonte.
   positions:
-  - designation: Intern
-    start: Jun 2015
-    end: Jan 2016
+  - designation: IT Support
+    start: Nov 2004
+    end: Nov 2008
     responsibilities:
-    - Count lost of interns.
-    - Count more interns.
-    - Count me as an intern.
+    - Provide support in administrative software deploy 
+    - Create and develop reports
+    - Support Oracle and SQL Server databases
