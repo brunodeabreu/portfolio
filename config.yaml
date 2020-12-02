@@ -1,6 +1,6 @@
 baseURL: http://example.org/
 languageCode: en-us
-title: "Toha"
+title: "Bruno"
 theme: "toha"
 
 # Manage languages
@@ -9,24 +9,9 @@ languages:
   en:
     languageName: English
     weight: 1
-  bn:
-    languageName: বাংলা
+  pt:
+    languageName: Português
     weight: 2
-  fr:
-    languageName: Français
-    weight: 3
-  id: 
-    languageName: Indonesian
-    weight: 4
-  de:
-    languageName: Deutsch
-    weight: 5
-  es:
-    languageName: Spanish
-    weight: 6
-  it:
-    languageName: Italian
-    weight: 7
 
 # Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
 # DefaultContentLanguage: fr
@@ -64,7 +49,7 @@ params:
     favicon: /images/site/favicon.png
 
   # GitHub repo URL of your site
-  gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
+  gitRepo: https://github.com/brunodeabreu/portfolio
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: true
