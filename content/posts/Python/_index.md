@@ -3,7 +3,7 @@ title: Python
 menu:
   sidebar:
     name: Python
-    identifier: Python
+    identifier: python-posts
     weight: 200
 ---
 

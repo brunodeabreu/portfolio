@@ -1,14 +1,17 @@
 ---
-title: "Python - Básico"
+title: "Python Básico"
 date: 2020-06-08T08:06:25+06:00
-hero: /posts/introduction/hero.svg
+hero: /posts/img/python.jpg
 description: Anotações de cursos de python
 menu:
   sidebar:
-    name: Python
-    identifier: Python
+    name: Python Básico
+    identifier: python-posts-basic
     weight: 10
+    parent: python-posts
 ---
+
+
 
 
 Em meus estudos muitas vezes me pego revendo conceitos básicos, na minha opinião isso é importante para que o conceito seja enraizado e aquele tópico se torne simples, o cursos [Introduction to Python](https://learn.datacamp.com/courses/intro-to-python-for-data-science) e [Intermediate Python](https://learn.datacamp.com/courses/intermediate-python) na Datacamp você encontra todos esses tópicos 
