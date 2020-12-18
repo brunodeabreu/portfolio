@@ -1,13 +1,13 @@
 ---
 title: "Python Básico"
-date: 2020-06-08T08:06:25+06:00
+date: 2020-12-12T08:06:25+06:00
 hero: /posts/img/python.jpg
 description: Anotações de cursos de python
 menu:
   sidebar:
     name: Python Básico
     identifier: python-posts-basic
-    weight: 10
+    weight: 1
     parent: python-posts
 ---
 
@@ -56,7 +56,7 @@ plt.show()
 ```
 
 ![](/posts/Python/g1.svg)
-
+>Gráfico apresentado no módulo de matplotlib do curso de Python Basics datacamp
 
 * [Pandas](https://pandas.pydata.org/docs/): É descrita com a ferramenta de manipulação de dados mais rápida, flexível e fácil de usar.
 

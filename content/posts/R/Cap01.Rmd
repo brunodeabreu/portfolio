@@ -1,0 +1,64 @@
+---
+title: "Cap 01 - Grupo de Estudos R for Data Science"
+date: 2020-12-16T08:08:00+03:00
+hero: /posts/img/img_ds_1.svg
+description: Grupo de Estudos R4DS - Cap1
+menu:
+  sidebar:
+    name: Cap 01
+    identifier: r-posts-grupo-de-estudos-Cap1
+    weight: 20
+    parent: r-posts
+
+---
+
+### Cap1
+
+*R for Data Science* livro de *Garrett Grolemund* e *Hadley Wickham* ensina as mais importantes ferramentas em R, após este estudo o ciêntista de dados terá uma variedade de ferramentas, técnias para desafios em ciência de dados usando R   
+
+
+#### Instaland os primeiros pacotes
+
+No primeiro capítulo do livro instalamos o *Tidyverse* e outros pacotes que serão utilizados no livro *R for Data Science*, ao carregar o pacote ele nos oferece algumas informações : 
+
+```{r }
+# Tidyverse install and load
+
+#install.packages("tidyverse")
+library(tidyverse)
+
+# outros packages
+#install.packages(c("nycflights13", "gapminder", "Lahman"))
+```
+
+Ao carregar o `tidyverse` ele nos mostra os pacotes e versões, além de mostrar os conflitos com funções nativos do R ou de outros pacotes, neste caso para utilizar a função específica utilizamos `::` como mostra no exemplo `dplyr::filter()`
+
+#### Explorando o primeiro dataframe `mpg` e verificando a estrutura:
+
+```{r}
+mpg
+```
+
+
+#### Primeiro plot
+
+O pacote utilizado para visualização é o `ggplot` que adota a estrutura de camadas para as plotagens, ou seja, é possivel incluir camadas e mais camadas nos plots, abaixo um `scatterplot` entre as variáveis `displ` no eixo X e `hwy` no eixo Y e para isso é adicionada a camada `geom_plot` ao `ggplot`: 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+#### Referências
+* [R for Data Science Book](https://r4ds.had.co.nz/data-visualisation.html)
+* [r-bloggers.com](http://www.r-bloggers.com)
+* [Happy git with R](https://happygitwithr.com/rstudio-git-github.html)
+* [RStudio Community](https://community.rstudio.com/)
+* [A layered grammar of graphics](http://vita.had.co.nz/papers/layered-grammar.html)
+* [RStudio Cheatsheets](https://rstudio.com/resources/cheatsheets/)
+
+
+
+
+
+

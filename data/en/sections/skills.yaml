@@ -15,6 +15,16 @@ skills:
   icon: "/images/sections/skills/python.png"
   summary: "Python is the main programing language for perform data analysis, in order to evaluate my python programimg skill I have used the datacamp assessment to compare with others my score was 138 (90th percentile)"
   url: "https://twitter.com/__bmachado__/status/1334959328147726336"
+
+
+
+- name: Data Manipulation with Python
+  icon: "/images/sections/skills/python.png"
+  summary: "Perform a data Manipulation with Python is not simple, today I got the score of 107(59th percentile)...Time to go back on this topic and study more."
+  url: "https://twitter.com/__bmachado__/status/1338897660598751240"
+
+
+
 #- name: R for  Data Science
 #  icon: "/images/sections/skills/R.jpeg"
 #  summary: "Basic knowledge of R and tidyverse."

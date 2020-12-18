@@ -16,6 +16,16 @@ skills:
   summary: "Minha principal linguagem de programação para analise de dados, afim de medir meus conhecimentos utilizei o assessment do Datacamp onde posso me comparar com divesas pessoas e obtive o score de 138 (90th percentile)"
   url: "https://twitter.com/__bmachado__/status/1334959328147726336"
 
+
+
+- name: Data Manipulation with Python
+  icon: "/images/sections/skills/python.png"
+  summary: "Manipulação de dados com python nem sempre é fácil meu score atual foi 107(59th percentile)...Hora de estudar, estudar e estudar."
+  url: "https://twitter.com/__bmachado__/status/1338897660598751240"
+
+
+
+
 #- name: R for  Data Science
 #  icon: "/images/sections/skills/R.jpeg"
 #  summary: "Basic knowledge of R and tidyverse."
