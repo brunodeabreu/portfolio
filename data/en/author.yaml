@@ -7,7 +7,7 @@ image: "images/author/john.png"
 # give your some contact information. they will be used in the footer
 contactInfo:
   email: "brunodeabreu@gmail.com"
-  phone: "+55 98955-4001"
+  phone: "+55 31 98955-4001"
 
 # some summary about what you do
 summary:
