@@ -1,8 +1,8 @@
 ---
-title: "3. DP-100 Optimize and manage models "
+title: "Optimize and manage models "
 date: 2020-12-21T08:06:25+03:00
 hero: /posts/img/dp100.png
-description: notas curso de data science certigicação
+description: notas curso de data science certificação
 menu:
   sidebar:
     name: 3. DP-100 Optimize and manage models
@@ -11,16 +11,16 @@ menu:
     parent: ds-cert-study-posts
 ---
 
-
+ 
 # Intro
 
-Este terceiro post contém notas sobre o o curso preparatório para certificação DP-100 e aborta tópicos de administração e otimização de modelos: 
+Este terceiro post com anotações feitas no curso preparatório para certificação **DP-100** e aborta tópicos de administração e otimização de modelos: 
 
-* Com a grande diversidade de algoritmos e métodos AutoML proporciona ao ciêntista de dados experimentar e avaliar diversos espaços de hipóses com vários algoritmos. Outra facilidade do Azure ML é o Hyperdriver para realizar tune de hyperparametros. 
+* Com a grande diversidade de algoritmos e técnicas computacionais e estatísticas utilizar **AutoML** proporciona ao ciêntista de dados experimentar e avaliar diversos espaços de hipóses com vários algoritmos. Outra facilidade do Azure ML é o **Hyperdriver** que auxilia na etapa de tune de hiper-parâmetros. 
 
-* Outro detalhe importante é a possibilidade de explicar e interpretar os modelos, porque o modelo foi criado e tomou tal decisão, etc. 
+* Outro detalhe importante é a possibilidade de explicar e interpretar os modelos, _"-Como o modelo foi criado?"_, - _"Como ele chegou a essa decisão ?"_, etc. 
 
-* Por fim a administração de modelos, com o tempo o modelo pode se tornar obsoleto, começar a fazer predições ruins, como se monitora a performance do modelo ? Como se versiona o modelo ? 
+* Por fim a administração de modelos, com o tempo os modelos podem se tornar obsoletos, começar a fazer predições ruins, como se monitora a performance do modelo ? Como se versiona o modelo ? 
 
 
 Todos esses tópicos são abordados neste tópico de estudo.
@@ -30,69 +30,72 @@ Todos esses tópicos são abordados neste tópico de estudo.
 ## Optimize and manage models  
 
 
-### Processo típico de Machine Learning
+### Machine Learning process
 
 ![ml_process](/posts/DS-cert/img/ml_process.png)
 
 Tipicamente o processo de aprendizado de máquina segue um roteiro como :
 
-1. `Preparação dos dados` -> Limpeza, preparação, outliers, analise descritiva, tratamento de missing values ou valores não condizentes, etc.
+1. `Preparação dos dados` : Limpeza e preparação de datasets, tratar outliers, analise descritiva para entender as distribuições e o dataset, tratamento de missing values ou valores não condizentes, etc.
 
-2. `Experimentos` -> Na segunda etapa de Experimentos é onde utilizamos ferramentas IDE como VSCode ou Jupyter em caso de python ou Rstudio para R a criar o modelo, realizar treinamento e teste do modelo , quando o modelo esta criado o analista deve registrar o modelo para o deploy
-
-
-3. `Deploy` -> Criaçào do container para disponibilizar para utilização
+2. `Experimentos` : Na segunda etapa de experimentos assim como na anterior utilizamos ferramentas IDE como VSCode ou Jupyter notebooks em caso de python ou Rstudio para R para criar modelos, realizar treinamento e teste em conjunto de dados não treinados, quando o modelo estiver criado e validado o analista deve registrar o modelo para o deploy
 
 
+3. `Deploy` : Criação do container para disponibilizar para utilização, assim o modelo pode ser consumido por aplicações, nesta etapa temos opção de utilizar Container instances ACI ou AKS Kubernetes services.
 
-Esse processo se torna um loop no ambiente de **DevOps** para Data Science, poís o cenário de analise de dados em que o modelo se engloba muda e o modelo e todo processo precisa ser repido diversas vezes para aprimorar o modelo na fase de construção assim como na fase de produção.
+
+
+Esse processo se torna um loop no ambiente de **DevOps** para Data Science, poís o cenário de análise de dados em que o modelo se engloba muda e com isso tanto o modelo com as demais etapadas precisam ser refeitas, gerando um ciclo a ser repido diversas vezes tanto na fase de desenvolvimento como em produção.
 
 ![auto_ml](/posts/DS-cert/img/loop_data_science.png)
 
 
 <br>
 
-### Requirimentos para treinar o modelo
+### Required to train the model
 
 
 
-* **Ambiente Computacional poderoso** : É preciso ter um ambiente que seja facil escalar com VMs e auto scaling scale-out cluster, com utilização por demanda
+* **Ambiente Computacional** : É preciso ter um ambiente que seja fácil escalar com VMs e auto scaling scale-out cluster, com utilização por demanda.
 
 
-* **Ambiente Pre-configurado** : Idelamente o ambiente deve ser pre-configurado ou seja, já incluir as versões de framework de machine learning que você quer trabalhar, libs, etc. O que irá facilitar e agilizar o trabalho
+* **Ambiente Pre-configurado** : Idelamente o ambiente deve ser pré-configurado, ou seja, já incluir as versões de framework de machine learning que você planeja trabalhar, bibliotecas, etc. O que irá facilitar e agilizar o trabalho do analista de dados.
 
 
-* **Administração de JOBs** : Em um mundo corporativo com vários data scientists na equipe o ideal não é cada um ter seu ambiente e sim um ambiente compartilhado de experimentos orientados por job's e o time possa iniciar, monitorar e gerenciar os jobs de analise de dados
-
-
-
-* **AutoML e Seleção de parâmetros automáticos** : Uma solução de AutoML que aplica os melhores algoritmos de ML e testa os principais hyperparametros ofere uma produtividade muito grande para o analista em projeto que podem ser aplicados.
+* **Administração de JOBs** : Em ambiente corporativo com vários ciêntistas de dados e analistas na mesma equipe, o ideal não é cada um ter seu ambiente e sim um ambiente compartilhado de experimentos orientados por job's e o time possa iniciar, monitorar e gerenciar os jobs de analise de dados e os projetos e conhecimento seja compartilhado.
 
 
 
+* **AutoML e Seleção de parâmetros automáticos** : Uma solução de AutoML que aplica os melhores algoritmos de ML e testa os principais hiper-parâmetros ofere uma produtividade muito grande para o analista em projeto que podem ser aplicados.
+
+<br>
 
 
-### Requirimentos para Registar e Administrar o modelo
 
-* **Containerização** : Azure ML automaticamente converte os modelos em Docker containers o que facilita o deploy em um ambiente de execução
+
+### Requirements to Register and manage the models
+
+* **Containerização** : Azure ML automaticamente converte os modelos em Docker containers o que facilita o deploy em um ambiente de execução.
 
 
 * **Versionamento** : Um detalhe muito importante é ter versões dos modelos para acompanhar modificações ao longo do tempo, identificar problemas, recuperar versões específicas de deploys, rollbacks, etc
 
 
-* **Repositório de Modelos** : Azure oferece um repositorio de modelos compartilha que te abilita a integrar pipelines de CI/CD ao ambiente de Data Science 
+* **Repositório de Modelos** : Azure oferece um repositório de modelos compartilhado que te habilita a integrar pipelines de CI/CD ao ambiente de Data Science. 
 
 
 * **Acompanhar Experimentos** : Ter um ambiente com detalhes de cada experimento é super importante para auditoria, verificar as modificações ao longo do tempo e habilitar a colaboração em membros do time.
 
 
+<br>
 
+### Automated Hyperparameter tuning on Distributed compute using Azure ML Service
 
-### Automated Hyper-parameter tuning on Distributed compute using Azure ML Service
+O processo manual de criação de modelos, treinar diferentes algoritmos, configurar hiper-parâmetros, gerenciar infraestrutura é um comprocesso que demanda tempo do analista de dados e muito repetitivo, oferecendo diversas possibildades de erros e falhas durante o processo.
 
-O processo manual de criação de modelos, treinar diferentes algoritimos, configurar hyperparametros, gerenciar infraestrutura é um comprocesso que demanda tempo do analista de dados e muito repetitivo, oferecendo diversas possibildades de erros e falhas, utilizando **AutoML** Azure ML criar diversos modelos e gerenciar os melhores parametros utilizando `hyperdrive` onde você especifica quais parâmetros quer testar e qual o range de valores e a ferramente irá disparar jobs paralelos testando todas as configurações escolhidas pelo ciêntista de dados, por fim aponta o melhor modelo.
+Utilizando **AutoML** Azure ML criar diversos modelos e otimizados com os melhores parâmetros utilizando `hyperdrive`, onde você especificar quais parâmetros quer testar e qual o range de valores. A ferramenta irá disparar jobs paralelos testando todas as configurações escolhidas pelo ciêntista de dados, por fim sugere o melhor modelo.
 
-Para o processo de hyperparametro a tool hyperdriver suporta os seguintes algoritmos de tuning : 
+Para o processo de hiper-parâmetro a tool hyperdriver suporta os seguintes algoritmos de tuning : 
 
 <br>
 
@@ -142,9 +145,11 @@ param_sampling = BayesianParameterSampling({
 
 <br>
 
-### Tipos de hyperparametros
+### Hyperparameters Type
 
-* **Discrete Hyperparameters** : Realiza a busca do parametro escolhendo em um range de valores discretos
+<br>
+
+* **Discrete Hyperparameters** : Realiza a busca do parâmetro escolhendo em um range de valores discretos
 
 ```
 {
@@ -154,6 +159,7 @@ param_sampling = BayesianParameterSampling({
 }
 ```
 
+<br>
 
 * **Continuous Hyperparameters** : Realiza a busca em uma distribuição continua como `uniform(low, high)`, `loguniform(low, high)` , `normal(mu, sigma)` e `lognormal(mu, sigma)`
 
@@ -164,47 +170,49 @@ param_sampling = BayesianParameterSampling({
 
 }
 ```
-
+<br>
 
 ### Primary metric
 
-* Para cada treinamento devemos especificar a forma de avaliação do modelo `primary metric`
+<br>
+
+* Para cada treinamento devemos especificar a forma de avaliação do modelo a `primary metric`.
 
 ```
 primary_metric_name = 'accuracy',
 primary_metric_goal = PrimaryMetricGoal.MAXMIZE
 ```
+<br>
 
 * Log metric para hyperparameter tuning
-_Quando se quer adicionar no script de treino a funcionalidade de logar as metricas relevantes_
-
+_Quando se quer adicionar no script de treino a funcionalidade de logar as métricas relevantes_
 ```
 from azureml.core.run import Run
 run_logger = Run.get_contect()
 run_logger.log('accuracy', float(val_accuracy))
 ```
 
-
+<br>
 
 ### Allocate resources
 
-Para controlar o gasto com recursos em realizar o tuning em hyperparametros em experimentos é importante especificar o número máximo de `training runs`
+Para controlar o gasto com recursos em realizar o tuning em hiper-parâmetros em experimentos é importante especificar o número máximo de `training runs`.
 
 * `max_total_runs` : Número máximo de _training runs_ que será criado
 
-* `max_duration_minutes` : Duração máxima em minutos do tuning de hyperparametros em um experimento
+* `max_duration_minutes` : Duração máxima em minutos do tuning de hiper-parâmetros em um experimento
 
-* `max_concurrent_runs` : Máximo número de `runs` para rodar ao mesmo tempo.
+* `max_concurrent_runs` : Número máximo de `runs` para rodar ao mesmo tempo.
 
 ```
 max_total_runs = 20
 max_concurrent_runs= 4
 ```
-
+<br>
 
 ### Configure experiment
 
-Para configurar o _hyperparameter tuning experiment_ é utilizado o hyperparamter search space, early termination policy, primary metric and resource allocation.
+Para configurar o **_hyperparameter tuning experiment_** é utilizado o **hyperparamter search space**, **early termination policy**, **primary metric** e **resource allocation**.
 
 ```
 from azureml.train.hyperdrive import HyperDriveConfig
@@ -242,7 +250,7 @@ RunDetails(hyperdrive_run).show()
 
 ### Find the best model
 
-Uma vez que todos os hyperparameters tuning foram executados, temos como _best model_ com a melhor configuração correspondente aos hyperparametros
+Uma vez que todos os hyperparameters tuning foram executados, temos como _best model_ a melhor configuração correspondente aos hiper-parâmetros.
 
 ```
 best_run = hyperdrive_run.get_best_run_by_primary_metric()
@@ -257,6 +265,8 @@ print('\n Batch size : ', parameter_value[7])
 ```
 
 
+<br>
+
 ## Azure Automated Machine Learning
 
 Automated Machine learning é o processo que irá auxiliar o ciêntista de dados a identificar e utilizar o melhor algoritmo de machine learning para solução do problema de negócios.
@@ -264,14 +274,14 @@ Automated Machine learning é o processo que irá auxiliar o ciêntista de dados
 
 ![automl-process](/posts/DS-cert/img/auto_ml_process.png)
 
-AutoML seleciona o melhor algoritmo e hyperametro e gera o modelo pronto para deploy, este modelo pode ser customizado e modificado de acordo com a necessidade, este processo auxilia na produtividade de realizar deploys em soluções de ML. 
+AutoML seleciona o melhor algoritmo e hiper-parâmetro e gera o modelo pronto para o deploy, este modelo pode ser customizado e modificado de acordo com a necessidade de negócio, este processo auxilia na produtividade do time, documentação e deixa para o analista tomar as melhores decisões para solucionar o problema.
 
 Com Azure ML podemos utilizar automl via interface gráfica ou por SDK python para classification, regression e forecasting.
 
 
 ### Preprocessing Step:
 
-Estes são algumas das técnicas que podem ser aplicadas para normalizar os dados, reduzir dimensões e transformar os dados antes de submeter ao modelo
+Estas são algumas das técnicas que podem ser aplicadas para normalizar, reduzir dimensões e transformar os dados antes de submeter a criação do modelo.
 
 ![automl-pre-processing](/posts/DS-cert/img/pre-processing_steps_automl.png)
 
@@ -296,7 +306,7 @@ Estes são algumas das técnicas que podem ser aplicadas para normalizar os dado
 * Usar mais dados de treino, eliminando _"statistical bias"_
 * Previnir _target leakage_ 
 * Usar poucas features
-* Utilizar Regularização e otimiza,ão de hyperparametros
+* Utilizar Regularização e otimiza,ão de hiper-parâmetros
 * Limitar o uso de modelos complexos
 * Utilizar _Cross-validation_
 
@@ -304,7 +314,7 @@ Estes são algumas das técnicas que podem ser aplicadas para normalizar os dado
 
 ### Time-Series forecasting
 
-> Podemos usar automl e combinar tecnicas e abordagens para obeter o melhor forecast possivel including : 
+> Podemos usar automl e combinar técnicas e abordagens para obeter o melhor forecast possível, incluindo : 
 
 * holiday detection and featurezation
 * time-series and DNN learners(auto-ARIMA, Prophet, ForecastTCN)
@@ -314,26 +324,26 @@ Estes são algumas das técnicas que podem ser aplicadas para normalizar os dado
 * rolling window aggregate features
 
 Um _automated time-series_  experiment é considerado como um problema de regressão com multiplas variáveis
-, valores de past time são manipulados com a técnica de _"pivot"_ e se transforma em uma dimensão adicional para o regressor
+, valores de _"past time"_ são manipulados com a técnica de _"pivot"_ e se transforma em uma dimensão adicional para o regressor.
 
 
 ### Ensemble Models
 
 Automated Azure ML suporta métodos **Ensemble** para `voting` ou `stacking` : 
 
-* `Voting` : Predicts based on the weighted average of predicted class probabilities ( for classification tasks ) or predicted regression targets(for regression tasks)
+* `Voting` : Predicts based on the weighted average of predicted class probabilities (for classification) or predicted regression targets(for regression).
 
 
-* `Stacking` : Staking combines heterogenous models and trains a meta-model based on the output from the individual models. The current default meta-models are `LogisticRegression` for classification and `ElasticNet` for regression and forecast tasks
+* `Stacking` : Staking combines heterogeneous models and trains a meta-model based on the output from the individual models. The current default meta-models are `LogisticRegression` for classification and `ElasticNet` for regression and forecast tasks.
 
 
 ### Imbalanced Data
 
-Conjunto de dados desbalanceados é um cenário comum em projetos de machine learning, Azure Auto ML tem a capacidade de lidar muito bem com dados desbalancedos, utilizando **weight column** como input irá fazer com que a columa seja ajustada quanto ao peso, o que levará a classe ser considerada mais ou menos importante. 
+Conjunto de dados desbalanceados é um cenário comum em projetos de machine learning, Azure Auto ML tem a capacidade de lidar muito bem com dados desbalancedos, utilizando **weight column** o input irá fazer com que a columa seja ajustada quanto ao peso, o que levará a classe ser considerada mais ou menos importante. 
 
 
 
-**Recusos para identificar dados desbalanceados**
+**Recursos para identificar dados desbalanceados**
 
 * `Confusion matrix` : Evaluate the correctly classified labels against the actual labels of the data
 * `Precision-recall` : Evaluate the ratio of correct label against the ration of found label instance of the data
@@ -354,18 +364,18 @@ Quais técnicas utilizar quando temos dados desbalanceados ?
 
 1. Download and prepare the data and package
 2. Prepare the sample dataframe to work
-3. Cleanse data, describe and analyse the data, perform EDA
+3. Cleanse data, describe and analyze the data, perform EDA
 4. Split the data into train and test sets `train_test_split` from sklearn
 5. Automatically train a model
    
    * Define settings for the experiment run
    * Attach your training data to the configuration, and modify setting that control the training process
    * Submit the experiment for model tuning
-   * After submiting the experiment, the process iterates throught different ML algorithms and hyperparameters setting, adhering to your defined constraints
+   * After submitting the experiment, the process iterates through different ML algorithms and hyperparameters setting, adhering to your defined constraints
    * It chooses the best-fit model by optimizing an accuracy metric
 
 
-> Submeter o treinamento com os parâmetros default irá levar de 5 a 20 min um experimento, caso queira reduzir esse tempo reduza o parametro `experiment_timeout_minutes`
+> Submeter o treinamento com parâmetros default irá demorar de 5 a 20 min um experimento, caso queira reduzir esse tempo reduza o parâmetro `experiment_timeout_minutes`
 
 6. Depois de iniciar o experimento ele funciona como um container
 7. Explore results
@@ -390,9 +400,9 @@ auto_explainer_setup_obj = automl_setup_model_explanations(fitted_model,
 ```
 <br>
 
-11. Register the model and the scoring explainer, can use `TreeScoringExplainer` to create the scoring explainer. The score explainer uses the `feature_map` to return the raw feature importance.
+11. Register the model and use scoring explainer to analyze the results, we can use `TreeScoringExplainer` to create the scoring explainer. The score explainer uses the `feature_map` to return the raw feature importance.
 
-12. Create the conda dependencies for setting up the service (create the env dependencies int the container to deploy the model)
+12. Create the conda dependencies for setting up the service (create the env dependencies in the container to deploy the model)
   
 13. Deploy the service usando conda and scoring file
 
@@ -424,7 +434,7 @@ D) This is standard for a training experiment
 E) Child runs are a optional part of Model Maintenance
 
 
-**Resposta : **  B and C
+**Resposta :**  B and C
 
 
 > Which 3 types of machine learning tasks can be used for Automated Machine Learning ? 
@@ -506,8 +516,7 @@ E) Using Fewer features
   - [Automated Machine Learning](https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab09.md)
   - [Interpreting Models](https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab10.md)
   - [Analyzing and Mitigating Unfairness in Models](https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab11.md)
-  - [Monitoring Models](https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab12.md)
-  - [Monitoring Data Drift](https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab13.md)
+
 
 
 
