@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python Básico</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Anotações de cursos de python" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Bruno</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ds-cert/">DS Certification Study</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100/">1. DP-100 Set up an Azure Machine Learning workspace</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post2/">2. DP-100 Run experiments and train models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post3/">3. DP-100 Optimize and manage models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post4/">4. DP-100 Deploy and consume models</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/python/">Python</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/python/python-basico/">Python Básico</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/datasicence_toolkit/">Python Data Science Tookit</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/r/">R</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/intro/">Grupo de Estudos R4DS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap01/">Cap 01</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap02_03/">Cap 02 &amp; 03</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://brunodeabreu.netlify.app/posts/img/python.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/john.png'/>
+          <h5 class="author-name">Bruno de Abreu Machado</h5>
+          <p>December 12, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Python Básico</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p>Em meus estudos muitas vezes me pego revendo conceitos básicos, na minha opinião isso é importante para que o conceito seja enraizado e aquele tópico se torne simples, o cursos <a href="https://learn.datacamp.com/courses/intro-to-python-for-data-science">Introduction to Python</a> e <a href="https://learn.datacamp.com/courses/intermediate-python">Intermediate Python</a> na Datacamp você encontra todos esses tópicos</p>
+<ul>
+<li>Tipos de variáveis</li>
+<li>Listas</li>
+<li>Funções e Pacotes</li>
+<li><a href="https://numpy.org/">Numpy</a></li>
+<li><a href="https://matplotlib.org/">Matplotlib</a></li>
+<li>Discionários</li>
+<li><a href="https://pandas.pydata.org/">Pandas</a></li>
+</ul>
+<p>Nos dois primeiros cursos da DataCamp já somos apresentados a alguns pacotes utilizados em ciência de dados, <code>numpy</code>, <code>matplotlib</code> e <code>pandas</code>, esses pacotes são fantásticos se este é seu primeiro contato deixa eu adicionar algumas informações sobre eles para você:</p>
+<ul>
+<li>
+<p><a href="https://numpy.org/doc/stable/">Numpy</a> : Foi criado para trabalhar com tabelas de elementos, chamados de array&rsquo;s multidimensionais que precisam ter o mesmo tipo, ou seja, é um pacote que iremos utilizar para computação matemática, aqui esta um <a href="https://numpy.org/learn/">quickstart</a>.</p>
+</li>
+<li>
+<p><a href="https://matplotlib.org/contents.html">Matplotlib</a> : É o principal pacote para visualização de dados, ou seja, elaboração de gráficos de diversos tipos, veja essa <a href="https://matplotlib.org/gallery/index.html">galeria</a>.</p>
+</li>
+</ul>
+<p>Um exemplo simples de utilização do matplotlib, com 3 arrays contendo GDP per capita <code>gdp_cap</code>, population <code>pop</code> e life Expectancy <code>life_exp</code> podemos criar o gráfico abaixo</p>
+<pre><code># Scatter plot
+plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c = col, alpha = 0.8)
+
+# Previous customizations
+plt.xscale('log') 
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000,10000,100000], ['1k','10k','100k'])
+
+# Additional customizations
+plt.text(1550, 71, 'India')
+plt.text(5700, 80, 'China')
+
+# Add grid() call
+plt.grid(True)
+
+# Show the plot
+plt.show()
+</code></pre><p><img src="/posts/Python/g1.svg" alt=""></p>
+<blockquote>
+<p>Gráfico apresentado no módulo de matplotlib do curso de Python Basics datacamp</p>
+</blockquote>
+<ul>
+<li><a href="https://pandas.pydata.org/docs/">Pandas</a>: É descrita com a ferramenta de manipulação de dados mais rápida, flexível e fácil de usar.</li>
+</ul>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/brunodeabreu/portfolio/edit/master/content/posts/Python/Python-Basico.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/python/datasicence_toolkit/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Python - Data Science Toolkit</span>
+        </a>
+      </div>
+      
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>brunodeabreu@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;55 31 98955-4001</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,592 @@
+---
+title: "Cap 02 03 - Grupo de Estudos R for Data Science"
+date: 2020-12-26T08:08:00+03:00
+hero: /posts/img/img_ds_1.svg
+description: Grupo de Estudos R4DS - Cap2 e 3
+menu:
+  sidebar:
+    name: Cap 02 & 03
+    identifier: r-posts-grupo-de-estudos-Cap2&3
+    weight: 20
+    parent: r-posts
+
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="visualização-de-dados" class="section level1">
+<h1>Visualização de Dados</h1>
+<p><strong>Livro :</strong><a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Neste segundo capítulo os autores nos ensinam como visualizar dados utilizando <code>ggplot2</code> e apresenta o conceito de <strong>gramática dos gráficos</strong> e como criar plots em camadas.</p>
+<p>Importando o pacote tidyverse para que nos fornece o <code>ggplot2</code> entre outros :</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<div id="usando-o-primeiro-gráfico-para-responder-algumas-perguntas" class="section level2">
+<h2>Usando o primeiro gráfico para responder algumas perguntas :</h2>
+<p><strong>1. Carros com motores maiores consomem mais combustível que carros com motores menores ? </strong></p>
+<ul>
+<li><p><code>displ</code> : engine size em litros</p></li>
+<li><p><code>hwy</code> : eficiencia em miles per gallon (mpg), um carro com baixa eficiencia consome mais combustivel .</p>
+<p><strong>Resposta</strong>: Podemos observar essa relação que é de conhecimento comum que carros com menor eficiência com relação a combustível <code>hwy</code> tem os maiores motores <code>displ</code></p></li>
+</ul>
+<p><strong>2. Qual o relacionamento entre <code>engine size (displ)</code> e <code>efficience (hwy)</code> ? </strong></p>
+<p><strong>Resposta</strong>: Relaçao negativa entre as duas variáveis, ou seja, carros com engines maiores são menos eficientes e usam mais combustível</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="exercícios-3.2.4" class="section level3 tabset tabset-fade">
+<h3>Exercícios 3.2.4</h3>
+<div id="section" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>Run ggplot(data = mpg). What do you see?</p>
+<p><strong>Resposta</strong>: essa primeira parte só monta a área do gráfico</p>
+<pre class="r"><code>ggplot(data = mpg)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="section-1" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> How many rows are in mpg? How many columns?</p>
+<p><strong>Resposta :</strong> O dataframe <code>mpg</code> tem 11 colunas e 234 observações ou linhas</p>
+<pre class="r"><code>ncol(mpg)</code></pre>
+<pre><code>## [1] 11</code></pre>
+<pre class="r"><code>nrow(mpg)</code></pre>
+<pre><code>## [1] 234</code></pre>
+<p>Outra forma de observar é utilizando a função <code>glimpse()</code> que oferece além do número de linhas e colunas, tipos das variáveis e exemplos de observações:</p>
+<pre class="r"><code>glimpse(mpg)</code></pre>
+<pre><code>## Rows: 234
+## Columns: 11
+## $ manufacturer &lt;chr&gt; &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, …
+## $ model        &lt;chr&gt; &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4 quattro&quot;, …
+## $ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2…
+## $ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 20…
+## $ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8,…
+## $ trans        &lt;chr&gt; &quot;auto(l5)&quot;, &quot;manual(m5)&quot;, &quot;manual(m6)&quot;, &quot;auto(av)&quot;, &quot;aut…
+## $ drv          &lt;chr&gt; &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;…
+## $ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, …
+## $ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, …
+## $ fl           &lt;chr&gt; &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;…
+## $ class        &lt;chr&gt; &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;…</code></pre>
+</div>
+<div id="section-2" class="section level4">
+<h4></h4>
+<p><strong>Pergunta:</strong> #### What does the drv variable describe? Read the help for ?mpg to find out.</p>
+<p><strong>Resposta:</strong> <code>drv</code>: the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd</p>
+<pre class="r"><code>?mpg</code></pre>
+</div>
+<div id="section-3" class="section level4">
+<h4></h4>
+<p><strong>Pergunta:</strong> Make a scatterplot of hwy vs cyl.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = hwy, y= cyl))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="section-4" class="section level4">
+<h4></h4>
+<p><strong>Pergunta:</strong> What happens if you make a scatterplot of class vs drv? Why is the plot not useful?</p>
+<p><strong>Resposta:</strong> Utilizando a função <code>glimpse</code> percebemos que <code>drv e calss</code> são do tipo <code>&lt;chr&gt;</code> que significa categórico, ou seja plotar um scatterplot de dados categóricos não fornece nenhuma informação útil.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = class, y= drv))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Na documentação do ggplot tem a função <code>geom_count</code>, plotando esse gráfico ele nos fornece algumas informações mais interessantes</p>
+<pre class="r"><code>ggplot(data = mpg, aes(x = class, y = drv))+
+  geom_count()</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="aesthetic-mapping" class="section level2">
+<h2>Aesthetic Mapping</h2>
+<p>Aesthetic é uma propriedade visual do objeto no plot, podemo adicionar funções que destacam o tamanho, shape ou cor.</p>
+<p>Utilizando <strong>aesthetic</strong> <code>color</code> mapeando a classe o <code>ggplot</code> automaticamente cria uma legenda e atribuiu uma cor específica para cada tipo de classe, processo chamado de <strong>scaling</strong></p>
+<pre class="r"><code>ggplot(data = mpg)+
+  geom_point(mapping = aes(x= displ, y= hwy, color=class))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Além de <code>color</code> podemos utilizar <code>size</code>, outras opções são <code>alpha</code> e <code>shape</code> .</p>
+<pre class="r"><code>ggplot(data = mpg)+
+  geom_point(mapping = aes(x= displ, y= hwy, size=class))</code></pre>
+<pre><code>## Warning: Using size for a discrete variable is not advised.</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div id="exercícios-3.3.1" class="section level3 tabset tabset-fade">
+<h3>Exercícios 3.3.1</h3>
+<div id="section-5" class="section level4">
+<h4></h4>
+<p><strong>Pergunta</strong> : What’s gone wrong with this code? Why are the points not blue?</p>
+<p><strong>Resposta</strong> : <code>blue</code> é intepretado como uma variável por isso o ggplot não identificou a cor, para modificar a cor do gráfico pode-se adicionar color fora do <code>aes</code></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = &quot;blue&quot;))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><strong>Fix</strong>: <em>Incluindo a cor fora do aes</em></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = &quot;blue&quot;)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="section-6" class="section level4">
+<h4></h4>
+<p><strong>Pergunta</strong> : 2. Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?</p>
+<pre class="r"><code>glimpse(mpg)</code></pre>
+<pre><code>## Rows: 234
+## Columns: 11
+## $ manufacturer &lt;chr&gt; &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, &quot;audi&quot;, …
+## $ model        &lt;chr&gt; &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4&quot;, &quot;a4 quattro&quot;, …
+## $ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2…
+## $ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 20…
+## $ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8,…
+## $ trans        &lt;chr&gt; &quot;auto(l5)&quot;, &quot;manual(m5)&quot;, &quot;manual(m6)&quot;, &quot;auto(av)&quot;, &quot;aut…
+## $ drv          &lt;chr&gt; &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;f&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;4&quot;, &quot;…
+## $ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, …
+## $ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, …
+## $ fl           &lt;chr&gt; &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;p&quot;, &quot;…
+## $ class        &lt;chr&gt; &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;compact&quot;, &quot;…</code></pre>
+<p><strong>Categórica :</strong> manufacturer, model, trans, drv, fl, class</p>
+<p><strong>Contínua : </strong> displ, year, cyl, cty, hwy</p>
+</div>
+<div id="section-7" class="section level4">
+<h4></h4>
+<p><strong>Pergunta : </strong> Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ,  y = hwy, color = displ))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ,  y = hwy, color = class))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-15-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ,  y = hwy, size = displ))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-15-3.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ,  y = hwy, shape = fl))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-15-4.png" width="672" /></p>
+</div>
+<div id="section-8" class="section level4">
+<h4></h4>
+<pre><code>**Pergunta :** 4. What happens if you map the same variable to multiple aesthetics?</code></pre>
+<pre class="r"><code>ggplot(mpg, aes(x = displ, y = hwy, colour = hwy, size = displ)) +
+  geom_point()</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="section-9" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>5. What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ,  y = hwy, stroke =8 ))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+<div id="section-10" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ &lt; 5)? Note, you’ll also need to specify x and y.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ,  y = hwy, color= displ &lt; 5))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="facet" class="section level2">
+<h2>Facet</h2>
+<p>O autor destaca que outra forma de observar variáveis categóricas é dividir o gráfico em <code>facet</code>, ou seja, criar subplots para cada tipo da variável. A função utilizada é a <code>facet_wrap()</code>.</p>
+<pre class="r"><code>ggplot(data = mpg, aes(x=displ, y=hwy))+
+  geom_point() +
+  facet_wrap(~ class, nrow = 2)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p>Para combinar duas variáveis com <code>facet</code> utilizamos o <code>facet_grid()</code></p>
+<pre class="r"><code>ggplot(data = mpg)+
+  geom_point(mapping = aes(x = displ , y = hwy)) + 
+  facet_grid(drv ~ cyl)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg)+
+  geom_point(mapping = aes(x = displ , y = hwy)) + 
+  facet_grid(drv ~ .)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div id="exercícios-3.5.1" class="section level3 tabset tabset-fade">
+<h3>Exercícios 3.5.1</h3>
+<div id="section-11" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> 1. What happens if you facet on a continuous variable?</p>
+<p><strong>Resposta :</strong> Na minha opinião , não é gráfico muito últil ter uma variável continua no facet, pois ele irá dividir o gráfico em muitas camadas.</p>
+<pre class="r"><code>ggplot(data = mpg, aes(x=displ, y=hwy))+
+  geom_point() +
+  facet_wrap(~ cty, nrow = 2)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<pre class="r"><code>#glimpse(mpg)</code></pre>
+</div>
+<div id="section-12" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What do the empty cells in plot with <code>facet_grid(drv ~ cyl)</code> mean? How do they relate to this plot?</p>
+<p><strong>Resposta : </strong></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="section-13" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What plots does the following code make? What does <code>.</code> do?</p>
+<p><strong>Resposta : </strong> Define em qual axis e qual variável você quer observar.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
+</div>
+<div id="section-14" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>4. Take the first faceted plot in this section:</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><strong>What are the advantages to using faceting instead of the colour aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?</strong></p>
+<p><strong>Resposta : </strong> A vantagem de usar facet em relação a aes é porque você pode observar cada classe de forma isolada, já com color as cores se misturam e não fica claro cada grupo, outro detalhe é se tivermos muitos grupos/classes complica mais a identificação de cada grupo. Casos de datasets muito grandes ou com diversas classes devemos podemos tentar filtrar por grupos, ou então teremos um facet com muitas camadas, e caso utilize colour não terá cores para todos os tipos.</p>
+</div>
+<div id="section-15" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> Read <code>?facet_wrap</code>. What does nrow do? What does ncol do? What other options control the layout of the individual panels? Why doesn’t facet_grid() have nrow and ncol arguments?**</p>
+<p><strong>Resposta : </strong> ncol e nrow especifica o número de colunas ou linhas que irá dividir seu subplot, outras opções para controlar o layout são : scales, shrink.</p>
+</div>
+<div id="section-16" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>6. When using facet_grid() you should usually put the variable with more unique levels in the columns. Why?**</p>
+<p><strong>Resposta : </strong> Para não ter diversas subdivisoes no plot</p>
+</div>
+</div>
+</div>
+<div id="geometric-objects" class="section level2">
+<h2>Geometric Objects</h2>
+<p><strong>geoms</strong> são normalmente conhecidos por tipos de gráficos como bar chart, line chart, , boxplot, scatterplot, etc. Cada um desses tipos de gráficos tem seu proprio <code>geom</code> .</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy))</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Adicionando <code>linetype</code> , com isso o ggplot irá separar os carros em 3 categorias de <code>drv</code> :</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy , linetype= drv))</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>Podemos adicionar uma camada de <code>geom</code> em cima da outra, combinado o gráfico de linhas com o scatterplot</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = drv)) +
+  geom_smooth(mapping = aes(x = displ, y = hwy , linetype= drv, color = drv))</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Uma das opções do <code>geom_smooth</code> é utilizar as opções de <code>group</code> e <code>color</code> para plotar variáveis categóricas :</p>
+<pre class="r"><code>ggplot(data = mpg) +
+  geom_smooth(mapping = aes(x = displ, y = hwy))</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) +
+  geom_smooth(mapping = aes(x = displ, y = hwy, group = drv))</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-29-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg) +
+  geom_smooth(
+    mapping = aes(x = displ, y = hwy, color = drv),
+    show.legend = FALSE
+  )</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-29-3.png" width="672" /></p>
+<p>Para evitar que se duplique informação no gráfico adicionando geoms podemos tratar o <code>mappting</code> na parte <strong>global</strong> do ggplot</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth()</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>Sobrescrevendo o mapping, neste caso o color para variável class será aplicado somente a camada de scatterplo:</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth()</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>Filtrando os dados para alguma camada de plot :</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy))+
+  geom_point(mapping = aes(color = class))+
+  geom_smooth(data = filter(mpg, class == &#39;subcompact&#39;), se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<div id="exercícios-3.6.1" class="section level3 tabset tabset-fade">
+<h3>Exercícios 3.6.1</h3>
+<div id="section-17" class="section level4">
+<h4></h4>
+<p><strong>Pergunta : </strong> What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?</p>
+<p><strong>Resposta : </strong> line chart : geom_line()
+boxplot : geom_boxplot()
+histogram: geom_histogram()
+area chart: geom_area()</p>
+</div>
+<div id="section-18" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>Run this code in your head and predict what the output will look like. Then, run the code in R and check your predictions.</p>
+<p><strong>Resposta : </strong> Na parte global irá criar um gráfico com x e y destacando cores por drv, adicionado um scatterplot e um smooth. <em>So depois de rodar que identifiquei que o se=FALSE removeu o intervalo de confiança do smooth</em></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
+  geom_point() + 
+  geom_smooth(se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+</div>
+<div id="section-19" class="section level4">
+<h4></h4>
+<p><strong>Pergunta</strong>What does show.legend = FALSE do? What happens if you remove it? Why do you think I used it earlier in the chapter?</p>
+<p><strong>Resposta : </strong> remove e legenda, se remoer irá criar uma legenda.</p>
+</div>
+<div id="section-20" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What does the se argument to geom_smooth() do?</p>
+<p><strong>Resposta :</strong> Habilita ou não o intervalo de confiança no gráfico</p>
+</div>
+<div id="section-21" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>Will these two graphs look different? Why/why not?<strong>
+</strong>Resposta :**O resultado será o mesmo, mas com informação duplicada</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth()</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<pre class="r"><code>ggplot() + 
+  geom_point(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-34-2.png" width="672" /></p>
+</div>
+<div id="section-22" class="section level4">
+<h4></h4>
+<p><strong>Pergunta: </strong>Recreate the R code necessary to generate the following graphs.</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth(se=FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy, group = drv)) + 
+  geom_point() + 
+  geom_smooth(se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-35-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
+  geom_point() + 
+  geom_smooth(se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-35-3.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth(se = FALSE)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-35-4.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="transformações-estatísticas" class="section level2">
+<h2>Transformações Estatísticas</h2>
+<p>Nesta parte do capítulo somos apresentados ao dataset <code>diamonds</code> que contém cerca de ~54k informações sobre diamantes, detalhes como preço, cor, claridade, etc.</p>
+<p>Utilizando <code>geom_bar</code> mapeando o eixo X agrupando pela variável <code>cut</code> podemos ver o numéro total de diamantes, como o geom_bar usa <code>stat_count()</code>, podemos até usar essa função no lugar <code>de geom_bar()</code>.</p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-36-1.png" width="672" />
+Como podemos ver nesse gráfico no eixo X é computado a quantidade por agrupamento, outros gráficos apresentam valores computados como :</p>
+<ul>
+<li>Bar chart, histograms and frequêncy compute te counts</li>
+<li>smoothers realiza o fit nos dados</li>
+<li>boxplots computa a distribuição estatística</li>
+</ul>
+<div id="exercícios-3.7.1" class="section level3 tabset tabset-fade">
+<h3>Exercícios 3.7.1</h3>
+<div id="section-23" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> 1. What is the default geom associated with stat_summary()? How could you rewrite the previous plot to use that geom function instead of the stat function?</p>
+<p><strong>Resposta : </strong> Verificando a documentação com <code>?stat_summary()</code> o default geom é o <code>geom = "pointrange"</code>, para sobrescrever podemos usar o parametro <code>geom</code></p>
+</div>
+<div id="section-24" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>What does geom_col() do? How is it different to geom_bar()?</p>
+<p><strong>Resposta :</strong> São os dois gipos de gráficos de barras, a diferença é que usamos <code>geom_bar</code> quando queremos o peso das barras proporcional ao numero de casos em cada grupo, já o <code>geom_col</code> os pesos representam os valores em dados.</p>
+</div>
+<div id="section-25" class="section level4">
+<h4></h4>
+<p><strong>Pergunta: </strong>Most geoms and stats come in pairs that are almost always used in concert. Read through the documentation and make a list of all the pairs. What do they have in common?</p>
+<p><strong>Resposta :</strong> A tabela completa esta em <a href="https://ggplot2.tidyverse.org/reference/">ggplot2 reference</a></p>
+<p>geom stat<br />
+* geom_bar() stat_count()<br />
+* geom_bin2d() stat_bin_2d()<br />
+* geom_boxplot() stat_boxplot()<br />
+* geom_contour_filled() stat_contour_filled()<br />
+* geom_contour() stat_contour()<br />
+* geom_count() stat_sum()<br />
+* geom_density_2d() stat_density_2d()<br />
+* geom_density() stat_density()<br />
+* geom_dotplot() stat_bindot()<br />
+* geom_function() stat_function()<br />
+* geom_sf() stat_sf()<br />
+* geom_sf() stat_sf()<br />
+* geom_smooth() stat_smooth()<br />
+* geom_violin() stat_ydensity()<br />
+* geom_hex() stat_bin_hex()<br />
+* geom_qq_line() stat_qq_line()<br />
+* geom_qq() stat_qq()<br />
+* geom_quantile()</p>
+</div>
+<div id="section-26" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What variables does stat_smooth() compute? What parameters control its behaviour?</p>
+<p><strong>Resposta : </strong> geom é o parametro que contra os cálculos , <code>stat_smooth</code> calcula uma previsão da variável <code>y</code> .</p>
+</div>
+<div id="section-27" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>5. In our proportion bar chart, we need to set group = 1. Why? In other words what is the problem with these two graphs?</p>
+<p><strong>Resposta:</strong> Se <code>group=1</code> não for utilizado todos as barras terão o mesmo tamanho</p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, y = ..prop..))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = color, y = ..prop..))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-37-2.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, y = ..prop.., group = 1))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(aes(x = cut, y = ..count.. / sum(..count..), fill = color))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-38-2.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="position-adjustments" class="section level2">
+<h2>Position adjustments</h2>
+<p>Podemos adicionar cores em barchats utilizando <code>colour = &lt;variável&gt;</code> ou <code>fill = &lt;variável&gt;</code>, sendo que o comando <code>fill</code> é mais útil, poís é mais fácil de ler e identificar as cores e grupos</p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, colour = cut))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = cut))</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-39-2.png" width="672" /></p>
+<p>O parâmetro <code>position</code> oferece três opções de formatação, sendo “identity”, “dodge” ou “fill”.</p>
+<p><strong>identinty</strong></p>
+<pre class="r"><code>ggplot(data = diamonds, mapping = aes(x = cut, fill = clarity)) + 
+  geom_bar(alpha = 1/5, position = &quot;identity&quot;)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Para que seja possivel identificar as classes é preciso adicionar um <code>alpha</code> para poder ver a sobreposição, apesar de bonito não é muito funcional</p>
+<p><strong>fill</strong></p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity), position = &quot;fill&quot;)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p>Utilizando <code>fill</code> já fica mais fácil identificar cada grupo.</p>
+<p><strong>dodge</strong></p>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity), position = &quot;dodge&quot;)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-42-1.png" width="672" />
+Na minha opinião a opção <code>dodge</code> é a forma de visualização mais amigável.</p>
+<div id="exercícios-3.8.1" class="section level3 tabset tabset-fade">
+<h3>Exercícios 3.8.1</h3>
+<div id="section-28" class="section level5">
+<h5></h5>
+<p><strong>Pergunta :</strong> What is the problem with this plot? How could you improve it?</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point()</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p><strong>Resposta :</strong> temos muitos poucos pontos, podemos utilizar a função <code>position = "jitter"</code> para mostrar todos os pontos</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point(position = &quot;jitter&quot;)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+</div>
+<div id="section-29" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What parameters to geom_jitter() control the amount of jittering?</p>
+<p><strong>Resposta :</strong> <code>geom_jitter</code> é um <em>shortcut</em> de <code>geom_point(position="jitter")</code> que controla <code>width</code> e <code>height</code></p>
+</div>
+<div id="section-30" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> Compare and contrast geom_jitter() with geom_count().</p>
+<pre class="r"><code>ggplot(data = mpg , mapping = aes(x = cty, y = hwy)) +
+  geom_jitter() +
+  ggtitle(&quot;Gráfico com geom_jitter()&quot;)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = mpg , mapping = aes(x = cty, y = hwy)) +
+  geom_count()+
+  ggtitle(&quot;Gráfico com geom_count()&quot;)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-45-2.png" width="672" /></p>
+</div>
+<div id="section-31" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What’s the default position adjustment for geom_boxplot()? Create a visualisation of the mpg dataset that demonstrates it.</p>
+<p><strong>Resposta :</strong> Verificando o help a position default é o <code>position = "dodge2"</code>, adicionando class podemos observar o comportamento.</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = drv, y = hwy, colour = class))+
+  geom_boxplot()</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="coordinate-systems" class="section level2">
+<h2>Coordinate systems</h2>
+<p>Utilizando para manipular os eixos X e Y com a função :</p>
+<pre><code>* `coord_flip()` : que troca o eixo X pelo Y  
+* `coord_quickmap()` : manipula ratios dos mapas
+* `coord_polar()` : manipulação de coordenadas</code></pre>
+<div id="exercícios-3.9.1" class="section level3 tabset tabset-fade">
+<h3>Exercícios 3.9.1</h3>
+<div id="section-32" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> Turn a stacked bar chart into a pie chart using coord_polar().</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = cyl, fill=drv))+
+  geom_bar()+
+  coord_polar()</code></pre>
+<pre><code>## Warning: position_stack requires non-overlapping x intervals</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+</div>
+<div id="section-33" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong>What does labs() do? Read the documentation.
+<strong>Resposta : </strong> Modifica axis, legenda e labels</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = class, y = hwy)) +
+  geom_boxplot() +
+  coord_flip() +
+  labs(y = &quot;Highway MPG&quot;,
+       x = &quot;Class&quot;,
+       title = &quot;Highway MPG by car class&quot;,
+       subtitle = &quot;1999-2008&quot;,
+       caption = &quot;Source: http://fueleconomy.gov&quot;)</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+</div>
+<div id="section-34" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What’s the difference between coord_quickmap() and coord_map()?</p>
+<p><strong>Resposta :</strong> Basicamente definem a forma de projeção do mapa</p>
+</div>
+<div id="section-35" class="section level4">
+<h4></h4>
+<p><strong>Pergunta :</strong> What does the plot below tell you about the relationship between city and highway mpg? Why is coord_fixed() important? What does geom_abline() do?</p>
+<p><strong>Resposta :</strong> O gráfico abaixo nos mostra o relacionamento entre as duas variáveis e o <code>coord_fixed</code> ajusta o ratio dos eixos X,Y, a função <code>geom_abline()</code> adiciona uma linha de referência ao plot, facilitando a analise.</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
+  geom_point() + 
+  geom_abline() +
+  coord_fixed()</code></pre>
+<p><img src="/posts/R/Cap02_03_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="the-layered-grammar-of-graphics" class="section level2">
+<h2>The layered grammar of graphics</h2>
+<p>Basicamente temos 7 parâmetros para criar um plot e são tratados em camadas utilizando a gramática dos gráficos:</p>
+<pre><code>ggplot(data = &lt;DATA&gt;) + 
+  &lt;GEOM_FUNCTION&gt;(
+     mapping = aes(&lt;MAPPINGS&gt;),
+     stat = &lt;STAT&gt;, 
+     position = &lt;POSITION&gt;
+  ) +
+  &lt;COORDINATE_FUNCTION&gt; +
+  &lt;FACET_FUNCTION&gt;</code></pre>
+</div>
+<div id="referências-e-links" class="section level2">
+<h2>Referências e Links</h2>
+<ul>
+<li><a href="https://exts.ggplot2.tidyverse.org/gallery/">ggplot galery</a></li>
+<li><a href="https://ggplot2.tidyverse.org/reference/">ggplo2 tidyverse</a></li>
+<li><a href="https://r4ds.had.co.nz/data-visualisation.html">R for Data Science Book</a></li>
+<li><a href="http://www.r-bloggers.com">r-bloggers.com</a></li>
+<li><a href="https://happygitwithr.com/rstudio-git-github.html">Happy git with R</a></li>
+<li><a href="https://community.rstudio.com/">RStudio Community</a></li>
+</ul>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>R for Data Science <a href="https://r4ds.had.co.nz/index.html" class="uri">https://r4ds.had.co.nz/index.html</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

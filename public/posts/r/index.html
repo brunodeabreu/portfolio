@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>R</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+    <link rel="stylesheet" href="/assets/css/layouts/list.css">
+    <link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Bruno</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  
+  
+    
+  
+
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ds-cert/">DS Certification Study</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100/">1. DP-100 Set up an Azure Machine Learning workspace</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post2/">2. DP-100 Run experiments and train models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post3/">3. DP-100 Optimize and manage models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post4/">4. DP-100 Deploy and consume models</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/python-basico/">Python Básico</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/datasicence_toolkit/">Python Data Science Tookit</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/r/">R</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/intro/">Grupo de Estudos R4DS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap01/">Cap 01</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap02_03/">Cap 02 &amp; 03</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content container-fluid" id="content">
+    <div class="container-fluid post-card-holder" id="post-card-holder">
+      
+      
+        <div class="post-card">
+  <a href="/posts/r/cap02_03/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/img/img_ds_1.svg'/>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Cap 02 03 - Grupo de Estudos R for Data Science</h5>
+        <p class="card-text post-summary">Visualização de Dados Livro :R for Data Science 1
+Neste segundo capítulo os autores nos ensinam como visualizar dados utilizando ggplot2 e apresenta o conceito de gramática dos gráficos e como criar plots em camadas.
+Importando o pacote tidyverse para que nos fornece o ggplot2 entre outros :
+library(tidyverse) Usando o primeiro gráfico para responder algumas perguntas : 1. Carros com motores maiores consomem mais combustível que carros com motores menores ?</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">December 26, 2020</span>
+        <a
+        href="/posts/r/cap02_03/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/r/cap01/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/img/img_ds_1.svg'/>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Cap 01 - Grupo de Estudos R for Data Science</h5>
+        <p class="card-text post-summary">Cap1 R for Data Science livro de Garrett Grolemund e Hadley Wickham ensina as mais importantes ferramentas em R, após este estudo o ciêntista de dados terá uma variedade de ferramentas, técnias para desafios em ciência de dados usando R
+Instaland os primeiros pacotes No primeiro capítulo do livro instalamos o Tidyverse e outros pacotes que serão utilizados no livro R for Data Science, ao carregar o pacote ele nos oferece algumas informações :</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">December 16, 2020</span>
+        <a
+        href="/posts/r/cap01/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+      
+        <div class="post-card">
+  <a href="/posts/r/intro/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/img/img_ds_1.svg'/>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Grupo de Estudos R4DS</h5>
+        <p class="card-text post-summary">Intro Recentimente descobri a comunidade do slack R4DS que estudo os livros de R for Data Science em formatos de grupos de estudos, a cada semana o grupo ira estudar um capítulo e meu objetivo é anotar tópicos importantes deste estudo.
+Motivação Estudar ciência de dados é complexo, sozinho torna ainda mais difícil, meu objetivo participando da comunidade é aprender com analistas mais experiêntes, poder contribuir de alguma forma com o grupo, desenvolver soft skills, inglês e diversas outras habilidades.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">December 16, 2020</span>
+        <a
+        href="/posts/r/intro/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+      
+    </div>
+    <div class="paginator">
+      
+
+
+    </div>
+  </div>
+</section>
+
+
+      
+       
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>brunodeabreu@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;55 31 98955-4001</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+    <script src="/assets/js/list.js"></script>
+
+  </body>
+</html>

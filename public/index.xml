@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bruno</title>
+    <link>https://brunodeabreu.netlify.app/</link>
+    <description>Recent content on Bruno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Dec 2020 08:08:00 +0300</lastBuildDate><atom:link href="https://brunodeabreu.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cap 02 03 - Grupo de Estudos R for Data Science</title>
+      <link>https://brunodeabreu.netlify.app/posts/r/cap02_03/</link>
+      <pubDate>Sat, 26 Dec 2020 08:08:00 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/r/cap02_03/</guid>
+      <description>Visualização de Dados Livro :R for Data Science 1
+Neste segundo capítulo os autores nos ensinam como visualizar dados utilizando ggplot2 e apresenta o conceito de gramática dos gráficos e como criar plots em camadas.
+Importando o pacote tidyverse para que nos fornece o ggplot2 entre outros :
+library(tidyverse) Usando o primeiro gráfico para responder algumas perguntas : 1. Carros com motores maiores consomem mais combustível que carros com motores menores ?</description>
+    </item>
+    
+    <item>
+      <title>Deploy and consume models </title>
+      <link>https://brunodeabreu.netlify.app/posts/ds-cert/dp-100_post4/</link>
+      <pubDate>Tue, 22 Dec 2020 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/ds-cert/dp-100_post4/</guid>
+      <description>Intro Este é o quarto post com anotações do curso preparatório para certificação DP-100 e aborta tópicos criação de compute targets e o que eles precisam ter para funcionar como um serviço, deploy de modelos as a service, criação de pipeline para batch inferencing e Publish as a designer pipeline as a web service.
+Deploy and consume models Deploy models with Azure ML Podemos fazer deploy do modelo como web service ou como um azure IoT device, o workflow é similar.</description>
+    </item>
+    
+    <item>
+      <title>Optimize and manage models </title>
+      <link>https://brunodeabreu.netlify.app/posts/ds-cert/dp-100_post3/</link>
+      <pubDate>Mon, 21 Dec 2020 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/ds-cert/dp-100_post3/</guid>
+      <description>Intro Este terceiro post com anotações feitas no curso preparatório para certificação DP-100 e aborta tópicos de administração e otimização de modelos:
+  Com a grande diversidade de algoritmos e técnicas computacionais e estatísticas utilizar AutoML proporciona ao ciêntista de dados experimentar e avaliar diversos espaços de hipóses com vários algoritmos. Outra facilidade do Azure ML é o Hyperdriver que auxilia na etapa de tune de hiper-parâmetros.
+  Outro detalhe importante é a possibilidade de explicar e interpretar os modelos, &amp;quot;-Como o modelo foi criado?</description>
+    </item>
+    
+    <item>
+      <title>Run experiments and train models</title>
+      <link>https://brunodeabreu.netlify.app/posts/ds-cert/dp-100_post2/</link>
+      <pubDate>Fri, 18 Dec 2020 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/ds-cert/dp-100_post2/</guid>
+      <description>Intro Este segundo post com anotações feitas no curso preparatório para certificação DP-100 e aborta tópicos de experimentos e treinamento de modelos.
+Run experiments and train models Tópicos:
+ Criando modelos usando Azure Machine Learning Executando training scripts no Azure ML Workspace Gerando métricas a partir dos experimentos Automatizando o processo de treinamento do modelo  Azure Machine Learning SDK for Python  Azure ML Python SDK permite criar e executar machine learning workflows no ambiente Azure Machine Learning</description>
+    </item>
+    
+    <item>
+      <title>Set up an Azure Machine Learning</title>
+      <link>https://brunodeabreu.netlify.app/posts/ds-cert/dp-100/</link>
+      <pubDate>Thu, 17 Dec 2020 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/ds-cert/dp-100/</guid>
+      <description>Intro Este é o primeiro post de anotações que fiz durante o curso preparatório para certificação DP-100, esta parte contém informações e orientações criar e configurar todo Data Science Enviroment na cloud da Microsoft Azure utilizando Azure Machine Learning.
+Para obter o certificado Exam DP-100: Designing and Implementing a Data Science Solution on Azure temos o plano de estudo free criado pela microsoft que descreve Criar soluções de IA com o Azure Machine Learning, que é composto de 14 módulos, aproximadamente 14hrs de estudo com diversos Labs no github mslearn-dp100.</description>
+    </item>
+    
+    <item>
+      <title>Cap 01 - Grupo de Estudos R for Data Science</title>
+      <link>https://brunodeabreu.netlify.app/posts/r/cap01/</link>
+      <pubDate>Wed, 16 Dec 2020 08:08:00 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/r/cap01/</guid>
+      <description>Cap1 R for Data Science livro de Garrett Grolemund e Hadley Wickham ensina as mais importantes ferramentas em R, após este estudo o ciêntista de dados terá uma variedade de ferramentas, técnias para desafios em ciência de dados usando R
+Instaland os primeiros pacotes No primeiro capítulo do livro instalamos o Tidyverse e outros pacotes que serão utilizados no livro R for Data Science, ao carregar o pacote ele nos oferece algumas informações :</description>
+    </item>
+    
+    <item>
+      <title>Grupo de Estudos R4DS</title>
+      <link>https://brunodeabreu.netlify.app/posts/r/intro/</link>
+      <pubDate>Wed, 16 Dec 2020 08:08:00 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/r/intro/</guid>
+      <description>Intro Recentimente descobri a comunidade do slack R4DS que estudo os livros de R for Data Science em formatos de grupos de estudos, a cada semana o grupo ira estudar um capítulo e meu objetivo é anotar tópicos importantes deste estudo.
+Motivação Estudar ciência de dados é complexo, sozinho torna ainda mais difícil, meu objetivo participando da comunidade é aprender com analistas mais experiêntes, poder contribuir de alguma forma com o grupo, desenvolver soft skills, inglês e diversas outras habilidades.</description>
+    </item>
+    
+    <item>
+      <title>Python - Data Science Toolkit</title>
+      <link>https://brunodeabreu.netlify.app/posts/python/datasicence_toolkit/</link>
+      <pubDate>Tue, 15 Dec 2020 08:08:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/python/datasicence_toolkit/</guid>
+      <description>O que é o toolkit ? O toolkit apresentado no curso Python Data Science toolbox da Datacamp é uma série de ferramentas do python que suportam o trabalho do ciêntista de dados. Ferramentas como funções built-in do python, criação de funções, lambda, iterators, list comprehensions e generators.
+Em python temos muitas ferramentas prontas mas é muito importante que o analista saiba usar o core da linguagem como mostra Hugo Bowne-Anderson no blog Dask and the PyData Stack na figura abaixo, python é a primeira camada do pydata stack.</description>
+    </item>
+    
+    <item>
+      <title>Python Básico</title>
+      <link>https://brunodeabreu.netlify.app/posts/python/python-basico/</link>
+      <pubDate>Sat, 12 Dec 2020 08:06:25 +0600</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/python/python-basico/</guid>
+      <description>Em meus estudos muitas vezes me pego revendo conceitos básicos, na minha opinião isso é importante para que o conceito seja enraizado e aquele tópico se torne simples, o cursos Introduction to Python e Intermediate Python na Datacamp você encontra todos esses tópicos
+ Tipos de variáveis Listas Funções e Pacotes Numpy Matplotlib Discionários Pandas  Nos dois primeiros cursos da DataCamp já somos apresentados a alguns pacotes utilizados em ciência de dados, numpy, matplotlib e pandas, esses pacotes são fantásticos se este é seu primeiro contato deixa eu adicionar algumas informações sobre eles para você:</description>
+    </item>
+    
+  </channel>
+</rss>

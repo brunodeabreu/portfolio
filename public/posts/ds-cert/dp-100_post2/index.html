@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Run experiments and train models</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="notas curso de data science certificação" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Bruno</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/ds-cert/">DS Certification Study</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100/">1. DP-100 Set up an Azure Machine Learning workspace</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/ds-cert/dp-100_post2/">2. DP-100 Run experiments and train models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post3/">3. DP-100 Optimize and manage models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post4/">4. DP-100 Deploy and consume models</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/python-basico/">Python Básico</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/datasicence_toolkit/">Python Data Science Tookit</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/r/">R</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/intro/">Grupo de Estudos R4DS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap01/">Cap 01</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap02_03/">Cap 02 &amp; 03</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://brunodeabreu.netlify.app/posts/img/dp100.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/john.png'/>
+          <h5 class="author-name">Bruno de Abreu Machado</h5>
+          <p>December 18, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Run experiments and train models</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h1 id="intro">Intro</h1>
+<p>Este segundo post com anotações feitas no curso preparatório para certificação <strong>DP-100</strong> e aborta tópicos de experimentos e treinamento de modelos.</p>
+<br>
+<h2 id="run-experiments-and-train-models">Run experiments and train models</h2>
+<p><em>Tópicos:</em></p>
+<ul>
+<li>Criando modelos usando Azure Machine Learning</li>
+<li>Executando training scripts no Azure ML Workspace</li>
+<li>Gerando métricas a partir dos experimentos</li>
+<li>Automatizando o processo de treinamento do modelo</li>
+</ul>
+<br>
+<h3 id="azure-machine-learning-sdk-for-python">Azure Machine Learning SDK for Python</h3>
+<blockquote>
+<p>Azure ML Python SDK permite criar e executar machine learning workflows no ambiente <em>Azure Machine Learning</em></p>
+</blockquote>
+<ul>
+<li>Podemos utiliar para:
+<ul>
+<li>Interactive python session</li>
+<li>Jupyter notebooks</li>
+<li>Visual Studio Code</li>
+<li>outras IDE&rsquo;s</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<p>Utilizando essas ferramentas podemos <strong>explorar</strong>,  <strong>preparar</strong>, <strong>gerenciar</strong> todo lifecycle dos datasets a serem utilizados nos experimentos de machine learning</p>
+</li>
+<li>
+<p>Com Azure ML podemos administrar os recursos da cloud para <strong>monitor</strong>, criar <strong>logging</strong> e <strong>organizar</strong> todos os experimentos de machine learning</p>
+</li>
+<li>
+<p>Podemos treinar modelos localmente ou usando recursos da cloud, incluindo GPU&rsquo;s</p>
+</li>
+<li>
+<p>Azure oferece <em>Automate Machine Learning</em> que podemos configurar uma série de parâmetros para treinar os modelos. Esta tool controla toda iteração com algorítimos, hyper-parâmetro e seleciona o melhor modelo para realizar as predições</p>
+</li>
+<li>
+<p>Por fim, podemos realizar deploy em web services convertendo os modelos em RESTful services que podem ser consumidos por qualquer aplicação</p>
+</li>
+</ul>
+<br>
+<h3 id="run-configuration">Run Configuration</h3>
+<p>Um Job genérico de treinamento pode ser definido com <strong>RunConfiguration</strong>, ele é usado com scripts para treinar modelos em <em>compute target</em>, porém é possível iniciar um run configuration na máquina local e depois fazer o switch para um compute target na cloud, um detalhe é que quando mofidicado o compute target podemos apenas modificar o run configuration a ser utilizado oferencendo mais flexibilidade para os jobs de machine learning.</p>
+<br>
+<h3 id="automated-machine-learning">Automated Machine Learning</h3>
+<p>Estes são os steps do <strong>Automated Machine Learning</strong>, inciando por definir iterações, hyperparametros e configurações, realizando o treinamento e assim como qualquer boa tool de <code>automl</code> irá lhe oferecer o melhor modelo baseado nos estimators que ele trabalha.</p>
+<p><img src="/posts/DS-cert/img/auto_ml.png" alt="auto_ml"></p>
+<br>
+<h3 id="estimators">Estimators</h3>
+<p>É uma forma fácil de treinar modelos utilizando os mais populares frameworks de machine learning, Azure também oferece o <em>estimator class</em> que auxilia a construir run configurations.</p>
+<p>Podemos utilizar diversos frameworks como <strong>Pytorch</strong>, <strong>TensorFlow</strong> e <strong>scikit-learn</strong>, todos são oferecidos na plataforma além de possibilitar criar estimadores genéricos.</p>
+<br>
+<h3 id="pipeline">Pipeline</h3>
+<p>Criar pipelines organizados auxilia o ciêntista de dados a reproduzir e agilizar o processo de análise de dados.</p>
+<p><img src="/posts/DS-cert/img/pipeline_ml.png" alt="pipeline"></p>
+<br>
+<ul>
+<li>
+<p>Pipeline consiste em datasets e modelos analíticos que se conectam para diferentes usos como :</p>
+<ul>
+<li>Criar pipeline para treinar um ou mais modelos</li>
+<li>Criar pipeline para realizar predições em real-time ou batch</li>
+<li>Criar pipline para realizar limpeza de dados</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Pipeline oference a possibilidade de reusar códigos e organizar os projetos</p>
+</blockquote>
+<p>Quando editamos o pipeline no designer ele é salvo como <strong>pipeline draft</strong>, um pipeline válido tem as seguintes características:</p>
+<ul>
+<li>Datasets pode conectar somente em módulos</li>
+<li>Módulos pode conectar somente em datasets e em outros módulos</li>
+<li>Todas as portas <em>(input ports)</em> dos módulos precisam ser conectadas com o data flow</li>
+<li>Todos parâmetros dos módulos precisam ser configurados</li>
+</ul>
+<p>Toda vez que um pipeline é executado a configuração do pipeline é armazenada na workspace, em <em>pipeline run</em>, onde pode ser investigado, auditado e contém todos os logs para troubleshooting. Todos os <em>pipeline runs</em> são agrupados em <em>experimentos</em> para organizar.</p>
+<p>Podemos definir um <strong>Compute Target</strong> para todo o pipeline, assim todos os módulos irão usar o mesmo compute target por default, ou podemos definir <strong>compute targets</strong> específicos para módulos.</p>
+<br>
+<h3 id="machine-learning-designer">Machine Learning Designer</h3>
+<p>Tool criada pela microsoft que facilita a criação e estruturação do pipeline e experimento, onde é possível por <em>&ldquo;drag and drop&rdquo;</em> montar todo pipeline de análise de dados.</p>
+<p><img src="/posts/DS-cert/img/designer_ml.png" alt="designer"></p>
+<br>
+<p>Este é um canvas que descreve a utilização do designer:</p>
+<ul>
+<li>Drag-and-drop datasets e modelos no canvas</li>
+<li>Conectar módulos e criar um pipeline draft</li>
+<li>Submeter o pipeline run usando recursos computacionais do Azure Machine Learning workspace</li>
+<li>Converter o training pipeline em inference pipeline</li>
+<li>Publicar o pipeline em <em>&ldquo;REST pipeline endpoint&rdquo;</em> para submeter novos pipline runs com diferentes parâmetros e datasets</li>
+<li>Publicar, treinar pipeline e reusar endpoints para treinar múltiplos modelos</li>
+<li>Publicar batch inference pipeline para realizar predições em novos dados usando o modelo</li>
+<li>Realizar deploy em &ldquo;real-time inference&rdquo; para endpoint e realizando predições em novos dados em tempo real.</li>
+</ul>
+<p><img src="/posts/DS-cert/img/canvas_design.png" alt="designer-canvas"></p>
+<br>
+<h3 id="cli">CLI</h3>
+<p>Azure CLI é uma extenção que possibilita trabalhar com Azure Machine Learning utilizando comandos CLI cross-plataform, possibilitando automatizar tarefas como treinamento de modelos, entre outras.</p>
+<h3 id="azure-machine-learning-workspace---python-create-and-connect">Azure Machine Learning Workspace - Python create and connect</h3>
+<p>Para carregar as configurações a partir de um arquivo <code>config.json</code> que contem workspace name, subscription e resource group, precisamos :</p>
+<pre><code>from azureml.core import Workspace
+ws = Workspace.from_config()
+</code></pre><br>
+<p>Para criar um experimento na workspace:</p>
+<pre><code>from azureml.core import Experiment
+experiment = Experiment(workspace = ws, name='&lt;experiment_name&gt;')
+</code></pre><br>
+<h3 id="track-and-monitor-experiments">Track and Monitor Experiments</h3>
+<p>Na Azure ML podemos utilizar as seguintes métricas para acompanhar os experimentos.</p>
+<p><strong>Escolhendo uma opçao de Logging</strong></p>
+<ul>
+<li><code>Run.start_logging</code> : Adiciona <em>logging functions</em> no script de treinamento e inicia um logging <em>&ldquo;interativo&rdquo;</em>&quot; na sessão</li>
+</ul>
+<br>
+<ul>
+<li><code>ScriptRunConfig</code> : Adiciona logging functions no script de treinamento e faz load da script folder</li>
+</ul>
+<p><img src="/posts/DS-cert/img/script_run_config.png" alt="script-runconfig"></p>
+<br>
+<h3 id="mlflow">MLflow</h3>
+<p>Outra forma de fazer track do modelo ou processo de ML é utilizando a biblioteca open source <a href="https://mlflow.org/">MLflow</a> que oferece a possibilidade de administrar todo o ciclo de vida de um experimento em machine learning, com ela podemos, fazer track do experimento, obter métricas e armazenar artefatos(<em>stats</em>) do modelo na Azure Machine Learning Workspace</p>
+<ul>
+<li>Local runs:</li>
+</ul>
+<pre><code># instalar MLflow
+pip install azureml-mlflow
+
+...
+...
+
+# importar libs
+import mlflow
+from azureml.core import Workspace
+
+ws = Workspace.from_config()
+mlflow.set_tracking_uri(ws.get_mlflow_tracking_uri())
+
+...
+...
+
+experiment_name = 'experiment_with_mlflow'
+mflow.set_experiment(experiment_name)
+
+with mlflow.start_run():
+    mlflow.log_metric('alpha', 0.03)
+</code></pre><br>
+<ul>
+<li>Track remote runs:</li>
+</ul>
+<pre><code>from azureml.core.enviroment import Enviroment
+from azureml.core.conda_depedencies improt CondaDependencies
+from azureml.core import ScriptRunConfig
+
+exp = Experiment(workspace = 'my_workspace', name = 'my_experiment')
+
+cd = CondaDependencies.create(pip_package=['mlflow', 'azureml-mlflow'])
+
+mlflow_env.python.conda_dependencies = cd
+
+src = ScriptRunConfig(source_directory = './my_script_location', script='my_training_script.py')
+
+src.run_config.target = 'my-remote-compute-compute'
+src.run_config.enviroment = mlflow_env
+
+</code></pre><br>
+<ul>
+<li>Logging the metrics</li>
+</ul>
+<pre><code>import mlflow
+
+with mlflow.start_run():
+    mlflow.log_metrics('sample', 1.23)
+    
+    
+run = exp.submit(src)
+
+</code></pre><h3 id="start-a-run-and-its-logging-process">Start a run and its logging process</h3>
+<p><strong>Usando SDK</strong></p>
+<pre><code>import azureml.core
+from azureml.core import Workspace, Experiment, Run
+from azureml.core import ScriptRunConfig
+
+ws = Workspace.from_config()
+exp = Expriment(workspace = ws, name = 'explore-runs')
+
+
+notebook_run = exp.start_logging()
+notebook_run.log(name = 'message', value = 'Hello from run!&quot;&quot;)
+
+</code></pre><br>
+<p><strong>Usando CLI</strong></p>
+<pre><code>az ml run submit-script -c sklearn -e testexperiment train.py
+</code></pre><br>
+<p><strong>Usando Azure Machine Learning Studio</strong></p>
+<ol>
+<li>Configure <em>compute target</em> para o pipeline</li>
+<li>Selecine <em>Run</em>  no pipeline canvas</li>
+<li>Selecione um experiment para agrupar os pipeline runs</li>
+</ol>
+<h3 id="monitoring-the-status">Monitoring the status</h3>
+<p><strong>Usando SDK</strong></p>
+<pre><code># get the status of a run with get_status()
+print(notebook_run.get_status())
+
+# to get the un ID, excution time and all the details
+print(notebook_run.get_details())
+
+
+# check if complete successfully
+print(notebook_run.get_status())
+
+# using with...as design pattern, the run will auto mark complete
+with exp.start_logging() as notebook_run:
+  notebook_run.log(name = 'message', value= 'Hello run!')
+  print(notebook_run.get_status())
+
+print(notebook_run.get_status())
+</code></pre><h3 id="cancel-or-fail-runs">Cancel or fail runs</h3>
+<p><strong>Usando SDK</strong></p>
+<pre><code>run_config = ScriptRunConfig(source_directory = '.', script='hello_with_delay.py')
+local_print_run = exp.submit(run_config)
+print(local_script_run.get_status())
+
+local_script_run.cancel()
+print(local_script_run.get_status())
+</code></pre><br>
+<p><strong>Usando CLI</strong></p>
+<pre><code>az ml run cancel -r runid -w workspace_name -e experiment_name
+</code></pre><br>
+<h2 id="pratical-questions">Pratical Questions:</h2>
+<blockquote>
+<p>What 5 steps are included in creating a Pipeline ?</p>
+</blockquote>
+<p>A. Prepare Data</p>
+<p>B. Create Datastore</p>
+<p>C. Train Data</p>
+<p>D. Construct the pipeline</p>
+<p>E. Create a Workflow</p>
+<p>F. Define Compute output</p>
+<p>G. Define Training Compute</p>
+<p>H. Define a Pipeline data object</p>
+<p>I. Run an Estimator</p>
+<p>J. Run an Evaluator</p>
+<p><strong>Resposta</strong> : H, A, I, C, D,</p>
+<blockquote>
+<p>Why do you need to register the model in an Azure ML Workspace ?</p>
+</blockquote>
+<p>A. In order to be able to load the model when needed</p>
+<p>B. The model is registered to configure the deployment compute</p>
+<p>C. Part of the Model.deploy script</p>
+<p>D. Needed to be able to construct the pipeline</p>
+<p>E. Part of the real time inferencing service</p>
+<p><strong>Resposta</strong> : A</p>
+<blockquote>
+<p>Which python SDK code will deploy a model ?</p>
+</blockquote>
+<p><img src="/posts/DS-cert/img/question_deploy_model.png" alt="Q reploy"></p>
+<p><strong>Resposta</strong> : C</p>
+<blockquote>
+<p>Which logging function would you use to create an interactive log in a jupyter notebook ?</p>
+</blockquote>
+<p>A. ScriptRunConfig</p>
+<p>B. Log.start</p>
+<p>C. run.getmetrics()</p>
+<p>D. Run.start_logging</p>
+<p><strong>Resposta</strong> : D</p>
+<h2 id="learning-path">Learning Path</h2>
+<blockquote>
+<p><a href="https://docs.microsoft.com/pt-br/learn/paths/build-ai-solutions-with-azure-ml-service/">Criar soluções de IA com o Azure Machine Learning</a></p>
+</blockquote>
+<ul>
+<li>
+<p><a href="https://tinyurl.com/amlvhol">Microsoft Learn - Azure Machine Learning Labs</a></p>
+</li>
+<li>
+<p><a href="aka.ms/MSCert">Microsoft Certifications</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/learn/certifications/exams/dp-100">Exam details page</a></p>
+</li>
+</ul>
+<h2 id="lab">Lab</h2>
+<blockquote>
+<p>Hands on Lab <a href="https://microsoftlearning.github.io/mslearn-dp100/">Azure Machine Learning Exercises</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/tree/master/labdocs">MicrosoftDocs/mslearn-aml-labs</a>
+<ul>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab05.md">Getting Started with Azure Machine Learning</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab05.md">Creating a Pipeline</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab06.md">Deploying a Model as a Real-Time Service</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab07.md">Creating a Batch Inferencing Service</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab08.md">Tuning Hyperparameters</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li><a href="https://github.com/MicrosoftLearning/DP100">MicrosoftLearning/DP100</a></li>
+</ul>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/brunodeabreu/portfolio/edit/master/content/posts/DS-cert/dp-100_post2.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/ds-cert/dp-100_post3/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Optimize and manage models </span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/ds-cert/dp-100/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Set up an Azure Machine Learning</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#run-experiments-and-train-models">Run experiments and train models</a>
+      <ul>
+        <li><a href="#azure-machine-learning-sdk-for-python">Azure Machine Learning SDK for Python</a></li>
+        <li><a href="#run-configuration">Run Configuration</a></li>
+        <li><a href="#automated-machine-learning">Automated Machine Learning</a></li>
+        <li><a href="#estimators">Estimators</a></li>
+        <li><a href="#pipeline">Pipeline</a></li>
+        <li><a href="#machine-learning-designer">Machine Learning Designer</a></li>
+        <li><a href="#cli">CLI</a></li>
+        <li><a href="#azure-machine-learning-workspace---python-create-and-connect">Azure Machine Learning Workspace - Python create and connect</a></li>
+        <li><a href="#track-and-monitor-experiments">Track and Monitor Experiments</a></li>
+        <li><a href="#mlflow">MLflow</a></li>
+        <li><a href="#start-a-run-and-its-logging-process">Start a run and its logging process</a></li>
+        <li><a href="#monitoring-the-status">Monitoring the status</a></li>
+        <li><a href="#cancel-or-fail-runs">Cancel or fail runs</a></li>
+      </ul>
+    </li>
+    <li><a href="#pratical-questions">Pratical Questions:</a></li>
+    <li><a href="#learning-path">Learning Path</a></li>
+    <li><a href="#lab">Lab</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>brunodeabreu@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;55 31 98955-4001</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

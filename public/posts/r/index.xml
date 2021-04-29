@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Bruno</title>
+    <link>https://brunodeabreu.netlify.app/posts/r/</link>
+    <description>Recent content in R on Bruno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Dec 2020 08:08:00 +0300</lastBuildDate><atom:link href="https://brunodeabreu.netlify.app/posts/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cap 02 03 - Grupo de Estudos R for Data Science</title>
+      <link>https://brunodeabreu.netlify.app/posts/r/cap02_03/</link>
+      <pubDate>Sat, 26 Dec 2020 08:08:00 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/r/cap02_03/</guid>
+      <description>Visualização de Dados Livro :R for Data Science 1
+Neste segundo capítulo os autores nos ensinam como visualizar dados utilizando ggplot2 e apresenta o conceito de gramática dos gráficos e como criar plots em camadas.
+Importando o pacote tidyverse para que nos fornece o ggplot2 entre outros :
+library(tidyverse) Usando o primeiro gráfico para responder algumas perguntas : 1. Carros com motores maiores consomem mais combustível que carros com motores menores ?</description>
+    </item>
+    
+    <item>
+      <title>Cap 01 - Grupo de Estudos R for Data Science</title>
+      <link>https://brunodeabreu.netlify.app/posts/r/cap01/</link>
+      <pubDate>Wed, 16 Dec 2020 08:08:00 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/r/cap01/</guid>
+      <description>Cap1 R for Data Science livro de Garrett Grolemund e Hadley Wickham ensina as mais importantes ferramentas em R, após este estudo o ciêntista de dados terá uma variedade de ferramentas, técnias para desafios em ciência de dados usando R
+Instaland os primeiros pacotes No primeiro capítulo do livro instalamos o Tidyverse e outros pacotes que serão utilizados no livro R for Data Science, ao carregar o pacote ele nos oferece algumas informações :</description>
+    </item>
+    
+    <item>
+      <title>Grupo de Estudos R4DS</title>
+      <link>https://brunodeabreu.netlify.app/posts/r/intro/</link>
+      <pubDate>Wed, 16 Dec 2020 08:08:00 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/r/intro/</guid>
+      <description>Intro Recentimente descobri a comunidade do slack R4DS que estudo os livros de R for Data Science em formatos de grupos de estudos, a cada semana o grupo ira estudar um capítulo e meu objetivo é anotar tópicos importantes deste estudo.
+Motivação Estudar ciência de dados é complexo, sozinho torna ainda mais difícil, meu objetivo participando da comunidade é aprender com analistas mais experiêntes, poder contribuir de alguma forma com o grupo, desenvolver soft skills, inglês e diversas outras habilidades.</description>
+    </item>
+    
+  </channel>
+</rss>

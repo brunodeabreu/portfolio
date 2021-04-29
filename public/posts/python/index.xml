@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Bruno</title>
+    <link>https://brunodeabreu.netlify.app/posts/python/</link>
+    <description>Recent content in Python on Bruno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Dec 2020 08:08:25 +0300</lastBuildDate><atom:link href="https://brunodeabreu.netlify.app/posts/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python - Data Science Toolkit</title>
+      <link>https://brunodeabreu.netlify.app/posts/python/datasicence_toolkit/</link>
+      <pubDate>Tue, 15 Dec 2020 08:08:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/python/datasicence_toolkit/</guid>
+      <description>O que é o toolkit ? O toolkit apresentado no curso Python Data Science toolbox da Datacamp é uma série de ferramentas do python que suportam o trabalho do ciêntista de dados. Ferramentas como funções built-in do python, criação de funções, lambda, iterators, list comprehensions e generators.
+Em python temos muitas ferramentas prontas mas é muito importante que o analista saiba usar o core da linguagem como mostra Hugo Bowne-Anderson no blog Dask and the PyData Stack na figura abaixo, python é a primeira camada do pydata stack.</description>
+    </item>
+    
+    <item>
+      <title>Python Básico</title>
+      <link>https://brunodeabreu.netlify.app/posts/python/python-basico/</link>
+      <pubDate>Sat, 12 Dec 2020 08:06:25 +0600</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/python/python-basico/</guid>
+      <description>Em meus estudos muitas vezes me pego revendo conceitos básicos, na minha opinião isso é importante para que o conceito seja enraizado e aquele tópico se torne simples, o cursos Introduction to Python e Intermediate Python na Datacamp você encontra todos esses tópicos
+ Tipos de variáveis Listas Funções e Pacotes Numpy Matplotlib Discionários Pandas  Nos dois primeiros cursos da DataCamp já somos apresentados a alguns pacotes utilizados em ciência de dados, numpy, matplotlib e pandas, esses pacotes são fantásticos se este é seu primeiro contato deixa eu adicionar algumas informações sobre eles para você:</description>
+    </item>
+    
+  </channel>
+</rss>

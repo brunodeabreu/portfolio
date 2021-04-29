@@ -1,11 +1,11 @@
 ---
-title: "Intro"
+title: "Grupo de Estudos R4DS"
 date: 2020-12-16T08:08:00+03:00
 hero: /posts/img/img_ds_1.svg
 description: Grupo de Estudos R4DS - intro
 menu:
   sidebar:
-    name: Intro
+    name: Grupo de Estudos R4DS
     identifier: r-posts-grupo-de-estudos-intro
     weight: 10
     parent: r-posts

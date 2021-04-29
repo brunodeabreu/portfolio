@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python - Data Science Toolkit</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Python Data Science tookit" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Bruno</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/ds-cert/">DS Certification Study</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100/">1. DP-100 Set up an Azure Machine Learning workspace</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post2/">2. DP-100 Run experiments and train models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post3/">3. DP-100 Optimize and manage models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/ds-cert/dp-100_post4/">4. DP-100 Deploy and consume models</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/python/">Python</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/python-basico/">Python Básico</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/python/datasicence_toolkit/">Python Data Science Tookit</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/r/">R</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/intro/">Grupo de Estudos R4DS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap01/">Cap 01</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap02_03/">Cap 02 &amp; 03</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://brunodeabreu.netlify.app/posts/img/Data_Mining.svg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/john.png'/>
+          <h5 class="author-name">Bruno de Abreu Machado</h5>
+          <p>December 15, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Python - Data Science Toolkit</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="o-que-é-o-toolkit-">O que é o toolkit ?</h2>
+<p>O toolkit apresentado no curso <a href="https://learn.datacamp.com/courses/python-data-science-toolbox-part-1">Python Data Science toolbox</a>  da <a href="datacamp.com">Datacamp</a> é uma série de ferramentas do python que suportam o trabalho do ciêntista de dados. Ferramentas como funções built-in do python, criação de funções, lambda, iterators, list comprehensions e generators.</p>
+<p>Em python temos muitas ferramentas prontas mas é muito importante que o analista saiba usar o core da linguagem como mostra Hugo Bowne-Anderson no blog <a href="https://coiled.io/blog/pydata-dask/">Dask and the PyData Stack</a> na figura abaixo, python é a primeira camada do pydata stack.</p>
+<p><img src="https://mk0coiled27knr0w73eb.kinstacdn.com/wp-content/uploads/jake-pydata-eco-pycon-2017.png" alt="PyData Stack"></p>
+<hr>
+<h2 id="python---funções">Python - funções</h2>
+<p>Python, a base do pydata stack oferece diversos recursos que pdoemos utilizar, são normalmente chamados de <code>built-in functions</code>:
+<br></p>
+<p><strong>Built-in functions</strong></p>
+<ul>
+<li>str()</li>
+<li>min()</li>
+<li>max()</li>
+<li>sum()</li>
+<li>type(), etc&hellip;</li>
+</ul>
+<h2 id="criando-suas-próprias-funções">Criando suas próprias funções</h2>
+<p>A syntax para criar sua própria função é bem simples, outras refências no site <a href="https://www.w3schools.com/python/python_functions.asp">Python Functions</a></p>
+<pre><code>def function_name(value1, value2):   # Function header
+  &quot;&quot;&quot; Doc about what the function does &quot;&quot;&quot;
+  ...
+  ...
+  ...
+  return ...
+
+function_name(param1, param2) 
+</code></pre><p>Alguns detalhes importantes sobre funções:</p>
+<ul>
+<li><strong>Nested functions</strong>:  funções dentro de funções, utilizando essa função é importante se atentar ao espoco das variáveis.</li>
+</ul>
+<p><em>Exemplo de Nested Function</em></p>
+<pre><code># Define echo
+def echo(n):
+   &quot;&quot;&quot;Return the inner_echo function.&quot;&quot;&quot;
+
+   # Define inner_echo
+   def inner_echo(word1):
+       &quot;&quot;&quot;Concatenate n copies of word1.&quot;&quot;&quot;
+       echo_word = word1 * n
+       return echo_word
+
+   # Return inner_echo
+   return inner_echo
+
+# Call echo: twice
+twice = echo(2)
+
+# Call echo: thrice
+thrice = echo(3)
+
+# Call twice() and thrice() then print
+print(twice('hello '), thrice('hello '))
+
+
+# output &gt; hello hello  hello hello hello
+</code></pre><ul>
+<li><strong>Parâmetros flexíveis</strong>: Sobre os argumentos podemos ter casos especiais como ao utilizar valores default que é definido na criação da função como por exemplo <code>x=5</code>, neste caso caso não seja informado o valor de <code>x</code> ele recebe por default <code>5</code> , em outros casos não sabemos quantos parâmetros deveremos passar definimos assim a função com <code>*args</code> nesse caso todos os parametros são atribuido em uma tupla no corpo da função, aprofundando mais temos a opção de passar <code>**kwargs</code> argumentos seguidos de identificadores.</li>
+</ul>
+<p><em>Exemplo de *args apresentado no curso datacamp</em></p>
+<pre><code> # Define gibberish
+def gibberish(*args):
+    &quot;&quot;&quot;Concatenate strings in *args together.&quot;&quot;&quot;
+
+    # Initialize an empty string: hodgepodge
+    hodgepodge = ''
+
+    # Concatenate the strings in args
+    for word in args:
+        hodgepodge += word
+
+    # Return hodgepodge
+    return hodgepodge
+
+# Call gibberish() with one string: one_word
+one_word = gibberish('luke')
+
+# Call gibberish() with five strings: many_words
+many_words = gibberish(&quot;luke&quot;, &quot;leia&quot;, &quot;han&quot;, &quot;obi&quot;, &quot;darth&quot;)
+
+# Print one_word and many_words
+print(one_word)
+print(many_words)
+</code></pre><hr>
+<p><em>Exemplo de **kwargs apresentado no curso datacamp</em></p>
+<pre><code> # Define report_status
+def report_status(**kwargs):
+    &quot;&quot;&quot;Print out the status of a movie character.&quot;&quot;&quot;
+
+    print(&quot;\nBEGIN: REPORT\n&quot;)
+
+    # Iterate over the key-value pairs of kwargs
+    for key, value in kwargs.items():
+        # Print out the keys and values, separated by a colon ':'
+        print(key + &quot;: &quot; + value)
+
+    print(&quot;\nEND REPORT&quot;)
+
+# First call to report_status()
+report_status(name='luke', affiliation='jedi', status='missing')
+
+# Second call to report_status()
+report_status(name='anakin', affiliation='sith lord', status='deceased')
+</code></pre><hr>
+<h2 id="lambda-mapreduce">Lambda, Map/Reduce</h2>
+<p>Lambda é uma recurso poderoso que pode ser utilizado para criar funções anônimas. Separei o vídeo abaixo de <a href="https://github.com/joeyajames">Joe James</a>, o nodebook pode ser encontrado no link <a href="https://github.com/joeyajames/Python/blob/master/Lambda%20Functions/Python%20Lambda%20Functions.ipynb">Python Lambda Functions</a></p>
+<br>
+<h3 id="python-lambda-functions-explained">Python LAMBDA Functions Explained</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Ob9rY6PQMfI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<br>
+<h2 id="iterators">Iterators</h2>
+<p>Como destacado por Hugo no curso <a href="https://learn.datacamp.com/courses/python-data-science-toolbox-part-2">Python Data Science toolbox</a> não temos razão para temer iterators, já usamos em for loops quando interagimos em cada caracter de uma string, ou em uma sequencia de números, são objetos &ldquo;iterables&rdquo; : <code>lists</code>, <code>strings</code> , <code>dicts</code> e  <code>file connections</code> .</p>
+<ul>
+<li>
+<p>Iterators team um método chamado <code>next()</code> que retorna o valor seguinte até o final uma mensagem <code>StopIteration</code></p>
+</li>
+<li>
+<p>utilizando <code>*</code> podemos imprimir todos os objetos do iterator</p>
+</li>
+</ul>
+<pre><code>word = 'Data'
+it = iter(word)
+print(*it)
+
+# output : D a t a
+
+</code></pre><br>
+<ul>
+<li>
+<p>Para iterar em um dicionário utilizamos o método <code>&lt;dict name&gt;.items()</code></p>
+</li>
+<li>
+<p>Para iterar em um file connection  criamos o objeto <code>it = iter()</code> e utilizamos <code>next(it)</code></p>
+</li>
+</ul>
+<h3 id="enumerate">enumerate()</h3>
+<p>A função enumerate nos oferece a oportunidade de adicionar um contator a cada <em>&ldquo;iterable&rdquo;</em></p>
+<pre><code># Create a list of strings: mutants
+mutants = ['charles xavier', 
+            'bobby drake', 
+            'kurt wagner', 
+            'max eisenhardt', 
+            'kitty pryde']
+
+# Create a list of tuples: mutant_list
+mutant_list = list(enumerate(mutants))
+
+# Change the start index
+for index2, value2 in enumerate(mutants, start=1):
+    print(index2, value2)
+    
+    
+# Ouput:
+1 charles xavier
+2 bobby drake
+3 kurt wagner
+4 max eisenhardt
+5 kitty pryde
+</code></pre><h3 id="zip">zip()</h3>
+<p>Já a função zip nos permite unir um número de objetos iteráveis, por exemplo, podemos fazer o zip de duas listas, que resulta em um iterator de tuplas do tipo zip, com isso podemos converter em uma lista.</p>
+<pre><code># Create a list of tuples: mutant_data
+mutant_data = list(zip(mutants, aliases, powers))
+
+# Print the list of tuples
+print(mutant_data)
+
+# output: 
+[('charles xavier', 'prof x', 'telepathy'), ('bobby drake', 'iceman', 'thermokinesis'), ('kurt wagner', 'nightcrawler', 'teleportation'), ('max eisenhardt', 'magneto', 'magnetokinesis'), ('kitty pryde', 'shadowcat', 'intangibility')]
+
+</code></pre><h2 id="list-comprehensions">List comprehensions</h2>
+<blockquote>
+<p>&ldquo;<em>List comprehensions</em>&rdquo; for loops em uma linha</p>
+</blockquote>
+<p>Loops for são computacionalmente custosos para grandes volumes de dados, uma forma inteligente de substituir um simple for loop é utilizando list comprehensions</p>
+<p>Syntax:</p>
+<pre><code>[&lt;output&gt; for n in &lt;iterable object&gt;]
+</code></pre><p>.</p>
+<p>Uma dica para ler é come,ar do <code>for</code>, como neste exemplo:</p>
+<pre><code># Create list comprehension: squares
+squares = [i**2 for i in range(0,10)]
+
+In [1]: squares
+Out[1]: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+</code></pre><h2 id="generators">generators</h2>
+<p>Basicamente se trocarmos <code>[]</code> de uma list comprehension teremos um objeto <code>generator</code> a diferença principal entre list comprehensions e generators é que <strong>generator</strong> não armazena o objeto em memória, o que é muito útil com grandes listas de dados.</p>
+<p>Em caso de Generator como funções a diferença é que a função retorna um <code>yield</code>.</p>
+<p>Em resumo list comprehension retorna uma lista de outputs enquanto generator retorna um objeto generator.</p>
+<p><em>Exemplo</em>:</p>
+<pre><code># Create a list of strings
+lannister = ['cersei', 'jaime', 'tywin', 'tyrion', 'joffrey']
+
+# Define generator function get_lengths
+def get_lengths(input_list):
+    &quot;&quot;&quot;Generator function that yields the
+    length of the strings in input_list.&quot;&quot;&quot;
+
+    # Yield the length of a string
+    for person in input_list:
+        yield len(person)
+
+# Print the values generated by get_lengths()
+for value in get_lengths(lannister):
+    print(value)
+    
+#Output:
+6
+5
+5
+6
+7
+</code></pre><h3 id="thank-you">Thank you!!!!</h3>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/brunodeabreu/portfolio/edit/master/content/posts/Python/datasicence_toolkit.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/r/intro/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Grupo de Estudos R4DS</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/python/python-basico/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Python Básico</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-que-é-o-toolkit-">O que é o toolkit ?</a></li>
+    <li><a href="#python---funções">Python - funções</a></li>
+    <li><a href="#criando-suas-próprias-funções">Criando suas próprias funções</a></li>
+    <li><a href="#lambda-mapreduce">Lambda, Map/Reduce</a>
+      <ul>
+        <li><a href="#python-lambda-functions-explained">Python LAMBDA Functions Explained</a></li>
+      </ul>
+    </li>
+    <li><a href="#iterators">Iterators</a>
+      <ul>
+        <li><a href="#enumerate">enumerate()</a></li>
+        <li><a href="#zip">zip()</a></li>
+      </ul>
+    </li>
+    <li><a href="#list-comprehensions">List comprehensions</a></li>
+    <li><a href="#generators">generators</a>
+      <ul>
+        <li><a href="#thank-you">Thank you!!!!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>brunodeabreu@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;55 31 98955-4001</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
