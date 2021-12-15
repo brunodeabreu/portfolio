@@ -24,6 +24,12 @@ skills:
   url: "https://twitter.com/__bmachado__/status/1338897660598751240"
 
 
+- name: Microsoftc Certified -  Azure Data Scientist Associate
+  icon : "/images/sections/skills/azure-data-scientist-associate.png"
+  summary: "The Microsfot DP100 Certification validate the Data Science and Cloud knolowdge. Where you can demostrated hability to create Azure cloud resources for machine learning, run experiments, train models and deploy on API, Container or kubernetes"
+  url: "https://www.credly.com/badges/82ed21cf-0b88-4370-8c1b-ddd33273ee23/public_url"
+
+
 
 #- name: R for  Data Science
 #  icon: "/images/sections/skills/R.jpeg"
