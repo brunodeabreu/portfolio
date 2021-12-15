@@ -24,6 +24,14 @@ skills:
   url: "https://twitter.com/__bmachado__/status/1338897660598751240"
 
 
+- name: Microsoftc Certified -  Azure Data Scientist Associate
+  icon : "/images/sections/skills/azure-data-scientist-associate.png"
+  summary: "A certificação DP100 valida conhecimentos gerais em ciência de dados e cloud. Aborda temas como provisionamento de recursos na cloud para projectos de data science, realizar experimentos de treinamento de modelos de machine learning e deploy em API/Container ou Kubernetes"
+  url: "https://www.credly.com/badges/82ed21cf-0b88-4370-8c1b-ddd33273ee23/public_url"
+
+
+
+
 
 
 #- name: R for  Data Science

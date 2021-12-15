@@ -1,5 +1,5 @@
 ---
-title: "Git - Study"
+title: "Git - Básico"
 date: 2021-04-29T08:06:25+03:00
 hero: /posts/img/git.png
 description: Notas, Comandos e estudos sobre git, github e gitlab
@@ -20,8 +20,25 @@ Porque usar o [git](https://git-scm.com/) ?
 - Gerencia de documentos,
 - Trabalho colaborativo
 
+Esta sequência de posts foi preparada durante os estudos no curso  [GitLab Certified Associate Self-Study + Exams](https://gitlab.edcast.com/pathways/cy-test-pathway-associate-study-exam/cards/1286380)
+
+
+### Porque o GitLab
+
+1. GitLab é uma plataforma de **DevOps open-source**, que oferece a oportundiade de empresas sairem do modelo de DevOps Sequência para o modelo Concorrente onde diversos times trabalham ao mesmo tempo de forma colaborativa para realizar o design, build, test, delivery e monitorar modificações no códigos.
+
+2. Optimizada para Kubernets
+
+3. Built In Security e Compliance
+
+4. Deploy software em qualquer lugar, etc.
+
+
+
 
 ### Básico
+
+
 
 
 ### Como instalar o git no linux ? 
