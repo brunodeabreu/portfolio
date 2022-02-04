@@ -9,9 +9,9 @@ languages:
   en:
     languageName: English
     weight: 2
-  pt:
-    languageName: Português
-    weight: 1
+#  pt:
+#    languageName: Português
+#    weight: 1
 
 # Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
 # DefaultContentLanguage: fr
@@ -61,3 +61,33 @@ params:
   # Currently, you can just hide it from the footer.
   newsletter:
     enable: false
+
+
+# Configure various features of this theme
+  features:
+    # Enable and configure portfolio
+    portfolio:
+      enable: true
+    # Enable and configure blog posts
+    blog:
+      enable: true
+      # Share post on different social media
+      shareButtons:
+        facebook: true
+        twitter: true
+        linkedin: true
+        reddit: true
+        whatsapp: true
+        email: true
+        # tumblr: true
+        # pocket: true
+        # diaspora: true
+        # mastodon: true
+
+    # Enable & configure "Notes" features
+    notes:
+      enable: true
+      
+    customMenus:
+      enable: true
+    

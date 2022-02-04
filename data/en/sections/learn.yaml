@@ -1,0 +1,98 @@
+# section information
+section:
+  name: Learning
+  id: projects
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Data Science / AI / ML
+  filter: "ds"
+- name: DevOps
+  filter: "devops"
+- name: DBA
+  filter: "dba"
+
+# your projects
+projects:
+- name: Linux
+  logo: /images/sections/projects/redhat.png
+  role: Student
+  timeline: "December 2021 - Present"
+  repo: https://github.com/brunodeabreu/linux # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: Learning about linux, openshift, ansbile, containers.
+  tags: ["devops", "Linux", "redhat"]
+  
+  
+
+- name:  Google Professional Machine Learning Engineer 
+  logo: /images/sections/projects/tensorflow.png
+  role: Student
+  timeline: "Jan 2022 - Present"
+  repo: https://github.com/brunodeabreu/gcp_ml
+  #url: ""
+  summary: Information about my learning during Google Machine Learning Enginer Certification
+  tags: ["ds", "machine-learning","academic"]
+
+
+- name:  Kyndryl Data Science roadmap
+  logo: /images/sections/projects/datascience.png
+  role: Student
+  timeline: "Jan 2022 - Present"
+  repo: https://github.com/brunodeabreu/k_ds_path
+  #url: ""
+  summary: Kyndryl have a great roadmap for junior and how would like to be a data science I am studyting this roadmap
+  tags: ["ds", "machine-learning","academic"]
+
+
+- name:  FreeCodeCamp Machine Learning with Python
+  logo: /images/sections/projects/tensorflow.png
+  role: Student
+  timeline: "Jan 2022 - Present"
+  repo: https://github.com/brunodeabreu/freecodecamp_ml
+  #url: ""
+  summary: Machine Learning content of FreeCodeCamp
+  tags: ["ds", "machine-learning","academic"]
+  
+  
+  
+
+#- name: Tensorflow
+#  logo: /images/sections/projects/tensorflow.png
+#  role: Developer
+#  timeline: "Jun 2018 - Present"
+#  repo: https://github.com/tensorflow/tensorflow
+#  #url: ""
+#  summary: An Open Source Machine Learning Framework for Everyone.
+#  tags: ["ds", "machine-learning","academic"]
+
+#- name: A sample academic paper
+#  role: Team Lead
+#  timeline: "Jan 2017 - Nov 2017"
+#  url: "https://www.example.com"
+#  summary: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eius reprehenderit animi suscipit autem eligendi esse amet aliquid error eum. Accusantium distinctio soluta aliquid quas placeat modi suscipit eligendi nisi.
+#  tags: ["dba","iot"]
+
+#- name: Nocode
+#  logo: /images/sections/projects/no-code.png
+#  role: Nothing
+#  timeline: "Oct 2019 - Dec 2019"
+#  repo: https://github.com/kelseyhightower/nocode
+#  #url: ""
+#  summary: The best way to write secure and reliable applications. Write nothing; deploy nowhere.
+#  tags: ["dba", "fun"]
+
+#- name: Toha
+#  logo: /images/sections/projects/toha.png
+#  role: Owner
+#  timeline: "Jun 2019 - Present"
+#  repo: https://github.com/hossainemruz/toha
+#  summary: A Hugo theme for personal portfolio.
+#  tags: ["hobby","hugo","theme","ds"]

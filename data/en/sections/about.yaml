@@ -11,14 +11,14 @@ section:
 designation: Db2 Database Administrator, Data Science and Stats Student
 # your company information
 company:
-  name: IBM Brazil.
-  url: "https://www.ibm.com"
+  name: Kyndryl Brazil.
+  url: "https://www.kyndryl.com"
 
 # your resume. this file path should be relative to you "static" directory
 resume: "files/resume.pdf"
 
 # a summary about you
-summary: 'Current I am working as a database administator at IBM Brazil, my objective is work as a data analytics solving business problems using data, machine learning and deep learning.'
+summary: 'Current I am working as a database administator at Kyndryl Brazil, my objective is work as a data analytics solving business problems using data, machine learning and deep learning.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -51,22 +51,22 @@ socialLinks:
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
 softSkills:
-- name: Program in Py
+- name: Python
   percentage: 90
   color: blue
-- name: Data wrangling
+- name: AI / ML 
   percentage: 59
   color: yellow
-- name: Communication
+- name: DevOps
   percentage: 65
   color: pink
-- name: Hard Working
+- name: AI / ML / DS
   percentage: 85
   color: green
-- name: Fast Learner
+- name: Containers
   percentage: 65
   color: sky
-- name: Problem Solving
+- name: SQL
   percentage: 85
   color: orange
 # you can also provide color code instead of pre-defined color name

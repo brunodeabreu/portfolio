@@ -21,7 +21,7 @@ buttons:
 
 # your projects
 projects:
-- name: Kubernetes
+- name: Kubernetes8
   logo: /images/sections/projects/kubernetes.png
   role: Contributor
   timeline: "March 2018 - Present"

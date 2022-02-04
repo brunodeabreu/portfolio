@@ -9,3 +9,8 @@ description: Portfolio and personal blog of Bruno de Abreu Machado
 #customMenus:
 #- name: Docs
 #  url: https://toha-guides.netlify.app/posts/
+
+customMenus:
+ - name: Notes
+   url: https://brunodeabreu.github.io/book-notes-linux-learn/index.html
+  

@@ -12,8 +12,8 @@ designation: Administrador de banco de dados, Estudante de Estatística e Ciênc
 
 # your company information
 company:
-  name: IBM Brazil.
-  url: "https://www.ibm.com"
+  name: Kyndryl.
+  url: "https://www.kyndryl.com"
 
 # your resume. this file path should be relative to you "static" directory
 resume: "files/resume.pdf"

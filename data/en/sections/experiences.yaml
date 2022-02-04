@@ -10,6 +10,30 @@ section:
 
 # Your experiences
 experiences:
+
+
+
+- company:
+    name: Kyndryl Brazil.
+    url: "https://www.kyndryl.com"
+    location: Belo Horizonte
+    # company overview
+    overview: Kyndryl is an big company present in more than 100 contries with lot of partners such as Google, Microsoft, and more.
+  positions:
+  - designation: Db2 Database administrator 
+    start: Sep 2021
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    #end: Sep 2021
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Provide phisical database support to IBM customers 
+    - Perform updates, upgrades and database maintanence 
+    - Work on high avaiability and disaster recovery projects
+    
+
+
+
+
 - company:
     name: IBM Brazil.
     url: "https://www.ibm.com"
@@ -20,7 +44,7 @@ experiences:
   - designation: Db2 Database Administrator 
     start: Nov 2008
     # don't provide end date if you are currently working there. It will be replaced by "Present"
-    # end: Dec 2020
+    end: Dec 2021
     # give some points about what was your responsibilities at the company.
     responsibilities:
     - Provide phisical database support to IBM customers 

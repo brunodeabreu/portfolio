@@ -10,6 +10,30 @@ section:
 
 # Your experiences
 experiences:
+
+
+- company:
+    name: Kyndryl Brazil.
+    url: "https://www.kyndryl.com"
+    location: Belo Horizonte
+    # company overview
+    overview: Kyndryl empresa indendente presente em mais de 100 paises com parcerias como Google, Microsoft, IBM, RedHat,WMware entre outros
+  positions:
+  - designation: Administrator de banco de dados Db2
+    start: Sep 2021
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    #end: Sep 2021
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Suporte a físico ao banco de dados Db2 
+    - Manutenção, atualizações e upgrades
+    - Projetos para implementação de alta disponibilidade e prevenção de desastre
+    
+    
+
+
+
+
 - company:
     name: IBM Brazil.
     url: "https://www.ibm.com"
@@ -20,7 +44,7 @@ experiences:
   - designation: Administrator de banco de dados Db2
     start: Nov 2008
     # don't provide end date if you are currently working there. It will be replaced by "Present"
-    # end: Dec 2020
+    end: Sep 2021
     # give some points about what was your responsibilities at the company.
     responsibilities:
     - Suporte a físico ao banco de dados Db2 
