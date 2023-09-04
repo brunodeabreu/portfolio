@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Az-104</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Notas, estudo AZ-104" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Bruno</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/aws-ml/">AWS ML</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/aws-ml/aws-ml-1/">1. ensorFlow  ML on Amazon Deep Learning AMI</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/data-science/">Data Science</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/data-science/dp-100/">1. DP-100 Set up an Azure Machine Learning workspace</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/data-science/dp-100_post2/">2. DP-100 Run experiments and train models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/data-science/dp-100_post3/">3. DP-100 Optimize and manage models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/data-science/dp-100_post4/">4. DP-100 Deploy and consume models</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/git/">Git</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/git/git-study/">Git Basic</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/git/git-flow/">Git Flow</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/microsoft/">Microsoft</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/microsoft/az-104/">AZ-104</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/python-basico/">Python Básico</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/datasicence_toolkit/">Python Data Science Tookit</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/r/">R</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/intro/">Grupo de Estudos R4DS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap01/">Cap 01</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap02_03/">Cap 02 &amp; 03</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://brunodeabreu.netlify.app/posts/img/azure104.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/john.png'/>
+          <h5 class="author-name">Bruno de Abreu Machado</h5>
+          <p>May 5, 2021</p>
+        </div>
+
+        <div class="title">
+          <h1>Az-104</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="sobre">Sobre</h2>
+<h2 id="power-shell-e-az-módulo">Power Shell e Az Módulo</h2>
+<p>Uma das ferramentas para administrar azure é o PowerShell e para isso é importante termos a última versão instalada, atualmente é a versão <a href="https://github.com/PowerShell/powershell/releases">7.1.3</a> cross plataform.</p>
+<p>Para instalar o <strong>Az</strong> podemos utilizar o comando:</p>
+<pre><code>Install-Module -Name Az -AllowClobber -Force
+</code></pre>
+<p><br> <br></p>
+<p>Verificando as versôes instaladas :</p>
+<p><strong>PowerShell</strong></p>
+<pre><code>bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ pwsh
+PowerShell 7.1.3
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/powershell
+Type 'help' to get help.
+
+PS /home/bruno/Documents/projects/git_learning/learning&gt; $PSVersionTable.PSVersion
+
+Major  Minor  Patch  PreReleaseLabel BuildLabel
+-----  -----  -----  --------------- ----------
+7      1      3                      
+
+PS /home/bruno/Documents/projects/git_learning/learning&gt; 
+</code></pre>
+<p><br> <br></p>
+<p><strong>Az</strong></p>
+<pre><code>PS /home/bruno&gt; Get-InstalledModule -Name Az -AllVersions | Select-Object -Property Name, Version                                                                                                                                   Name Version                                                                                                      
+---- -------
+Az   5.9.0
+</code></pre>
+<p><br> <br></p>
+<hr>
+<h2 id="conectando-ao-az-via-powershell">Conectando ao Az via PowerShell</h2>
+<pre><code>PS /home/bruno&gt; Connect-AzAccount
+Opening in existing browser session.
+
+Account            SubscriptionName      TenantId                             Environment
+-------            ----------------      --------                             -----------
+bmacha@outlook.com Azure para Estudantes a5e9809c-1bb9-466b-a5ac-87fb0dfba837 AzureCloud
+</code></pre>
+<p><br> <br></p>
+<p>Atualmente estou utilizando a Substrition de estudante para listar todas podemos utilizar o comando <code>Get-AzSubscription</code></p>
+<pre><code>PS /home/bruno&gt; Get-AzSubscription
+
+Name                  Id                                   TenantId                             State
+----                  --                                   --------                             -----
+Pay-As-You-Go         17b99868-871c-4000-8e62-3bd8de9c662b a5e9809c-1bb9-466b-a5ac-87fb0dfba837 Disabled
+Azure para Estudantes e540c008-a5ca-46fd-b78c-1008f3f5a1fb a5e9809c-1bb9-466b-a5ac-87fb0dfba837 Enabled
+</code></pre>
+<p><br> <br></p>
+<p>Para trocar de subscription</p>
+<pre><code>$context = Get-AzSubscription -SubscriptionID &lt;Id&gt;
+Set-AzContext $context
+</code></pre>
+<h2 id="azure-resource-group">Azure Resource Group</h2>
+<p>Podemos considear Resource group como uma estrutura que organiza diversos recursos como VMs, Storage, Vnets, Ips entre outros e podemos aplicar tags, policies, Locks,etc</p>
+<p>Uma das vantagens de utilizar resource group é que quando ele ẽ deletado todos os resources dentro dele também são removidos</p>
+<h4 id="locks">Locks</h4>
+<p>Lock é um importante recurso que pode ser utilizado para colocar o Resource Group em <em>Read Only</em> ou <em>Delete</em> que previne que algum recurso seja adicionado ao resource group inadivertidamente ou algum componente seja deletado por acidente.</p>
+<h4 id="policy">Policy</h4>
+<p>Policy é uma alternativa que o administrador tem que organizar as politicas como por exemplo se a empresa decide que só podemos criar recursos no data center Brazil South, podemos criar essa policy que irá bloquer qualquer tentativa de criar resources em outras Regions.</p>
+<h4 id="move-resources">Move resources</h4>
+<p>Podemos mover o resource para outro resource group ou outra subscription, importante atentar que cada resource tem um ID e o nome do resource group faz parte desse ID, caso tenha algum script que utilize esse <em>Resource ID</em> precisa ser atualizado.</p>
+<h3 id="lab-manage-governance-via-azure-policy">Lab Manage Governance via Azure Policy</h3>
+<p>Um dos primeiros labs é sobre governança <a href="https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_02b-Manage_Governance_via_Azure_Policy.md"><em>Manage Governance via Azure Policy</em></a>, como criar resource groups e storage accounts, como garantir que as TAGs sao criadas utilizando policy .</p>
+<p><em>Criando um resource group via PowerShell</em></p>
+<pre><code>PS /home/bruno&gt; New-AzResourceGroup -Name &quot;mynewrg&quot; -Location &quot;East US&quot;
+
+ResourceGroupName : mynewrg
+Location          : eastus
+ProvisioningState : Succeeded
+Tags              : 
+ResourceId        : /subscriptions/e540c008-a5ca-46fd-b78c-1008f3f5a1fb/resourceGroups/mynewrg
+
+
+PS /home/bruno&gt; 
+PS /home/bruno&gt; $rg = Get-AzResourceGroup -Name &quot;mynewrg&quot;
+PS /home/bruno&gt; $rg.ResourceGroupName
+mynewrg
+
+
+</code></pre><hr>
+<h2 id="manage-subscription">Manage Subscription</h2>
+<p>Algumas deficinições:</p>
+<ul>
+<li><strong>Account</strong> : Representa um usuário ou uma aplicação</li>
+<li><strong>Tenant</strong>  : Representa uma organização, i.e, <em>public domain</em> example.com, uma instancia dedicada do <strong>Azure Active Directory</strong>, cada <strong>Azure account</strong> é parte de pelo menos um <em><strong>tenant</strong></em>.</li>
+<li><strong>Subscription</strong> : É um &ldquo;acordo&rdquo; com a Microsoft para utilizar Azure service e como o serviço será pago, Tenants podem ter mais de uma subscription</li>
+<li><strong>Resource</strong> : Qualquer <em>entity</em> administrada pela Azure, VM, Web app, Storage account, etc. Alguns casos os resource podem criar <strong>sub-resources</strong> como Public IP, Network Interface card, NSG e estes também são incluidos como resources</li>
+<li><strong>Resource Group</strong> : Como se organiza os resources, como uma estrutura de pastas</li>
+</ul>
+<h4 id="cost-management--billing">Cost Management + Billing</h4>
+<p>Setor no Azure onde pode-se acompanhar os gastos, quais recursos estão sendo cobrandos e quanto de cada subscriptions, ou seja, é onde se gerencia totalmente o <em>billing</em>.</p>
+<h4 id="azure-policy">Azure Policy</h4>
+<p>Podemos utilizar Policy como no primeiro Lab para garantir TAGs nos recursos, mas basicamente as policies são utilizadas para garantir as empresas standars e SLAs.</p>
+<p>Existem um grande número de Azure Policy <strong>Built-In</strong>, alguns exemplos:</p>
+<ul>
+<li>Allowed Storage Account SKUs</li>
+<li>Allowed Resource Locations</li>
+<li>Enforce tag and its value</li>
+<li>Not allowed resource types</li>
+</ul>
+<p>Utilizando Policy via <strong>PowerShell</strong></p>
+<pre><code>PS /home/bruno&gt; Get-AzPolicyDefinition | Where-Object { $_.properties.displayName -eq &quot;Inherit a tag from the subscription if missing&quot;}
+
+Name               : 40df99da-1232-49b1-a39a-6da8d878f469
+ResourceId         : /providers/Microsoft.Authorization/policyDefinitions/40df99da-1232-49b1-a39a-6da8d878f469
+ResourceName       : 40df99da-1232-49b1-a39a-6da8d878f469
+ResourceType       : Microsoft.Authorization/policyDefinitions
+SubscriptionId     :
+Properties         : Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyDefinitionProperties
+PolicyDefinitionId : /providers/Microsoft.Authorization/policyDefinitions/40df99da-1232-49b1-a39a-6da8d878f469
+
+
+PS /home/bruno&gt;
+</code></pre><h4 id="management-groups">Management groups</h4>
+<p>É uma estrutura para oganizar outros grupos e subscriptions, nos ajuda a gerenciar acesso, policy, compliance por grupo etc.</p>
+<h3 id="lab-manage-subscriptions-and-rbac">LAB Manage Subscriptions and RBAC</h3>
+<p>Neste segundo LAB sobre <a href="https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_02a_Manage_Subscriptions_and_RBAC.md">Administração de Subscription e RBAC</a> podemos praticar a criação de usuários no AD, , roles e assign Roles.</p>
+<h2 id="azure-monitor">Azure Monitor</h2>
+<p>A capacidade de monitorar o ambiente é de extrema importancia, com o <em>Azure Monitor</em> temos acesso a diversas ferramentas para implementar esse importante pre-req de qualquer empresa:</p>
+<ul>
+<li><strong>Dignostics logs</strong> : Dentro dos resources podemos habilitar coleta de logs para diagnóstico.</li>
+<li><strong>Monitor</strong> : Dashboard para monitoração aplicações, criar alertas, visualizar métricas entre outras atividades, como :
+<ul>
+<li>Activity log</li>
+<li>Alerts
+<ul>
+<li>Action Group : Pode-se configurar para enviar um email e disparar uma automação para subir um serviço por exemplo</li>
+</ul>
+</li>
+<li>Metrics</li>
+<li>Logs</li>
+<li>Health Check</li>
+<li>Insights</li>
+<li>Settings</li>
+<li>Troubleshooting</li>
+<li>Support</li>
+</ul>
+</li>
+</ul>
+<h3 id="lab-implement-monitoring">LAB Implement Monitoring</h3>
+<ul>
+<li>Lab sobre <a href="https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_11-Implement_Monitoring.md">Monitoring</a></li>
+</ul>
+<hr>
+<h2 id="storage-account">Storage Account</h2>
+<p>Quando precisamos criar um <strong>storage account</strong> precisamos especificar alguns detalhes como :</p>
+<ul>
+<li>Subscription
+<ul>
+<li>Resource Group</li>
+</ul>
+</li>
+<li>Name</li>
+<li>Location</li>
+<li>Performance : <em>Premium( flash/ssd ) ou Standard</em></li>
+<li>Kind : <em>Storage V2, V1 ( old version ), BlobStorage</em></li>
+<li>Replication: <em>LRS, RA-GRS, GRS, ZRS, GZRS, etc</em></li>
+<li>Tier : <em>Cool ou Hot</em></li>
+<li>Networking : <em>Public all networks, Public selected nets ou Privite endpoint</em>
+<ul>
+<li>Virtual network : <em>Qual a Vnet que esse storage irá pertencer</em></li>
+<li>Subnets : <em>Qual subnet deverá acessar esse storage</em></li>
+</ul>
+</li>
+<li>Advanced
+<ul>
+<li>Security : <em>SSL</em></li>
+<li>Large file shares : <em>enable large file shares</em></li>
+<li>Data Protection : <em>Blob soft delete, retain for x days</em></li>
+<li>Data Lake Storage V2</li>
+</ul>
+</li>
+<li>Tags</li>
+</ul>
+<p>Nas configurações algumas informações que podemos configurar:</p>
+<ul>
+<li>Access Keys : Duas chaves para acesso ao storage</li>
+<li>Shared access signature ( <em>SAS</em> ) : fornece acesso ao storage por uma determinada janela configurada</li>
+</ul>
+<h4 id="storage-explorer">Storage Explorer</h4>
+<p>Ótima alternativa para administrar storage, fazer upload e download de arquivos, queries, criar e administrar tabelas, blobs, arquivos no geral entre outras atividades.</p>
+<h4 id="lifecycle-management">Lifecycle Management</h4>
+<p>Podemos mover arquivos do storage hot para o cool manualmente, outra opção é configurar uma regra para arquivos do tipo Blob utilizando o <em>Lifecycle Management</em> para mover os arquivos após X dias desde a última modificação.</p>
+<h3 id="lab-manage-azure-storage">Lab Manage Azure Storage</h3>
+<p>Neste Lab <a href="https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_07-Manage_Azure_Storage.md">Manage Azure Storage</a> pratica-se a criação e configuração de storage, administração de blob, autenticação, file shares e network access.</p>
+<ul>
+<li>Obtendo as Locations no PowerShell</li>
+</ul>
+<pre><code>PS /home/bruno&gt; (Get-AzLocation).Location
+eastasia
+southeastasia
+centralus
+eastus
+eastus2
+westus
+northcentralus
+</code></pre><br>
+<br>
+<ul>
+<li>Criando Resource Group</li>
+</ul>
+<pre><code>PS /home/bruno&gt; $location = 'westus2'
+PS /home/bruno&gt; $rgName = 'az104-07-rg0'
+PS /home/bruno&gt; New-AzResourceGroup -Name $rgName -Location $location
+
+ResourceGroupName : az104-07-rg0
+Location          : westus2
+ProvisioningState : Succeeded
+Tags              :
+ResourceId        : /subscriptions/e540c008-a5ca-46fd-b78c-1008f3f5a1fb/resourceGroups/az104-07-rg0
+
+
+</code></pre><br>
+<br>
+<ul>
+<li>Criando VM utilizando os arquivos templates do Lab</li>
+</ul>
+<pre><code>PS /home/bruno&gt; New-AzResourceGroupDeployment `
+&gt;&gt;    -ResourceGroupName $rgName `
+&gt;&gt;    -TemplateFile $HOME/deploymentTemplate.json `
+&gt;&gt;    -TemplateParameterFile $HOME/az104-07-vm-parameters.json `
+&gt;&gt;    -AsJob
+
+Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+--     ----            -------------   -----         -----------     --------             -------
+2      Long Running O… AzureLongRunni… Running       True            localhost            New-AzResou…
+
+PS /home/bruno&gt;
+</code></pre><br>
+<br>
+<hr>
+<h2 id="large-data-import-and-export-tofrom-azure">Large Data Import and Export to/from Azure</h2>
+<p>Microsoft oferece uma opção <em>Import/Export jobs</em>, no caso de export você seleciona o storage e resource group que gostaria de exportar e a microsoft irá te enviar o disco com todos os dados se essa for sua opção.</p>
+<p>No caso de import cria-se um journal dos arquivos e a microsoft irá enviar um disco vazio para que possa ser importado e enviado a Microsoft.</p>
+<p>O processo esta documentado no <a href="https://azure.microsoft.com/en-us/services/databox">Azure Data Box</a>.</p>
+<hr>
+<h2 id="azure-backup--recovery">Azure Backup &amp; Recovery</h2>
+<p>O serviço de recovery vault precisa ser criado na mesma região do resource group, o serviço de <strong>Recovery Vault</strong> atende basicamente a dois propósitos :</p>
+<ul>
+<li>Backup</li>
+<li>Site Recovery ou Replication ( <em>DR solution</em> )
+<ul>
+<li>Disaster Recovery de uma VM por exemplo deve ser configurado na opção <em>Disaster Recovery</em> da virtual machine, escolhe-se o DC que será a replica e inicia-se a replicação, neste caso se um DC cair essa VM será direcionada a replica.</li>
+<li>Após configurar podemos fazer um Faiover ou realizar o Test Failover</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="azure-virtual-machine">Azure Virtual Machine</h2>
+<p>Ao criar uma nova máquina temos que preencher alguns campos como:</p>
+<ul>
+<li><strong>Subscription</strong></li>
+<li><strong>Resource group</strong> : Importante não ter RG genéricos porque uma VM irá criar varios resources como vnet, ip, disk etc.</li>
+<li><strong>Region</strong> : A escolha da região impacta diretamente no preço da VM</li>
+<li><strong>Availability options</strong> :
+<ul>
+<li><strong>Availability zone</strong> : Onde pode escolher o DC/Zone que a VM será alocada, garante 99.99% ~4min downtime por mês</li>
+<li><strong>Availability set</strong> : Duas ou mais VM relacionadas que não devem ser impactadas ao mesmo tempo, 99.95% Up ~20min downtime por mês</li>
+<li>Para single instance VM com Premium SSD Microsoft garante 99.9% do tempo Up, ~ 43 downtime por mês</li>
+</ul>
+</li>
+<li><strong>Image</strong> : Sistema operacional e versão</li>
+<li><strong>Azure Spot Instance</strong> : Uma alternativa para provisionar máquinas por um menor preço, mas a máquina pode ser desligada a qualquer momento, muito útil para tasks com baixa prioridade</li>
+<li><strong>Size</strong> : As configurações da VM</li>
+<li><strong>User e Password</strong>:  Usuário para administrar a VM</li>
+<li><strong>Port rules</strong> : Quais portas ficaram expostas</li>
+<li><strong>Disk</strong> : SSD, HDD , encryption type e discos adicionais</li>
+<li><strong>Network</strong> : Vnet, Subnet, Public Ip, Portas secundárias, Load balance</li>
+</ul>
+<p>Para acessar VM temos 3 opções :</p>
+<ul>
+<li>RDP</li>
+<li>SSH</li>
+<li>Bastion : Método mais seguro via browser</li>
+</ul>
+<h3 id="lab-manage-virtual-machine">Lab Manage Virtual Machine</h3>
+<p><a href="https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md">Lab</a></p>
+<h4 id="linux-vm">Linux VM</h4>
+<p>Na Azure temos diversas opções linux para realizar deploy como Centos, RHEL, SLEs, Ubuntu entre outras:</p>
+<pre><code>bruno@Azure:~$ az vm image list --output table
+You are viewing an offline list of images, use --all to retrieve an up-to-date list
+Offer          Publisher               Sku                 Urn                                                             UrnAlias             Version
+-------------  ----------------------  ------------------  --------------------------------------------------------------  -------------------  ---------
+CentOS         OpenLogic               7.5                 OpenLogic:CentOS:7.5:latest                                     CentOS               latest
+CoreOS         CoreOS                  Stable              CoreOS:CoreOS:Stable:latest                                     CoreOS               latest
+debian-10      Debian                  10                  Debian:debian-10:10:latest                                      Debian               latest
+openSUSE-Leap  SUSE                    42.3                SUSE:openSUSE-Leap:42.3:latest                                  openSUSE-Leap        latest
+RHEL           RedHat                  7-LVM               RedHat:RHEL:7-LVM:latest                                        RHEL                 latest
+SLES           SUSE                    15                  SUSE:SLES:15:latest                                             SLES                 latest
+UbuntuServer   Canonical               18.04-LTS           Canonical:UbuntuServer:18.04-LTS:latest                         UbuntuLTS            latest
+WindowsServer  MicrosoftWindowsServer  2019-Datacenter     MicrosoftWindowsServer:WindowsServer:2019-Datacenter:latest     Win2019Datacenter    latest
+WindowsServer  MicrosoftWindowsServer  2016-Datacenter     MicrosoftWindowsServer:WindowsServer:2016-Datacenter:latest     Win2016Datacenter    latest
+WindowsServer  MicrosoftWindowsServer  2012-R2-Datacenter  MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:latest  Win2012R2Datacenter  latest
+WindowsServer  MicrosoftWindowsServer  2012-Datacenter     MicrosoftWindowsServer:WindowsServer:2012-Datacenter:latest     Win2012Datacenter    latest
+WindowsServer  MicrosoftWindowsServer  2008-R2-SP1         MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:latest         Win2008R2SP1         latest
+bruno@Azure:~$
+</code></pre><br>
+<br>
+<p>Neste repositório da Microsoft <a href="https://github.com/Azure/azure-quickstart-templates">Azure/azure-quickstart-templates</a> temos diversos templates em JSON para deploy utilizando ARM ( <em>Azure Resource Manager</em> )</p>
+<hr>
+<h2 id="manage-vm-backups">Manage VM Backups</h2>
+<ul>
+<li>O backup deve ser agendado de dentro da VM na <strong>Operations</strong> -&gt; <strong>Backup</strong> -&gt; <strong>Enable backup</strong> criando um serviço do <em>Recovery Service vault</em></li>
+</ul>
+<hr>
+<h2 id="manage-virtual-network">Manage Virtual Network</h2>
+<ul>
+<li>Um dos primeiros campos que precisamos preencher ao criar uma VNet é o <em>Address space</em> ,range de IPs.</li>
+<li>Cada <em>Virtual Network</em> precisa de ter no mínimo uma <em>SubNet</em>.</li>
+<li>DDoS, Firewall e Service Endpoints são opções de segurança para proteger a VNet</li>
+<li>Ao criar um IP Publico basta procurar no Marketplace por <strong>Public IP address</strong>, definir por IPv4 ou IPv6, se o IP será dinâmico ou estático , timeouts, resources e  <strong>DNS name</strong>.</li>
+</ul>
+<h4 id="vpn">VPN</h4>
+<ul>
+<li>Point to Site <strong>P2S</strong> VPN  : Utilizada por um funcionário do seu computador fora da empresa</li>
+<li>Site to Site  <strong>S2S</strong> VPN  : Um escritório acessando um Data Center</li>
+<li><strong>ExpressRoute</strong> : Conexão privada entre Data Centers ou escritórios e não trafega pela internet pública como P2S ou S2S, além de ser extremamente rápida.
+<ul>
+<li>ExpressRoute oferece um <em>Add-On Premium</em> que te possibilita conectar com VNets em qualquer região</li>
+<li>ExpressRoute Direct : Oferece a possibilidade da empresa se conectar diretamente com o backbone da Microsoft com uma grande velocidade de 10Gbps ou 100Gbps que são ofertadas hoje em dia, utilizado para grandes volumes de <em>Data Ingestion</em>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="firewall">Firewall</h4>
+<ul>
+<li>É um <em>Managed Cloud Service</em> oferecido pela Microsoft para proteger recursos <em>Azure Virtual Network</em></li>
+<li>Suporta Availability zone</li>
+<li>Quando se cria o resource de Firewall é criado uma máquina virtual com uma Vnet e uma <em>AzureFirewallSubnet</em> especifica</li>
+<li>Podemos configurar 3 tipos de Rules no Firewall:
+<ul>
+<li>NAT rule collection</li>
+<li>Network rule collection</li>
+<li>Application rule connection</li>
+</ul>
+</li>
+</ul>
+<h4 id="vnet-peering">Vnet Peering</h4>
+<p>Por padrão duas máquinas em VNets diferentes não conseguem se comunicar, para habilitar essa opção precisamos utiliar a opção <strong>Peerings</strong> e relacionar as duas VNets.</p>
+<p>Importante atentar ue Inbound e Outbound data transfer é cobrado dentro da mesma região, ou seja, apesar da criação da Vnet Peering não ser cobrada mas a transferência de dados será cobrada.</p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/brunodeabreu/portfolio/edit/master/content/posts/Microsoft/az-104.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/aws-ml/aws-ml-1/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>TensorFlow  ML on Amazon Deep Learning AMI</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/git/git-flow/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>GitLab Flow</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#power-shell-e-az-módulo">Power Shell e Az Módulo</a></li>
+    <li><a href="#conectando-ao-az-via-powershell">Conectando ao Az via PowerShell</a></li>
+    <li><a href="#azure-resource-group">Azure Resource Group</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#locks">Locks</a></li>
+            <li><a href="#policy">Policy</a></li>
+            <li><a href="#move-resources">Move resources</a></li>
+          </ul>
+        </li>
+        <li><a href="#lab-manage-governance-via-azure-policy">Lab Manage Governance via Azure Policy</a></li>
+      </ul>
+    </li>
+    <li><a href="#manage-subscription">Manage Subscription</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#cost-management--billing">Cost Management + Billing</a></li>
+            <li><a href="#azure-policy">Azure Policy</a></li>
+            <li><a href="#management-groups">Management groups</a></li>
+          </ul>
+        </li>
+        <li><a href="#lab-manage-subscriptions-and-rbac">LAB Manage Subscriptions and RBAC</a></li>
+      </ul>
+    </li>
+    <li><a href="#azure-monitor">Azure Monitor</a>
+      <ul>
+        <li><a href="#lab-implement-monitoring">LAB Implement Monitoring</a></li>
+      </ul>
+    </li>
+    <li><a href="#storage-account">Storage Account</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#storage-explorer">Storage Explorer</a></li>
+            <li><a href="#lifecycle-management">Lifecycle Management</a></li>
+          </ul>
+        </li>
+        <li><a href="#lab-manage-azure-storage">Lab Manage Azure Storage</a></li>
+      </ul>
+    </li>
+    <li><a href="#large-data-import-and-export-tofrom-azure">Large Data Import and Export to/from Azure</a></li>
+    <li><a href="#azure-backup--recovery">Azure Backup &amp; Recovery</a></li>
+    <li><a href="#azure-virtual-machine">Azure Virtual Machine</a>
+      <ul>
+        <li><a href="#lab-manage-virtual-machine">Lab Manage Virtual Machine</a>
+          <ul>
+            <li><a href="#linux-vm">Linux VM</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#manage-vm-backups">Manage VM Backups</a></li>
+    <li><a href="#manage-virtual-network">Manage Virtual Network</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#vpn">VPN</a></li>
+            <li><a href="#firewall">Firewall</a></li>
+            <li><a href="#vnet-peering">Vnet Peering</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Learning</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>brunodeabreu@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;55 31 98955-4001</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

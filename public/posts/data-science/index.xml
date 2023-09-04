@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cert on Bruno</title>
+    <link>https://brunodeabreu.netlify.app/posts/data-science/</link>
+    <description>Recent content in Cert on Bruno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Dec 2020 08:06:25 +0300</lastBuildDate><atom:link href="https://brunodeabreu.netlify.app/posts/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy and consume models </title>
+      <link>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post4/</link>
+      <pubDate>Tue, 22 Dec 2020 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post4/</guid>
+      <description>Intro Este é o quarto post com anotações do curso preparatório para certificação DP-100 e aborta tópicos criação de compute targets e o que eles precisam ter para funcionar como um serviço, deploy de modelos as a service, criação de pipeline para batch inferencing e Publish as a designer pipeline as a web service.
+Deploy and consume models Deploy models with Azure ML Podemos fazer deploy do modelo como web service ou como um azure IoT device, o workflow é similar.</description>
+    </item>
+    
+    <item>
+      <title>Optimize and manage models </title>
+      <link>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post3/</link>
+      <pubDate>Mon, 21 Dec 2020 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post3/</guid>
+      <description>Intro Este terceiro post com anotações feitas no curso preparatório para certificação DP-100 e aborta tópicos de administração e otimização de modelos:
+  Com a grande diversidade de algoritmos e técnicas computacionais e estatísticas utilizar AutoML proporciona ao ciêntista de dados experimentar e avaliar diversos espaços de hipóses com vários algoritmos. Outra facilidade do Azure ML é o Hyperdriver que auxilia na etapa de tune de hiper-parâmetros.
+  Outro detalhe importante é a possibilidade de explicar e interpretar os modelos, &amp;quot;-Como o modelo foi criado?</description>
+    </item>
+    
+    <item>
+      <title>Run experiments and train models</title>
+      <link>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post2/</link>
+      <pubDate>Fri, 18 Dec 2020 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post2/</guid>
+      <description>Intro Este segundo post com anotações feitas no curso preparatório para certificação DP-100 e aborta tópicos de experimentos e treinamento de modelos.
+Run experiments and train models Tópicos:
+ Criando modelos usando Azure Machine Learning Executando training scripts no Azure ML Workspace Gerando métricas a partir dos experimentos Automatizando o processo de treinamento do modelo  Azure Machine Learning SDK for Python  Azure ML Python SDK permite criar e executar machine learning workflows no ambiente Azure Machine Learning</description>
+    </item>
+    
+    <item>
+      <title>Set up an Azure Machine Learning</title>
+      <link>https://brunodeabreu.netlify.app/posts/data-science/dp-100/</link>
+      <pubDate>Thu, 17 Dec 2020 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/data-science/dp-100/</guid>
+      <description>Intro Este é o primeiro post de anotações que fiz durante o curso preparatório para certificação DP-100, esta parte contém informações e orientações criar e configurar todo Data Science Enviroment na cloud da Microsoft Azure utilizando Azure Machine Learning.
+Para obter o certificado Exam DP-100: Designing and Implementing a Data Science Solution on Azure temos o plano de estudo free criado pela microsoft que descreve Criar soluções de IA com o Azure Machine Learning, que é composto de 14 módulos, aproximadamente 14hrs de estudo com diversos Labs no github mslearn-dp100.</description>
+    </item>
+    
+  </channel>
+</rss>

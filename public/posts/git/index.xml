@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Bruno</title>
+    <link>https://brunodeabreu.netlify.app/posts/git/</link>
+    <description>Recent content in Git on Bruno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 May 2021 08:06:25 +0300</lastBuildDate><atom:link href="https://brunodeabreu.netlify.app/posts/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitLab Flow</title>
+      <link>https://brunodeabreu.netlify.app/posts/git/git-flow/</link>
+      <pubDate>Sun, 02 May 2021 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/git/git-flow/</guid>
+      <description>Processo recomendado pelo GitLab Este processo é recomendado pelo GitLab para times DevOps trabalharem com GitLab.
+Step 1 - Criando um Issue Todas modificações no GitLab se iniciam com a crição de um Issue, os issues permitem que times trabalharem de forma colaborativa.
+O issue pode ser utilizado para :
+  Discussão de novas ideias
+  Acompanhar status do trabalho
+  Aceitar ou rejeitar sugestões de modificaçoes, realizar perguntas, solicitar suporte ou reportar um bug</description>
+    </item>
+    
+    <item>
+      <title>Git - Básico</title>
+      <link>https://brunodeabreu.netlify.app/posts/git/git-study/</link>
+      <pubDate>Thu, 29 Apr 2021 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/git/git-study/</guid>
+      <description>Sobre o post Este post é uma coleção de anotações de estudos sobre Git, Gilab e Github
+Porque usar o git ?
+ Versinamento de código, Gerencia de documentos, Trabalho colaborativo  Esta sequência de posts foi preparada durante os estudos no curso GitLab Certified Associate Self-Study + Exams
+Porque o GitLab   GitLab é uma plataforma de DevOps open-source, que oferece a oportundiade de empresas sairem do modelo de DevOps Sequência para o modelo Concorrente onde diversos times trabalham ao mesmo tempo de forma colaborativa para realizar o design, build, test, delivery e monitorar modificações no códigos.</description>
+    </item>
+    
+  </channel>
+</rss>

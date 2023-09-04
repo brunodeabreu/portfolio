@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cert on Bruno</title>
+    <link>https://brunodeabreu.netlify.app/posts/aws-ml/</link>
+    <description>Recent content in Cert on Bruno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Aug 2023 08:06:25 +0300</lastBuildDate><atom:link href="https://brunodeabreu.netlify.app/posts/aws-ml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TensorFlow  ML on Amazon Deep Learning AMI</title>
+      <link>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-1/</link>
+      <pubDate>Thu, 10 Aug 2023 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-1/</guid>
+      <description>Intro </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Git - Básico</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="Notas, Comandos e estudos sobre git, github e gitlab" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Bruno</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/aws-ml/">AWS ML</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/aws-ml/aws-ml-1/">1. ensorFlow  ML on Amazon Deep Learning AMI</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/data-science/">Data Science</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/data-science/dp-100/">1. DP-100 Set up an Azure Machine Learning workspace</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/data-science/dp-100_post2/">2. DP-100 Run experiments and train models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/data-science/dp-100_post3/">3. DP-100 Optimize and manage models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/data-science/dp-100_post4/">4. DP-100 Deploy and consume models</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/git/">Git</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/git/git-study/">Git Basic</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/git/git-flow/">Git Flow</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/microsoft/">Microsoft</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/microsoft/az-104/">AZ-104</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/python-basico/">Python Básico</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/datasicence_toolkit/">Python Data Science Tookit</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/r/">R</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/intro/">Grupo de Estudos R4DS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap01/">Cap 01</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap02_03/">Cap 02 &amp; 03</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://brunodeabreu.netlify.app/posts/img/git.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/john.png'/>
+          <h5 class="author-name">Bruno de Abreu Machado</h5>
+          <p>April 29, 2021</p>
+        </div>
+
+        <div class="title">
+          <h1>Git - Básico</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h2 id="sobre-o-post">Sobre o post</h2>
+<p>Este post é uma coleção de anotações de estudos sobre Git, Gilab e Github</p>
+<p>Porque usar o <a href="https://git-scm.com/">git</a> ?</p>
+<ul>
+<li>Versinamento de código,</li>
+<li>Gerencia de documentos,</li>
+<li>Trabalho colaborativo</li>
+</ul>
+<p>Esta sequência de posts foi preparada durante os estudos no curso  <a href="https://gitlab.edcast.com/pathways/cy-test-pathway-associate-study-exam/cards/1286380">GitLab Certified Associate Self-Study + Exams</a></p>
+<h3 id="porque-o-gitlab">Porque o GitLab</h3>
+<ol>
+<li>
+<p>GitLab é uma plataforma de <strong>DevOps open-source</strong>, que oferece a oportundiade de empresas sairem do modelo de DevOps Sequência para o modelo Concorrente onde diversos times trabalham ao mesmo tempo de forma colaborativa para realizar o design, build, test, delivery e monitorar modificações no códigos.</p>
+</li>
+<li>
+<p>Optimizada para Kubernets</p>
+</li>
+<li>
+<p>Built In Security e Compliance</p>
+</li>
+<li>
+<p>Deploy software em qualquer lugar, etc.</p>
+</li>
+</ol>
+<h3 id="básico">Básico</h3>
+<h3 id="como-instalar-o-git-no-linux-">Como instalar o git no linux ?</h3>
+<p>Detalhes de como instalar o git esta no link <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Getting Started - Installing Git</a> no meu caso que utilizo uma distribuição baseda em ubuntu este é o comando:</p>
+<pre><code>sudo apt-get install git
+</code></pre><p>Logo após instalar recomendável realizar algumas <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">configurações básicas</a>.</p>
+<h3 id="clonando-um-projeto">Clonando um projeto</h3>
+<p>Depois de criar um projeto / repo no Gitlab podemos clonar trazendo todo conteúdo para nossa máquina, lembrando que neste caso como tenho configurado minha chave ssh no gitlab não preciso passar a senha</p>
+<pre><code>$ git clone git@gitlab.com:brunodeabreu/learning.git
+Cloning into 'learning'...
+The authenticity of host 'gitlab.com (172.65.251.78)' can't be established.
+ECDSA key fingerprint is SHA256:HbW3g8zUjNSksFbqTiUWPWg2Bq1x8xdGUrliXFzSnUw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'gitlab.com,172.65.251.78' (ECDSA) to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+(base) bruno@turing ~/Documents/projects/git_learning $ 
+</code></pre><br>
+<br>
+<h3 id="git-status">Git Status</h3>
+<p>O comando git status verifica o que tem de diferente entre o seu repositório e sua replica local.</p>
+<p><em>Neste caso o git verificou que minha replica esta completamente sincronizada com o repo</em></p>
+<pre><code>$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+</code></pre><br>
+<p><em>Neste segundo exemplo foi identifico que temos arquivos que nao estao sendo monitorados pelo git e que devemos usar o comando <strong>git add <file></strong> caso queira adicionar ao repo</em></p>
+<pre><code> $ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	cap1/
+	file2.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+
+</code></pre><br>
+<br>
+<h3 id="fases-do-repositório-local">Fases do repositório <strong>local</strong></h3>
+<ol>
+<li>Working Dir</li>
+</ol>
+<ul>
+<li>
+<p>O arquivo <code>file2.txt</code> e a pasta <code>cap1</code> ainda não são controlados pelo git, logo se encontram no <strong>Working Dir</strong></p>
+</li>
+<li>
+<p>Para que o git possa controlar esses arquivos precisamos mover ele para o <code>Index</code> ou <code>Stage</code> utilizando <code>git add &lt;file&gt;</code> como mostra o último output</p>
+</li>
+</ul>
+<pre><code>$ git add file2.txt cap1/
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	new file:   cap1/file1.txt
+	new file:   file2.txt
+
+</code></pre><ol start="2">
+<li>Index ou Stage</li>
+</ol>
+<p>Como podemos ver os arquivos estão no stage e podemos restaurar o arquivo utilizando o <code>git restore --staged &lt;file&gt;</code> assim ele saira do stage, ou podemos fazer o <code>commit</code> para passar os arquivo para o <code>HEAD</code> e depois enviar para o servidor.</p>
+<pre><code>$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	new file:   cap1/file1.txt
+	new file:   file2.txt
+
+</code></pre><ol start="3">
+<li>HEAD</li>
+</ol>
+<p>Utilizando git commit para enviar os arquivos do Index ou Stage para o HEAD</p>
+<pre><code>$ git commit -m &quot;Adicionando arquivo file2.txt&quot; file2.txt 
+[master be3c68e] Adicionando arquivo file2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.txt
+
+</code></pre><br>
+<br>
+<p>Agora só temos mais um arquivo no Index</p>
+<pre><code>$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	new file:   cap1/file1.txt
+
+</code></pre><br>
+<br>
+<p>Adicionando o segundo arquivo <code>cap1/file1.tx</code> no HEAD</p>
+<pre><code>$ git commit -m &quot;adicionando file1&quot; cap1/file1.txt 
+[master fcf1c01] adicionando file1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cap1/file1.txt
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+
+</code></pre><br>
+<br>
+<ol start="4">
+<li>Enviando o arquivo para o REPO utilizando o <code>git push</code>, todos arquivo da HEAD foram para o repositório</li>
+</ol>
+<pre><code>$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 629 bytes | 314.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To gitlab.com:brunodeabreu/learning.git
+   4af4053..fcf1c01  master -&gt; master
+
+</code></pre><br>
+<br>
+<h3 id="git-log">Git Log</h3>
+<p>Caso que queira analisar os commits o git oferece a opção de analisar os logs e conferir o que aconteceu : <code>git log</code></p>
+<pre><code>$ git log
+commit fcf1c01ca0f1f1df52a2b511d308b1668638e880 (HEAD -&gt; master, origin/master, origin/HEAD)
+Author: Bruno Machado &lt;brunodeabreu@gmail.com&gt;
+Date:   Thu Apr 29 15:08:44 2021 -0300
+
+    adicionando file1
+
+commit be3c68ea2e9ff6a25716450e24b09e5478c1bd42
+Author: Bruno Machado &lt;brunodeabreu@gmail.com&gt;
+Date:   Thu Apr 29 15:06:15 2021 -0300
+
+    Adicionando arquivo file2.txt
+
+commit 4af40539b0d7aa33fc4ed29491a9e6f7059a21ad
+Author: Bruno A. Machado &lt;brunodeabreu@gmail.com&gt;
+Date:   Thu Apr 29 17:07:07 2021 +0000
+
+    Initial commit
+
+</code></pre><br>
+<br>
+<p>Outras opções:</p>
+<ul>
+<li><code>git log -3</code> : para mostrar as ultimas 3 linhas</li>
+<li><code>git log --oneline</code>  : mostra somente o hash e o comentário</li>
+<li><code>git log --author=&quot;Bruno&quot;</code> : filtrando por autor</li>
+<li><code>git log --graph --decorate</code> : mostra em uma estrutura</li>
+</ul>
+<br>
+<br>
+<h3 id="git-pull">Git pull</h3>
+<p>Baixando arquivos do REPO para LOCAL</p>
+<p>Neste caso o file2.txt foi removido e meu repo local esta diferente do repositorio do Gitlab, podemos utilizar o git pull para puxar arquivos</p>
+<pre><code>$ rm file2.txt 
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	deleted:    file2.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+
+</code></pre><br>
+<br>
+<h3 id="git-rm">Git rm</h3>
+<p>Utilizado para remover arquivo do controle do git, ele funciona com o add precisa comitar para ter efeito.</p>
+<pre><code>$ git rm file2.txt 
+rm 'file2.txt'
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	deleted:    file2.txt
+
+$ git commit -m &quot;remove&quot;
+[master 28a0c54] remove
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 file2.txt
+
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+$ 
+
+</code></pre><br>
+<br>
+<h3 id="branch-e-git-checkout">Branch e Git checkout</h3>
+<p>Nunca é legal fazer o commit direto na <code>master</code> , podemos imaginar a master como uma linha do tempo a versão principal do repositório.</p>
+<p><img src="/posts/git/img/branch.png" alt="branch">
+*<em>Fonte</em>: <a href="https://noic.com.br/git-e-github/">https://noic.com.br/git-e-github/</a></p>
+<p>Primeiro passo e criar a branch temporaria <code>temp123</code>:</p>
+<pre><code>bruno @ ~/Documents/projects/git_learning/learning - [master] $ git checkout -b temp123
+Switched to a new branch 'temp123'
+bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ 
+
+
+</code></pre><p>Para ilustrar esse flow, adicionei uma imagem <code>file_branch.txt</code> e fizemos o commit :</p>
+<pre><code>bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ git status
+On branch temp123
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	file_branch.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ 
+
+
+bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ git add file_branch.txt 
+
+bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ git commit -m &quot;adicionando file 4&quot; *
+[temp123 362c9e7] adicionando file 4
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file_branch.txt
+bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ 
+
+
+</code></pre><p>Agora chegou a parte de enviar o arquivo para o servidor remoto do GitLab <code>git push origin temp123</code>:</p>
+<pre><code>bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ git push origin temp123
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 276 bytes | 276.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: 
+remote: To create a merge request for temp123, visit:
+remote:   https://gitlab.com/brunodeabreu/learning/-/merge_requests/new?merge_request%5Bsource_branch%5D=temp123
+remote: 
+To gitlab.com:brunodeabreu/learning.git
+ * [new branch]      temp123 -&gt; temp123
+bruno @ ~/Documents/projects/git_learning/learning - [temp123] $ 
+
+</code></pre><p>Automaticamente ele criou um merge request, uma solicitação para modificar a MASTER, no Github é chamado Pull Request(PR) no GitLab Merge Request(MR), esse request irá para revisão, aprovação e pode ser feito o merge, uma opção é marcar para deletar a branch temporária assim que o merge for feito.</p>
+<p>Para voltar para master <code>git checkout master</code></p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/brunodeabreu/portfolio/edit/master/content/posts/git/git-study.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/git/git-flow/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>GitLab Flow</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/r/cap02_03/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Cap 02 03 - Grupo de Estudos R for Data Science</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sobre-o-post">Sobre o post</a>
+      <ul>
+        <li><a href="#porque-o-gitlab">Porque o GitLab</a></li>
+        <li><a href="#básico">Básico</a></li>
+        <li><a href="#como-instalar-o-git-no-linux-">Como instalar o git no linux ?</a></li>
+        <li><a href="#clonando-um-projeto">Clonando um projeto</a></li>
+        <li><a href="#git-status">Git Status</a></li>
+        <li><a href="#fases-do-repositório-local">Fases do repositório <strong>local</strong></a></li>
+        <li><a href="#git-log">Git Log</a></li>
+        <li><a href="#git-pull">Git pull</a></li>
+        <li><a href="#git-rm">Git rm</a></li>
+        <li><a href="#branch-e-git-checkout">Branch e Git checkout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Learning</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>brunodeabreu@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;55 31 98955-4001</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
