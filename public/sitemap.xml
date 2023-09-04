@@ -4,7 +4,22 @@
   
   <url>
     <loc>https://brunodeabreu.netlify.app/</loc>
-    <lastmod>2023-08-10T08:06:25+03:00</lastmod>
+    <lastmod>2023-09-04T08:06:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brunodeabreu.netlify.app/posts/deep-learning/</loc>
+    <lastmod>2023-09-04T08:06:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brunodeabreu.netlify.app/posts/deep-learning/dl-fastai_0/</loc>
+    <lastmod>2023-09-04T08:06:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brunodeabreu.netlify.app/posts/</loc>
+    <lastmod>2023-09-04T08:06:25+03:00</lastmod>
   </url>
   
   <url>
@@ -13,12 +28,12 @@
   </url>
   
   <url>
-    <loc>https://brunodeabreu.netlify.app/posts/</loc>
+    <loc>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-1/</loc>
     <lastmod>2023-08-10T08:06:25+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-1/</loc>
+    <loc>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-0/</loc>
     <lastmod>2023-08-10T08:06:25+03:00</lastmod>
   </url>
   
@@ -58,27 +73,27 @@
   </url>
   
   <url>
-    <loc>https://brunodeabreu.netlify.app/posts/data-science/</loc>
+    <loc>https://brunodeabreu.netlify.app/posts/azure-dp100/</loc>
     <lastmod>2020-12-22T08:06:25+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post4/</loc>
+    <loc>https://brunodeabreu.netlify.app/posts/azure-dp100/dp-100_post4/</loc>
     <lastmod>2020-12-22T08:06:25+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post3/</loc>
+    <loc>https://brunodeabreu.netlify.app/posts/azure-dp100/dp-100_post3/</loc>
     <lastmod>2020-12-21T08:06:25+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brunodeabreu.netlify.app/posts/data-science/dp-100_post2/</loc>
+    <loc>https://brunodeabreu.netlify.app/posts/azure-dp100/dp-100_post2/</loc>
     <lastmod>2020-12-18T08:06:25+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brunodeabreu.netlify.app/posts/data-science/dp-100/</loc>
+    <loc>https://brunodeabreu.netlify.app/posts/azure-dp100/dp-100/</loc>
     <lastmod>2020-12-17T08:06:25+03:00</lastmod>
   </url>
   

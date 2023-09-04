@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning on Bruno</title>
+    <link>https://brunodeabreu.netlify.app/posts/deep-learning/</link>
+    <description>Recent content in Deep Learning on Bruno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Sep 2023 08:06:25 +0300</lastBuildDate><atom:link href="https://brunodeabreu.netlify.app/posts/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Learning - prep work</title>
+      <link>https://brunodeabreu.netlify.app/posts/deep-learning/dl-fastai_0/</link>
+      <pubDate>Mon, 04 Sep 2023 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/deep-learning/dl-fastai_0/</guid>
+      <description>1. Terminal On Windows we can install PowerShell and WSL using, the first time you
+wsl --install 
+ Tips :  Terminal Full Screen : &amp;lt;Alt+Enter&amp;gt; Switch between users : sudo -u &amp;lt;user&amp;gt; -i Check version and python location : which python Install everything in homedir to do not mix the system python/files with our version of python used to DEV and experiment    2. Install python  Github for conda mini-forge and mamba-forge installer conda-forge/miniforge Linux Manbaforge install   wget https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,12 +8,26 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Aug 2023 08:06:25 +0300</lastBuildDate><atom:link href="https://brunodeabreu.netlify.app/posts/aws-ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>TensorFlow  ML on Amazon Deep Learning AMI</title>
+      <title>Deep Learning intro</title>
       <link>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-1/</link>
       <pubDate>Thu, 10 Aug 2023 08:06:25 +0300</pubDate>
       
       <guid>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-1/</guid>
-      <description>Intro </description>
+      <description>Applications  Object recognition Caption generation Facebook: deep face, application to recognize face Photo Classifier Deep Speech : S2T, T2S Language translation Smart Reply emails ARDA: Automated Retinal Disease Assessment Skin Cancer classifier Self Driver cars Gaming Arts and Music  Repository https://github.com/Dataweekends/zero_to_deep_learning_video
+ </description>
+    </item>
+    
+    <item>
+      <title>Intro</title>
+      <link>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-0/</link>
+      <pubDate>Thu, 10 Aug 2023 08:06:25 +0300</pubDate>
+      
+      <guid>https://brunodeabreu.netlify.app/posts/aws-ml/aws-ml-0/</guid>
+      <description>Machine Learning Concepts Industry Applications
+ Recommendation Engines Demand Forecasting Computer Vision Fraud Detection Medical Diagnosis Stock Marketing Forecasting Sentiment Analysis  Basic Terminology
+  Features : each item or piece of data that described by a number of features
+  Labels : each item or piece of data may be tagged with known classification result
+  Instances : an instance or sample is an item within the dataset, each instance will have a set of features, and may also have label assigned to it</description>
     </item>
     
   </channel>

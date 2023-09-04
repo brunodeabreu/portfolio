@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deploy and consume models </title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="notas curso de data science certificação" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Bruno</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/aws-ml/">AWS ML</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/aws-ml/aws-ml-0/">1. Introduction</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/azure-dp100/">Data Science</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/azure-dp100/dp-100/">1. DP-100 Set up an Azure Machine Learning workspace</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/azure-dp100/dp-100_post2/">2. DP-100 Run experiments and train models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/azure-dp100/dp-100_post3/">3. DP-100 Optimize and manage models</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/azure-dp100/dp-100_post4/">4. DP-100 Deploy and consume models</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/git/">Git</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/git/git-study/">Git Basic</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/git/git-flow/">Git Flow</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/microsoft/">Microsoft</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/microsoft/az-104/">AZ-104</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/python-basico/">Python Básico</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/datasicence_toolkit/">Python Data Science Tookit</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/r/">R</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/intro/">Grupo de Estudos R4DS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap01/">Cap 01</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap02_03/">Cap 02 &amp; 03</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://brunodeabreu.netlify.app/posts/img/dp100.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/john.png'/>
+          <h5 class="author-name">Bruno de Abreu Machado</h5>
+          <p>December 22, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Deploy and consume models </h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h1 id="intro">Intro</h1>
+<p>Este é o quarto post com anotações do curso preparatório para certificação <strong>DP-100</strong> e aborta tópicos criação de compute targets e o que eles precisam ter para funcionar como um serviço, deploy de modelos as a service, criação de pipeline para batch inferencing e Publish as a designer pipeline as a web service.</p>
+<h2 id="deploy-and-consume-models">Deploy and consume models</h2>
+<h3 id="deploy-models-with-azure-ml">Deploy models with Azure ML</h3>
+<p>Podemos fazer deploy do modelo como web service ou como um azure IoT device, o workflow é similar.</p>
+<p><img src="/posts/DS-cert/img/deploy_workflow.png" alt="deploy-workflow"></p>
+<p><strong>Register model</strong></p>
+<ul>
+<li>
+<p>O modelo registrado é um container lógico composto por um ou mais arquivos</p>
+</li>
+<li>
+<p>Depois de registrar o arquivo ou modelo, podemos fazer download ou realizar o deploy do modelo registrado</p>
+</li>
+<li>
+<p>Os modelos de Machine Learning são registrados no AzureML</p>
+</li>
+<li>
+<p>O modelo pode vir do AzureML ou outra plataforma.</p>
+</li>
+</ul>
+<p><strong>Register a model from an experiment run</strong></p>
+<ul>
+<li>
+<p>Usando SDK</p>
+<ul>
+<li>Quando usamos o SDK para treinar o modelo recebemos um objeto <code>Run</code> ou um <code>AutoMLRun</code> , estes objetos podem ser usado para treinar o modelo</li>
+</ul>
+</li>
+</ul>
+<br>  
+<ul>
+<li>
+<p>Usando CLI</p>
+<ul>
+<li>Podemos usar comandos de CLI como :</li>
+</ul>
+<pre><code>az ml register -n sklearn_mnist --asset-path outputs/sklearn_mnist_model.pkl --experiment...
+</code></pre></li>
+</ul>
+<br>
+<ul>
+<li>
+<p>Usando VS Code</p>
+<ul>
+<li>No VS Code temos uma extensão que nos auxilia a realizar o registro do modelo</li>
+<li>Podemos realizar o deploy do modelo como web service para:
+<ul>
+<li>Azure Container Instance (<strong>ACI</strong>)</li>
+<li>Azure Kubernetes Service (<strong>AKS</strong>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<p>Usando SDK and ONNX</p>
+<ul>
+<li>ONNX é um pacote open source criado pela microsoft que permite realizar deploy usando C#.</li>
+</ul>
+</li>
+</ul>
+<h3 id="choose-a-compute-target">Choose a compute target</h3>
+<ul>
+<li>
+<p><em><strong>Azure Kubernetes Service <code>AKS</code></strong></em> : Usado para deploy&rsquo;s de produção em alta escala, oferece reposta rápida e auto-escalável de serviços. Cluster autoscaling não é suportado pelo AzureML SDK, para modificar nodes no AKS cluster é preciso usar a UI no Azure portal.</p>
+</li>
+<li>
+<p><em><strong>Azure Container instance <code>ACI</code></strong></em> : Utilizado para low-scale CPU-based workloads que requerem menos de 48GB de RAM</p>
+</li>
+<li>
+<p><em><strong>Azure Machine Learning Compute clusters</strong></em> : Para rodar Batch scoring em serverless compute. Suporta VM&rsquo;s de worksload normal ou de baixa prioridade.</p>
+</li>
+<li>
+<p><em><strong>Azure Functions</strong></em>: Utilizado para preparar deploy, install SDK, criar imagens e realizar deploy de imagens as web app</p>
+</li>
+<li>
+<p><em><strong>Azure IoT Edge</strong></em> : Realiza deploy de modelos ML em IoT devices, converte modelos em azure containers.</p>
+</li>
+<li>
+<p><em><strong>Azure Data Box Edge</strong></em> : Realiza deploy de modelos ML em IoT devices. Utiliza Azure Stack Edge (AI-enabled edge computing) um Hardware-as-a-service que a microsoft oferece como cloud managed device with built-in  FPGA (<em>Field Programmable Gate Array</em>) que possibilita acelerar AI-inferencing.</p>
+</li>
+</ul>
+<h3 id="deploy-to-aks---_usando-sdk_">Deploy to AKS - <em>Usando SDK</em></h3>
+<p>Para realizar deploy de modelos no Azure Kubernetes Service, criamos o deployment config com todas as configurações necessárias</p>
+<pre><code>from azureml.core.webservice import AksWebservice, Webservice
+from azureml.core.model import Model
+
+aks_target = AksCompute(ws, 'myaks')
+
+# if deploying to a cluster config for de/test, ensure thatit was created with enouth cores and memory 
+# to handle this deployment config. Note that memory is also used by things sucha as dependence  
+# and AML comonents
+
+deployment_config = AksWebservice.deploy_configuration(cpu_cores = 1 , memory_gb = 1)
+service = Model.deploy(ws, 'myservice', [model], inferece_config, deployment_config, aks_target)
+service.wait_for_deployment(show_output=True)
+print(service.state)
+print(service.get_logs())
+</code></pre><h3 id="deploy-to-aci---_using-sdk_">Deploy to ACI - <em>Using SDK</em></h3>
+<p>Para realizar deploy do modelo em Azure Container Instance <strong>ACI</strong> criamos o deploy config como no exemplo abaixo:</p>
+<pre><code>from azureml.core.webservice import AciWebservice, Webservice
+from azureml.core.model import Model
+
+deployment_config = AciWebservice.deploy_configuration(cpu_cores = 1 , memory_gb = 1)
+service = Model.deploy(ws, 'aciservice', [model], inferece_config, deployment_config)
+service.wait_for_deployment(show_output=True)
+print(service.state)
+print(service.get_logs())
+</code></pre><h3 id="fpga-inference">FPGA inference</h3>
+<p><em>FPGAs vs. CPU, GPU and ASIC</em></p>
+<p><img src="/posts/DS-cert/img/fpga_inf.png" alt="hardware-fpga"></p>
+<p>Podemos reconfigurar FPGAs para diferentes tipos de modelos de machine leraning, essa flexibilidade e favorece aplicações otimizadas para computação numérica e modelos que utilizam muita memória.</p>
+<h3 id="what-supported-on-azure">What' Supported on Azure</h3>
+<ul>
+<li>FPGAs
+<ul>
+<li>Image Classification and recognition scenarios</li>
+<li>TensorFlow deployment</li>
+<li>Intel FPGA</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>DNN models :
+<ul>
+<li>ResNet 50</li>
+<li>ResNet 152</li>
+<li>DenseNet-121</li>
+<li>VGG-16</li>
+<li>SSD-VGG</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>FPGAs per region
+<ul>
+<li>East US</li>
+<li>Southeast Asia</li>
+<li>West Europe</li>
+<li>west US 2</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="how-to-create-a-kubernetes-cluster-with-gpus">How to create a Kubernetes cluster with GPUs</h3>
+<pre><code>from azureml.core.compute import ComputeTarget, AksCompute
+from azureml.exceptions import ComputeTargetException
+
+# Choose a name for cluster
+aks_name = 'aks-gpu'
+
+# Check to see if the cluster already exists
+
+try:
+  aks_target = Computetarget(workspace = ws, name= aks_name)
+  print('Found existing compute target')
+
+except ComputeTargetException:
+  print('Creating a new compute target ...')
+  
+  # Provision AKS cluster with gpu
+  prov_config = AksCompute.provisioning_configuration(vm_size='Standard_NC6')
+  
+  # create the clsuter
+  aks_target = ComputeTarget.create(
+      workspace = ws, 
+      name = aks_name,
+      provioning_configuration = prov_config
+  )
+  
+  aks_target.wat_for_completion(show_output=True)
+</code></pre><h3 id="define-the-deployment-configuration">Define the deployment configuration</h3>
+<p>O deployment configuration abaixo define Azure Kubernet Service enviroment para rodar o web service:</p>
+<pre><code>from azureml.core.webservice import AksWebservice
+
+gpu_aks_config = AksWebservice.deploy_configuration(autoscale_enabled=False,
+                                                    num_replicas = 3,
+                                                    cpu_cores = 2,
+                                                    memory_gb = 4)
+</code></pre><h3 id="deploy-the-model">Deploy the model</h3>
+<pre><code>from azureml.core.model import Model
+
+# Name of web service that is deployed
+aks_service_name = 'aks-dnn-mnist'
+
+# Get the registered model
+model = Model(ws, 'tf-dnn-mnist')
+
+# Deploy the model
+aks_service = Model.deploy(ws, models = [model],
+                           inference_config = inference_config,
+                           deployment_config = gpu_aks_config,
+                           deploument_target = aks_target,
+                           name = aks_service_name)
+                           
+aks_service.wait_for_deployment(show_output = True)
+print(aks_service.state)
+</code></pre><h2 id="batch-inferecing">Batch Inferecing</h2>
+<blockquote>
+<p>Processar grande quantidade de dados <em>(Big Data)</em> utilizando computação paralela</p>
+</blockquote>
+<h3 id="ml-processing-of-big-data">ML Processing of Big Data</h3>
+<ul>
+<li>Processamento para grandes volumes de workload</li>
+<li>Designed para processamento em Batch e otimizado para high throughput</li>
+<li>Divide os dados em pequenas partes para processamento paralelo</li>
+<li>Suporta dados estruturados e não estruturados</li>
+<li>Auto-parallelism via Automated ML SDK</li>
+</ul>
+<h3 id="3-steps-for-batch-inferencing">3 Steps for Batch Inferencing</h3>
+<ol>
+<li>The dataset is partitioned (<em>dado pode ser processado ao mesmo tempo</em>)</li>
+<li>Delegate the batch inferences to scaled compute</li>
+<li>Output is stored in defined storage</li>
+</ol>
+<h3 id="batch-inference-pipelines">Batch Inference Pipelines</h3>
+<p><img src="/posts/DS-cert/img/batch_inf_pipeline.png" alt="batch_inf_pipeline"></p>
+<p><img src="/posts/DS-cert/img/batch_inf_pipeline_2.png" alt="batch_inf_pipeline2"></p>
+<h2 id="deploy-to-compute-instances">Deploy To Compute Instances</h2>
+<ol>
+<li>
+<p>O primeiro passo é registrar o modelo, podemos utilizar SKD ou CLI para realziar o deploy do modelo, sendo que o deploy pode ser em um único endpoint ou multi-model endpoints</p>
+</li>
+<li>
+<p>O segundo passo é submeter dado de teste para o serviço que esta rodando como no exemplo</p>
+</li>
+</ol>
+<p><img src="/posts/DS-cert/img/test_service.png" alt="test_service"></p>
+<h3 id="use-an-existing-model-with-azureml-register-model">Use an existing model with AzureML Register model</h3>
+<p>Registrando o modelo permite que controle verões e track de metada sobre o modelo na workspace</p>
+<pre><code>from azureml.core.model import Model
+
+# Tip : When model_path is set to a directory, you can use the child_paths parameter
+#       to include only some of the files from the dir
+
+model = Model.register(model_path = './models',
+                       model_name = 'sentiment',
+                       description = 'Sentiment analysis model trained outside Azure ML',
+                       workspace = ws)
+</code></pre><h3 id="define-inference-configuration">Define Inference Configuration</h3>
+<ul>
+<li>An entry script:
+<ul>
+<li>O arquivo <code>score.py</code> faz o load do modelo quando o serviço de deploy inicia, ele também é responsavel por receber os dados e passar ao modelo e assim retornar a resposta</li>
+</ul>
+</li>
+</ul>
+<br>  
+<ul>
+<li>An Azure Machine Learning Environment
+<ul>
+<li>Um ambiente define as dependencias de softwares necessárias para rodar o modelo e o <em>entry script</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="define-deployment">Define deployment</h3>
+<p>O webservice package contem todas as classes usadas para o deployment.</p>
+<pre><code>from azureml.core.webservice import LocalWebservice
+deployment_config = LocalWebservice.deploy_configuration()
+</code></pre><h3 id="deploy-the-model-1">Deploy the model</h3>
+<p>Durante o processo de deploy, <em>instance configuration</em> e <em>deployment configuration</em> são usados para criar e configurar o <em>service environment</em></p>
+<pre><code>from azureml.core.model import Model
+
+model = Model(ws, name='sentiment')
+service = Model.deploy(ws, 'myservice', [model], inference_config, deployment_config)
+
+service.wait_for_deployment(True)
+print(service.state)
+print('scoring URI : ' + service.scoring_uri)
+</code></pre><h3 id="request-reponse-comnsumption">Request-reponse comnsumption</h3>
+<p>Exemplo de um cliente que submeteu dados para o servi,o e mostra a resposta</p>
+<pre><code>import requests
+improt json
+
+scoring_uri = 'scoring uri for your service'
+headers = {'Content-Type': 'application/json'}
+
+test_data = json.dumps({'test': 'today is a great day!'})
+
+response = requests.pot(scoring_uri, data = test_data, headers = headers)
+print(response.status_code)
+print(response.elapsed)
+print(response.json())
+</code></pre><h2 id="consume-an-azure-machine-learning-model-deployed-as-a-web-service">Consume an Azure Machine Learning model deployed as a web Service</h2>
+<p><strong>General Workflow</strong></p>
+<ol>
+<li>Use SDK to get the connection information</li>
+<li>Determine the type of request data used by the model</li>
+<li>Create an application that calls the webs service.</li>
+</ol>
+<p><strong>Connection information</strong></p>
+<ul>
+<li>
+<p>Secured web service : Se realizar o deploy utilizando web service SSL certificate, podemos utilizar https para conectar ao web service usando scoring ou swagger URI.</p>
+</li>
+<li>
+<p>Authentication for services : Usa duas formas de controlar acesso com auth keys and tokens</p>
+</li>
+</ul>
+<p><strong>Resquest data</strong></p>
+<p>REST API esperam receber um documento JSON com estrutura pre definida <code>{&quot;data&quot; : [&lt;model-specific-data-structure&gt;] }</code></p>
+<p>Pode ser utilizado em C#, Go, Java, Python, PowerBI, etc.</p>
+<h2 id="enable-data-collection">Enable Data collection</h2>
+<p>É possível que seja necessário coletar informações do modelo toda vez que ele é executado, para habilitar tal feature é preciso habilitar o <code>data collector</code> editando o scoring file :</p>
+<pre><code>from azureml.monitoring import ModelDataCollector
+
+# declarar a data collection variable na função init
+</code></pre><h3 id="using-python-to-turn-on-azure-application-insights">Using Python to turn on Azure Application Insights</h3>
+<p>Após ter o modelo treinavo e atualizado o service podemos habilitar o Azure Application Insights:</p>
+<pre><code>from azureml.core.webservice import Webservice
+aks_service = Webservice(ws, 'my-service-name')
+
+aks_service.update(enable_app_insights = True)
+</code></pre><h2 id="pratical-questions">Pratical Questions:</h2>
+<blockquote>
+<p>You plan on deploying a model and have it analyse a very big dataset. You have impelmented batch inferencing so that it ill process the data in parallel. What is the optimal compute compoenents for this implementation ?</p>
+</blockquote>
+<p>A) GPUs</p>
+<p>B) FPGA</p>
+<p>C) CPU</p>
+<p>D) ASIC</p>
+<p>**Resposta : ** A  <em>GPU designed for parallel processing</em></p>
+<hr>
+<blockquote>
+<p>Which code will load the explainer &lsquo;named_explainer&rsquo;</p>
+</blockquote>
+<p><img src="/posts/DS-cert/img/q_explainer.png" alt="q_explainer"></p>
+<p>**Resposta : ** A</p>
+<hr>
+<blockquote>
+<p>You want to install your model as a web service. Select all deployment options which support this</p>
+</blockquote>
+<p>A) Azure Machine Learning compute clusters</p>
+<p>B) Deploy to the Web using a URL</p>
+<p>C) Deploy to ACI</p>
+<p>D) Deploy to a AKS Container</p>
+<p><strong>Resposta :</strong> C, D</p>
+<hr>
+<blockquote>
+<p>I want to turn on logging so for future deployments using the Azure Machine Learning Workspace. Where do I go and what I need to configure ?</p>
+</blockquote>
+<p>A) Go to Models, select model and update the properties</p>
+<p>B) Go to Properties, select the model and turn on logging</p>
+<p>C) Go to deployments, select deployment and turn on Application Insights</p>
+<p>D) Go to experiments, seelct the experiments and turn on application insights</p>
+<p><strong>Resposta :</strong> C</p>
+<h2 id="learning-path">Learning Path</h2>
+<blockquote>
+<p><a href="https://docs.microsoft.com/pt-br/learn/paths/build-ai-solutions-with-azure-ml-service/">Criar soluções de IA com o Azure Machine Learning</a></p>
+</blockquote>
+<ul>
+<li>
+<p><a href="https://tinyurl.com/amlvhol">Microsoft Learn - Azure Machine Learning Labs</a></p>
+</li>
+<li>
+<p><a href="aka.ms/MSCert">Microsoft Certifications</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/learn/certifications/exams/dp-100">Exam details page</a></p>
+</li>
+</ul>
+<h2 id="lab">Lab</h2>
+<blockquote>
+<p>Hands on Lab <a href="https://microsoftlearning.github.io/mslearn-dp100/">Azure Machine Learning Exercises</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/tree/master/labdocs">MicrosoftDocs/mslearn-aml-labs</a>
+<ul>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab12.md">Monitoring Models</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab13.md">Monitoring Data Drift</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li><a href="https://github.com/MicrosoftLearning/DP100">MicrosoftLearning/DP100</a></li>
+</ul>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/brunodeabreu/portfolio/edit/master/content/posts/Azure-DP100/dp-100_post4.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/r/cap02_03/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Cap 02 03 - Grupo de Estudos R for Data Science</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/azure-dp100/dp-100_post3/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Optimize and manage models </span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#deploy-and-consume-models">Deploy and consume models</a>
+      <ul>
+        <li><a href="#deploy-models-with-azure-ml">Deploy models with Azure ML</a></li>
+        <li><a href="#choose-a-compute-target">Choose a compute target</a></li>
+        <li><a href="#deploy-to-aks---_usando-sdk_">Deploy to AKS - <em>Usando SDK</em></a></li>
+        <li><a href="#deploy-to-aci---_using-sdk_">Deploy to ACI - <em>Using SDK</em></a></li>
+        <li><a href="#fpga-inference">FPGA inference</a></li>
+        <li><a href="#what-supported-on-azure">What' Supported on Azure</a></li>
+        <li><a href="#how-to-create-a-kubernetes-cluster-with-gpus">How to create a Kubernetes cluster with GPUs</a></li>
+        <li><a href="#define-the-deployment-configuration">Define the deployment configuration</a></li>
+        <li><a href="#deploy-the-model">Deploy the model</a></li>
+      </ul>
+    </li>
+    <li><a href="#batch-inferecing">Batch Inferecing</a>
+      <ul>
+        <li><a href="#ml-processing-of-big-data">ML Processing of Big Data</a></li>
+        <li><a href="#3-steps-for-batch-inferencing">3 Steps for Batch Inferencing</a></li>
+        <li><a href="#batch-inference-pipelines">Batch Inference Pipelines</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploy-to-compute-instances">Deploy To Compute Instances</a>
+      <ul>
+        <li><a href="#use-an-existing-model-with-azureml-register-model">Use an existing model with AzureML Register model</a></li>
+        <li><a href="#define-inference-configuration">Define Inference Configuration</a></li>
+        <li><a href="#define-deployment">Define deployment</a></li>
+        <li><a href="#deploy-the-model-1">Deploy the model</a></li>
+        <li><a href="#request-reponse-comnsumption">Request-reponse comnsumption</a></li>
+      </ul>
+    </li>
+    <li><a href="#consume-an-azure-machine-learning-model-deployed-as-a-web-service">Consume an Azure Machine Learning model deployed as a web Service</a></li>
+    <li><a href="#enable-data-collection">Enable Data collection</a>
+      <ul>
+        <li><a href="#using-python-to-turn-on-azure-application-insights">Using Python to turn on Azure Application Insights</a></li>
+      </ul>
+    </li>
+    <li><a href="#pratical-questions">Pratical Questions:</a></li>
+    <li><a href="#learning-path">Learning Path</a></li>
+    <li><a href="#lab">Lab</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Learning</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>brunodeabreu@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;55 31 98955-4001</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

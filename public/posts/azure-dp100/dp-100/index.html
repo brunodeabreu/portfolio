@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Set up an Azure Machine Learning</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/assets/css/layouts/main.css"/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/site/favicon.png" />
+
+
+<link rel="stylesheet" href="/assets/css/style.css"/>
+
+    
+<meta name="description" content="notas curso de data science certificação" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/assets/css/layouts/single.css"/>
+<link rel="stylesheet" href="/assets/css/navigators/sidebar.css">
+
+
+    
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-XXXXXXXXX-X', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+  
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/site/main-logo.png">Bruno</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/site/main-logo.png" class="d-none" id="main-logo">
+  <img src="/images/site/inverted-logo.png" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/aws-ml/">AWS ML</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/aws-ml/aws-ml-0/">1. Introduction</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/azure-dp100/">Data Science</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/azure-dp100/dp-100/">1. DP-100 Set up an Azure Machine Learning workspace</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/azure-dp100/dp-100_post2/">2. DP-100 Run experiments and train models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/azure-dp100/dp-100_post3/">3. DP-100 Optimize and manage models</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/azure-dp100/dp-100_post4/">4. DP-100 Deploy and consume models</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/git/">Git</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/git/git-study/">Git Basic</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/git/git-flow/">Git Flow</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/microsoft/">Microsoft</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/microsoft/az-104/">AZ-104</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/python-basico/">Python Básico</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/datasicence_toolkit/">Python Data Science Tookit</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/r/">R</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/intro/">Grupo de Estudos R4DS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap01/">Cap 01</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/r/cap02_03/">Cap 02 &amp; 03</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://brunodeabreu.netlify.app/posts/img/dp100.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/john.png'/>
+          <h5 class="author-name">Bruno de Abreu Machado</h5>
+          <p>December 17, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Set up an Azure Machine Learning</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <h1 id="intro">Intro</h1>
+<p>Este é o primeiro post de anotações que fiz durante o curso preparatório para certificação <strong>DP-100</strong>, esta parte contém informações e orientações criar e configurar todo Data Science Enviroment na cloud da Microsoft Azure utilizando <a href="ml.azure.com">Azure Machine Learning</a>.</p>
+<p>Para obter o certificado <a href="https://docs.microsoft.com/en-us/learn/certifications/exams/dp-100">Exam DP-100: Designing and Implementing a Data Science Solution on Azure</a> temos o plano de estudo <em>free</em> criado pela microsoft que descreve <a href="https://docs.microsoft.com/pt-br/learn/paths/build-ai-solutions-with-azure-ml-service/">Criar soluções de IA com o Azure Machine Learning</a>, que é composto de 14 módulos, aproximadamente 14hrs de estudo com diversos Labs no github <a href="(https://microsoftlearning.github.io/mslearn-dp100/)">mslearn-dp100</a>.</p>
+<p>As anotações abaixo foram feitas enquanto assistia do curso preparatório que fiz pela TIDWIT e estudava o <em>learning path</em> <a href="https://docs.microsoft.com/pt-br/learn/paths/build-ai-solutions-with-azure-ml-service/">Criar soluções de IA com o Azure Machine Learning</a>.</p>
+<h2 id="set-up-an-azure-machine-learning-workspace">Set up an Azure Machine Learning workspace</h2>
+<p>Na figura abaixo temos o caminho sugerido pela Micrsoft para obter o título de <strong><em>Microsfot Certified: Azure Data Scientist Associate</em></strong>, podemos ver que o curso de fundamentos <a href="https://docs.microsoft.com/en-us/learn/certifications/exams/az-900">Exam AZ-900: Microsoft Azure Fundamentals</a> é opcional.</p>
+<p><img src="/posts/DS-cert/img/ds_100_path.png" alt="path"></p>
+<p>Em resumo é preciso saber todo pipeline de projetos de ciência de dados, é possivel obter um path detalhado de estudo em <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2PLKZ">Learning path for Azure Data Scientist</a>.</p>
+<h3 id="o-que-é-azure-machine-learning-">O que é Azure Machine Learning ?</h3>
+<p><strong>Azure Machine lerning</strong> é um conjunto de serviços em cloud <em>&ldquo;turbinado&rdquo;</em> com Python(SDK/CLI/UX) que possibilita:</p>
+<ul>
+<li>Preparar dados</li>
+<li>Construir modelos</li>
+<li>Treinar modelos estatísticos</li>
+<li>Administrar modelos</li>
+<li>Realizar track de experimentos</li>
+<li>Deploy de modelos</li>
+</ul>
+<p>Azure ML inclui o <strong>Workspace</strong> onde você pode criar todo ambiente de <em>ML Service</em>, criando <code>modelos</code>, <code>experimentos</code> e <code>pipeline</code>, com <code>data stores</code> e <code>compute targets</code> específicos.</p>
+<h3 id="8-passos-para-treinar-um-modelo-em-azure-ml">8 passos para treinar um modelo em Azure ML</h3>
+<ol>
+<li>Configurar um Workspace</li>
+<li>Definer os Computes Clusters : <em>sugerido ter um para dev e outro para prod</em></li>
+<li>Upload Data <em>on right format</em></li>
+<li>Create Experiment</li>
+<li>Training Script</li>
+<li>Run Estimator, track models version</li>
+<li>Register the model</li>
+<li>Package for Deployment</li>
+</ol>
+<h3 id="workspace">Workspace</h3>
+<p><strong>Workspace as Azure Resources:</strong></p>
+<p>Workspace é um Resource da Azure dentro de uma Subscription, além da workspace temos outros resources como :</p>
+<ul>
+<li><strong>Storage Account</strong> : <em>Armazenar os arquivos necessários</em>,</li>
+<li><strong>Application Insights</strong> : <em>Monitorar serviços preditivos</em></li>
+<li><strong>Key Vault</strong> : <em>Administrar as credenciais da Worksapce</em></li>
+<li><strong>VM&rsquo;s</strong> : <em>Include notebooks, hardware resouces para realiar computação da workspace</em></li>
+<li><strong>Contariners Registry(Kubernets)</strong> : <em>Administrar os containers utilizados no deploy</em></li>
+</ul>
+<p><img src="/posts/DS-cert/img/workspaces.png" alt="skills-DP-100"></p>
+<p><strong>Workspace Taxonomy</strong></p>
+<p>Abaixo todos os componentes que interagem com a workspace:</p>
+<p><img src="/posts/DS-cert/img/workspace_taxonomy.png" alt="skills-DP-100"></p>
+<p>Podemos utilizar RBAC (<em>Role-Based Access Control</em>) para workspace controlar acesso e permissões na workspace:</p>
+<ul>
+<li>Administrar permissões</li>
+<li>Criar policy</li>
+<li>Permitir usuários no grupo de Data Science a criar e rodar experimentos, registar modelos, etc.</li>
+</ul>
+<h3 id="criando-uma-workspace">Criando uma Workspace:</h3>
+<ol>
+<li>
+<p>Podemos utilizar a UI : create new ML rerouce -&gt; speficy Subscription -&gt; resource group -&gt; workspace name -&gt; workspace edition</p>
+</li>
+<li>
+<p>Ou utilizando código Python utilizando <code>azureml</code>  lib:</p>
+</li>
+</ol>
+<pre><code>from azureml.core import Workspace
+
+ws = Workspace.create(name = 'aml-workspace',
+                      subscription_id='1234-abc-123...',
+                      resource_group = 'aml-resources',
+                      create_resource_group=True,
+                      sku='enterprise')
+
+</code></pre><br>
+<ol start="3">
+<li>Ou utilizando Azure CLI</li>
+</ol>
+<pre><code>#bash
+az ml workspace create -w 'aml-workspace' -g 'aml-resource'
+
+</code></pre><br>
+<ol start="4">
+<li>Ou via Azure Resource teamplate</li>
+</ol>
+<p><strong>Considerations</strong>:</p>
+<ul>
+<li>
+<p>Precisa garantir que a <strong>Region</strong> tem os recursos que precisa, por exemplo, nem todas tem GPU.</p>
+</li>
+<li>
+<p>Workspace está disponível em duas <strong>Edições</strong></p>
+<ul>
+<li>
+<p><strong><em>Enterprise</em></strong> : comtém todas as features</p>
+</li>
+<li>
+<p><strong><em>Basic</em></strong> : Core features, não contém parte de Designer graphical tool for automated ML or Monitoring</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="como-interagir-com-a-workspace">Como interagir com a Workspace</h3>
+<ul>
+<li>
+<p><strong>Web</strong> : <a href="https://ml.azure.com">Azure Machine Learning Studio</a> ou Azure ML Designer</p>
+</li>
+<li>
+<p>No ambiente Python com <strong>Azure ML SDK for Python</strong></p>
+<ul>
+<li>Access anywhere</li>
+<li>Scale easily</li>
+<li>Integration</li>
+<li>Start quickly</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<p>Em R com <strong>Azure ML SDK for R</strong></p>
+</li>
+<li>
+<p>Command line com Azure ML <strong>CLI extention</strong></p>
+</li>
+</ul>
+<h3 id="instalação-python-sdk">Instalação Python SDK</h3>
+<pre><code># install azure ML SDK
+pip install azureml-sdk
+
+# Extra packages
+pip install azureml-sdk[notebooks, automl, explain]
+
+</code></pre><h3 id="conectando-a-workstation">Conectando a workstation</h3>
+<p>Para conectar à Workspace é preciso saber a <code>subscription_id</code>, <code>resource_group</code> e <code>workspace_name</code>, normalmente a forma mais utilizada é criando um arquivo de configuração em JSON, como no exemplo abaixo :</p>
+<ul>
+<li>Config file <em>JSON</em>:</li>
+</ul>
+<pre><code>&quot;subscription_id&quot;: &quot;123456-abc-1234...&quot;
+&quot;resource_group&quot;:&quot;aml-resource&quot;
+&quot;workspace_name&quot;:&quot;aml-workspace&quot;
+</code></pre><br>
+<ul>
+<li>Utilizando <em>JSON</em> :</li>
+</ul>
+<pre><code>from azure.core import Workspace
+ws = Workspace.from_config()
+</code></pre><br>
+<ul>
+<li>Utilizando o método <strong>get</strong></li>
+</ul>
+<p>Neste caso não é utilizado o arquivo de configuração JSON e os detalhes de acesso é informado via método <code>get</code>.</p>
+<pre><code>from azureml.core import Workspace
+
+ws = Workspace.get(name = 'aml-workspace',
+                   subscription_id='12345-abc-1234..,
+                   resource_group='aml-resources')
+</code></pre><h3 id="trabalhando-com-worskpace-class">Trabalhando com Worskpace Class</h3>
+<p>A classe da workspace é o ponto de partida da maioria das operações, como no exemplo abaixo, que é utilizado <code>compute_targets</code> para obter um dicionário de objetos contendo compute targers:</p>
+<pre><code>for compute_name in ws.compute_targets:
+      compute = ws.compute_targets[compute_name]
+      print(compute.name, ':', compute.type)
+</code></pre><h3 id="azure-ml-cli-extention">Azure ML CLI Extention</h3>
+<p>Azure CLI é uma interface cross-plataform e fornece packages para trabalhar com Azure ML.</p>
+<ul>
+<li>Para instalar :</li>
+</ul>
+<pre><code>#bash
+az extention add -n azure-cli-ml
+</code></pre><br>
+<ul>
+<li>Utilizando :</li>
+</ul>
+<pre><code>az ml computetarget list -g 'aml-resources' -w 'aml-workspace'
+</code></pre><h3 id="run-notebook-on-azure-workspace">Run Notebook on Azure Workspace</h3>
+<ol>
+<li>
+<p>Log in <a href="https://ml.azure.com">Azure Machine Learning Studio</a></p>
+</li>
+<li>
+<p>Select your subscription and workspace</p>
+</li>
+<li>
+<p>Select <a href="https://notebooks.azure.com">Notebooks</a> on the left</p>
+</li>
+<li>
+<p>Open the Samples folder</p>
+</li>
+<li>
+<p>Open the Python folder</p>
+</li>
+</ol>
+<p>Ou minha forma preferida:</p>
+<ol>
+<li>
+<p>Log in <a href="https://ml.azure.com">Azure Machine Learning Studio</a></p>
+</li>
+<li>
+<p>Go to <strong>compute instance</strong>, start the server</p>
+</li>
+<li>
+<p>Select Notebook ou Jupyter lab</p>
+</li>
+</ol>
+<blockquote>
+<p>Podemos criar <strong>Compute Instances</strong> no workspace e termos um ambiente de desenvolvimento que é gerenciado como todos os assets</p>
+</blockquote>
+<h3 id="why-use-computer-instance-and-what-is-computer-instance-">Why use computer instance and What is computer instance ?</h3>
+<p>Computer instance é um ambiente em cloud para desenvolvimento de projetos de ciência de dados, totalmente configurável, com logs, monitors do início ao fim de um projeto.</p>
+<p>Abaixo quatro motivos de porque usar Computer instance:</p>
+<p><img src="/posts/DS-cert/img/pq_compute_instance.png" alt="compute instance"></p>
+<h3 id="compute-targets">Compute targets</h3>
+<ul>
+<li>
+<p><strong>Compute target</strong> é um <em>&ldquo;resource&rdquo;</em> designado para realizar o treinamento ou servir de host para o serviço de deployment</p>
+</li>
+<li>
+<p>Pode estar localizado na máquina local ou Cloud-based</p>
+</li>
+<li>
+<p>Facilita modificar o compute enviroment sem ter que editar código</p>
+</li>
+<li>
+<p>Os compute resources para uso do compute target ficam anexados na workspace</p>
+</li>
+</ul>
+<p><img src="/posts/DS-cert/img/training-comp-targets.png" alt="compute targets"></p>
+<h3 id="visual-studio-code">Visual Studio Code</h3>
+<p>Outra opção é utilizar Visual Studio ou alguma IDE que tenha um <em>plugin</em> da AzureML:</p>
+<ul>
+<li>Editor e criar código</li>
+<li>Oferece a possibilidade de instalar extenções modulares, syntax check, debugging, etc</li>
+<li>Utilizar <em>Azure ML Extention</em> para trabalhar com assets na Azure ML workspace</li>
+</ul>
+<h3 id="data-storage-and-datasets">Data Storage and Datasets</h3>
+<p>Azure oferece uma conjunto de Datastores listados na figura abaixo, esses são storages para armazenar dados para projetos de data science:</p>
+<p><img src="/posts/DS-cert/img/data_access.png" alt="data-access"></p>
+<h3 id="data-access-machine-learning-workflow">Data Access Machine learning workflow:</h3>
+<p>Normalmente você pode ter seu dado em um storage e criar um dataset a partir dele, em alguns casos pode-se criar o dataset diretamente</p>
+<p><img src="/posts/DS-cert/img/data_access_workflow.png" alt="data-access"></p>
+<p><strong>Tipos de Dataset</strong></p>
+<ul>
+<li>
+<p><strong><em>TabularDataset</em></strong> : Dados em formato tabular de fácil manipulação com pandas ou spark;</p>
+</li>
+<li>
+<p><strong><em>FileDataset</em></strong> : Representa um único ou vários arquivos no datastore ou URL, com esse método é preciso fazer download, montar e escolher o compute target como <em>FileDataset</em> para consumir o dado.</p>
+</li>
+</ul>
+<p>Azure tem um repositório publico de datasets chamado <code>Azure Open Datasets</code> que estão na Cloud da Microsoft integrados com Azure Machine Learning, onde podemos acessar via API ou outros produtos como PowerBI ou Azure Data Factory</p>
+<p><strong>Data Labeling</strong></p>
+<p>Azure ML oferece uma central para adminstrar Labels projects comumns em atividades de image classification e  object detection.</p>
+<h3 id="expriments">Expriments</h3>
+<ul>
+<li>
+<p>Um experimento em Azure Machine Learning é um processo, normalmente realizado com scripts ou pipelines que podem gerar métricas e outputs com logs, um experimento pode ser executado diversas vezes e com diferentes dados, códigos e configurações.</p>
+</li>
+<li>
+<p>Azure ML monitora cada experimento e oferece a possibilidade de comparar históricos dos resultados de diferentes execuções do mesmo experimento.</p>
+</li>
+</ul>
+<p><strong>Experiment Run Context</strong></p>
+<p>Quando submetemos um experimento usamos <em>run context</em> para inicializar e finalizar o experimento</p>
+<pre><code>from azureml.core import Experiment
+
+# create an experiment variable
+experiment = Experiment(workspace = ws, name 'my-experiment')
+
+#start the experiment
+run = experiment.start_logging()
+
+# experiment code goes here
+
+#end experiment
+run.complete()
+
+</code></pre><br>
+<p><strong>Loggin Metrics</strong></p>
+<ul>
+<li><strong>log</strong> : record a single named value</li>
+<li><strong>log_list</strong> : Record a named list of values</li>
+<li><strong>log_row</strong> : Record a row with multiple columns</li>
+<li><strong>lot_table</strong> : Record a dictionary as a table</li>
+<li><strong>log_image</strong>: Record an image file or a plot</li>
+</ul>
+<p><strong>Visualizando os logs</strong></p>
+<p><em>Op1:</em></p>
+<pre><code>from azureml.widgets import RunDetails
+RunDetails(run).Show()
+</code></pre><br>
+<p><em>Op2:</em></p>
+<pre><code>import json
+
+# Get logged metrics
+metrics = run.get_metrics()
+print(json.dumps(metrics, indent=2))
+</code></pre><h2 id="pratical-questions">Pratical Questions:</h2>
+<blockquote>
+<ol>
+<li>You want to develop an Machine Learning Model using R. Which application will provide you the tools you need ?</li>
+</ol>
+</blockquote>
+<p>A) Azure SQL</p>
+<p>B) Azure Macine Learning SDK</p>
+<p>C) SQL Server</p>
+<p>D) Azure Databricks</p>
+<p><strong>Resposta</strong> : Todas estão corretas</p>
+<blockquote>
+<ol start="2">
+<li>Which 3 configuration options must be set in your config.json file ?</li>
+</ol>
+</blockquote>
+<p>A) location</p>
+<p>B) user_id</p>
+<p>C) subscription_id</p>
+<p>D) password</p>
+<p>E) resoruce_group</p>
+<p>F) workspace_name</p>
+<p>G) key</p>
+<p>H) registry</p>
+<p>I) storage</p>
+<p>J) workspace_edition</p>
+<p><strong>Resposta</strong> : C, E, F</p>
+<blockquote>
+<ol start="3">
+<li>You are interested in developing your machine learning models using CUDAs. You have also decided you do not need more than 12 cores. Which storage option should you pick ?</li>
+</ol>
+</blockquote>
+<p>A) Standard_V12s with 12 VCPUs and 12GB Super RAM</p>
+<p>B) Standard_F2s_v2 with 12 VCPUs and 12GB SSD</p>
+<p>C) Standard_NV12s_v3 with 12 CVPUs 1 GPU</p>
+<p>D) Standard_V12s with 12 VCPUs</p>
+<p><strong>Resposta</strong> : C</p>
+<blockquote>
+<ol start="4">
+<li>Which datastore cannot be used as a Data Store in Azure ML ?</li>
+</ol>
+</blockquote>
+<p>A) Azure Blob Container</p>
+<p>B) Azure File Share</p>
+<p>C) Azure DW (Synapse)</p>
+<p>D) Azure Data Lake Gen2</p>
+<p>E) Azure SQL Database</p>
+<p>F) Azure Database for PostgreSQL</p>
+<p>G) Databricks File system</p>
+<p>H) Azure Database for MySQL</p>
+<p><strong>Resposta</strong> : C</p>
+<h2 id="learning-path">Learning Path</h2>
+<blockquote>
+<p><a href="https://docs.microsoft.com/pt-br/learn/paths/build-ai-solutions-with-azure-ml-service/">Criar soluções de IA com o Azure Machine Learning</a></p>
+</blockquote>
+<ul>
+<li>
+<p><a href="https://tinyurl.com/amlvhol">Microsoft Learn - Azure Machine Learning Labs</a></p>
+</li>
+<li>
+<p><a href="aka.ms/MSCert">Microsoft Certifications</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/learn/certifications/exams/dp-100">Exam details page</a></p>
+</li>
+</ul>
+<h2 id="lab">Lab</h2>
+<blockquote>
+<p>Hands on Lab <a href="https://microsoftlearning.github.io/mslearn-dp100/">Azure Machine Learning Exercises</a></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/tree/master/labdocs">MicrosoftDocs/mslearn-aml-labs</a>
+<ul>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab01.md">Getting Started with Azure Machine   Learning</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab02.md">Training and Registering Models</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab03.md">Working with Data</a></li>
+<li><a href="https://github.com/MicrosoftDocs/mslearn-aml-labs/blob/master/labdocs/Lab04.md">Working with Compute</a></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li><a href="https://github.com/MicrosoftLearning/DP100">MicrosoftLearning/DP100</a></li>
+</ul>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/brunodeabreu/portfolio/edit/master/content/posts/Azure-DP100/dp-100.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="/posts/azure-dp100/dp-100_post2/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Run experiments and train models</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="/posts/r/cap01/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Cap 01 - Grupo de Estudos R for Data Science</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+          <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname == "localhost") return;
+
+    var dsq = document.createElement("script");
+    dsq.type = "text/javascript";
+    dsq.async = true;
+    var disqus_shortname = "does-not-exist";
+    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(dsq);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+<a href="https://disqus.com/" class="dsq-brlink"
+  >comments powered by <span class="logo-disqus">Disqus</span></a
+>
+
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#set-up-an-azure-machine-learning-workspace">Set up an Azure Machine Learning workspace</a>
+      <ul>
+        <li><a href="#o-que-é-azure-machine-learning-">O que é Azure Machine Learning ?</a></li>
+        <li><a href="#8-passos-para-treinar-um-modelo-em-azure-ml">8 passos para treinar um modelo em Azure ML</a></li>
+        <li><a href="#workspace">Workspace</a></li>
+        <li><a href="#criando-uma-workspace">Criando uma Workspace:</a></li>
+        <li><a href="#como-interagir-com-a-workspace">Como interagir com a Workspace</a></li>
+        <li><a href="#instalação-python-sdk">Instalação Python SDK</a></li>
+        <li><a href="#conectando-a-workstation">Conectando a workstation</a></li>
+        <li><a href="#trabalhando-com-worskpace-class">Trabalhando com Worskpace Class</a></li>
+        <li><a href="#azure-ml-cli-extention">Azure ML CLI Extention</a></li>
+        <li><a href="#run-notebook-on-azure-workspace">Run Notebook on Azure Workspace</a></li>
+        <li><a href="#why-use-computer-instance-and-what-is-computer-instance-">Why use computer instance and What is computer instance ?</a></li>
+        <li><a href="#compute-targets">Compute targets</a></li>
+        <li><a href="#visual-studio-code">Visual Studio Code</a></li>
+        <li><a href="#data-storage-and-datasets">Data Storage and Datasets</a></li>
+        <li><a href="#data-access-machine-learning-workflow">Data Access Machine learning workflow:</a></li>
+        <li><a href="#expriments">Expriments</a></li>
+      </ul>
+    </li>
+    <li><a href="#pratical-questions">Pratical Questions:</a></li>
+    <li><a href="#learning-path">Learning Path</a></li>
+    <li><a href="#lab">Lab</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Learning</a>
+              </li>
+            
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>brunodeabreu@gmail.com</span></li>
+          
+          <li><span>Phone: </span> <span>&#43;55 31 98955-4001</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/assets/images/inverted-logo.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/assets/images/hugo-logo-wide.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/assets/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
